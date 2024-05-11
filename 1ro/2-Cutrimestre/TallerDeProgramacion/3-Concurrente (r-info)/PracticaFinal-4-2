@@ -1,0 +1,85 @@
+programa practicaFinal
+procesos
+  proceso dejarPapel(E num : numero)
+  comenzar
+    repetir num
+      depositarPapel
+  fin
+areas
+  avenida5 : AreaP (5,1,5,100)
+  avenida10 : AreaP (10,1,10,100)
+  areaC : AreaC (50,50,50,50)
+  areaP1 : AreaP (11,1,11,1)
+  areaP2 : AreaP (12,1,12,1)
+robots
+  robot Productor
+  variables
+    papel : numero
+    Av : numero
+    Ca : numero
+  comenzar
+    Av := PosAv
+    Ca := PosCa
+    papel := 0
+    mientras (Ca+1 < 101)
+      mover
+      Ca := Ca + 1
+      si(HayPapelEnLaEsquina)
+        tomarPapel
+        papel := papel +1
+      si(papel = 5)
+        BloquearEsquina(50,50)
+        Pos(50,50)
+        dejarPapel(5)
+        Pos(Av,Ca)
+        LiberarEsquina(50,50)
+        papel := 0
+  fin
+  robot Consumidor
+  variables
+    papel : numero
+    puede : numero
+    intento : numero
+    Av : numero
+    Ca : numero
+  comenzar
+    Av := PosAv
+    Ca := PosCa
+    intento := 0
+    mientras intento < 8
+      Random(papel,2,5)
+      BloquearEsquina(50,50)
+      Pos(50,50)
+      puede := 0
+      mientras (HayPapelEnLaEsquina)&&(papel > puede)
+        puede := puede + 1
+        tomarPapel
+      si(papel <> puede)
+        intento := intento +1
+        dejarPapel(puede)
+        Pos(Av,Ca)
+        LiberarEsquina(50,50)
+      sino
+        Pos(Av,Ca)
+        LiberarEsquina(50,50)
+        dejarPapel(papel)
+  fin
+variables
+  productor1 : Productor
+  productor2 : Productor
+  consumidor1 : Consumidor
+  consumidor2 : Consumidor
+comenzar
+  AsignarArea(productor1,avenida5)
+  AsignarArea(productor2,avenida10)
+  AsignarArea(consumidor1,areaP1)
+  AsignarArea(consumidor2,areaP2)
+  AsignarArea(productor1,areaC)
+  AsignarArea(productor2,areaC)
+  AsignarArea(consumidor1,areaC)
+  AsignarArea(consumidor2,areaC)
+  Iniciar(productor1,5,1)
+  Iniciar(productor1,10,1)
+  Iniciar(consumidor1,11,1)
+  Iniciar(consumidor2,12,1)
+fin

@@ -1,0 +1,132 @@
+programa Practica5
+procesos
+  proceso juntar (ES flores : numero)
+  comenzar
+    mientras(HayFlorEnLaEsquina)
+      tomarFlor
+      flores := flores + 1
+  fin
+  proceso posicionar (ES flores : numero ; E av : numero; E ca : numero; E avA : numero; E caA : numero)
+  comenzar
+    BloquearEsquina(av,ca)
+    Pos(av,ca)
+    juntar(flores)
+    Pos(avA,caA)
+    LiberarEsquina(av,ca)
+  fin
+  proceso finalizar (ES flores : numero; E avA : numero; E caA : numero)
+  comenzar
+    BloquearEsquina(10,10)
+    Pos(10,10)
+    mientras(flores > 0)
+      depositarFlor
+      flores := flores - 1
+    Pos(avA,caA)
+    LiberarEsquina(10,10)
+  fin
+  proceso random (ES av : numero; ES ca : numero)
+  variables
+    ava : numero
+    aca : numero
+  comenzar
+    Random(ava, 40,60)
+    Random(aca,40,60)
+    av := ava
+    ca := aca
+  fin
+areas
+  cuadrante : AreaC (40,40,60,60)
+  punto : AreaPC (10,10,10,10)
+  area1 : AreaP (1,1,1,1)
+  area2 : AreaP (2,1,2,1)
+  area3 : AreaP (3,1,3,1)
+  area4 : AreaP (4,1,4,1)
+robots
+  robot recolector
+  variables
+    tipo : numero
+    flores : numero
+    ok : boolean
+    ca : numero
+    av : numero
+    caA : numero
+    avA : numero
+  comenzar
+    flores := 0
+    caA:= PosCa
+    avA := PosAv
+    RecibirMensaje(tipo,jefe)
+    RecibirMensaje(ok,jefe)
+    mientras(ok)
+      RecibirMensaje(av,jefe)
+      RecibirMensaje(ca,jefe)
+      posicionar(flores,av,ca,avA,caA)
+      EnviarMensaje(V,jefe)
+      RecibirMensaje(ok,jefe)
+    finalizar(flores,avA,caA)
+    EnviarMensaje(V,jefe)
+  fin
+  robot jefe
+  variables
+    tipo : numero
+    total : numero
+    av : numero
+    ca : numero
+    ok : boolean
+  comenzar
+    total := 0
+    EnviarMensaje(1,robot1)
+    EnviarMensaje(2,robot2)
+    EnviarMensaje(3,robot3)
+    av := 0
+    ca := 0
+    ok := V
+    repetir 8
+      random(av,ca)
+      Random(tipo,1,3)
+      si(tipo = 1)
+        EnviarMensaje(V,robot1)
+        EnviarMensaje(av,robot1)
+        EnviarMensaje(ca,robot1)
+        RecibirMensaje(ok,robot1)
+      sino
+        si(tipo = 2)
+          EnviarMensaje(V,robot2)
+          EnviarMensaje(av,robot2)
+          EnviarMensaje(ca,robot2)
+          RecibirMensaje(ok,robot2)
+        sino
+          EnviarMensaje(V,robot3)
+          EnviarMensaje(av,robot3)
+          EnviarMensaje(ca,robot3)
+          RecibirMensaje(ok,robot3)
+    EnviarMensaje(F,robot1)
+    EnviarMensaje(F,robot2)
+    EnviarMensaje(F,robot3)
+    repetir 3
+      RecibirMensaje(ok,*)
+    posicionar(total,10,10,4,1)
+    Informar(total)
+  fin
+variables
+  jefe: jefe
+  robot1: recolector
+  robot2:recolector
+  robot3:recolector
+comenzar
+  AsignarArea(jefe,area4)
+  AsignarArea(robot1,area1)
+  AsignarArea(robot2,area2)
+  AsignarArea(robot3,area3)
+  AsignarArea(robot1,cuadrante)
+  AsignarArea(robot2,cuadrante)
+  AsignarArea(robot3,cuadrante)
+  AsignarArea(jefe,punto)
+  AsignarArea(robot1,punto)
+  AsignarArea(robot2,punto)
+  AsignarArea(robot3,punto)
+  Iniciar(jefe,4,1)
+  Iniciar(robot1,1,1)
+  Iniciar(robot2,2,1)
+  Iniciar(robot3,3,1)
+fin

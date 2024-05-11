@@ -1,0 +1,76 @@
+programa practica2
+procesos
+  proceso izquierda
+  comenzar
+    repetir 3
+      derecha
+  fin
+  proceso contar (ES flores : numero ; ES papeles : numero)
+  comenzar
+    si(HayFlorEnLaEsquina)
+      tomarFlor
+      flores := flores + 1
+    sino
+      si(HayPapelEnLaEsquina)
+        tomarPapel
+        papeles := papeles + 1
+  fin
+areas
+  ciudad1 : AreaC(1,1,100,100)
+robots
+  robot escalera
+  variables
+    flores : numero
+    papeles : numero
+    ca : numero
+    total : numero
+  comenzar
+    total := 0
+    repetir 4
+      flores := 0
+      papeles := 0
+      contar(flores,papeles)
+      mover
+      derecha
+      RecibirMensaje(ca,jefe)
+      repetir ca
+        contar(flores,papeles)
+        mover
+      si(flores > papeles)
+        total := total + 1
+      izquierda
+    EnviarMensaje(total,jefe)
+  fin
+  robot jefe
+  variables
+    total : numero
+    ca : numero
+  comenzar
+    total := 0
+    Random(ca, 1,5)
+    repetir 4
+      EnviarMensaje(ca,robot1)
+      Random(ca,1,5)
+      EnviarMensaje(ca,robot2)
+      Random(ca,1,5)
+      EnviarMensaje(ca,robot3)
+    repetir 3
+      RecibirMensaje(ca ,*)
+      total := ca + total
+    Informar(total)
+  fin
+variables
+  robot1 : escalera
+  robot2 : escalera
+  robot3: escalera
+  jefe : jefe
+comenzar
+  AsignarArea(robot1,ciudad1)
+  AsignarArea(robot2,ciudad1)
+  AsignarArea(robot3,ciudad1)
+  AsignarArea(jefe,ciudad1)
+  Iniciar(robot1,2,1)
+  Iniciar(robot2,7,1)
+  Iniciar(robot3,12,1)
+  Iniciar(jefe,1,1)
+fin

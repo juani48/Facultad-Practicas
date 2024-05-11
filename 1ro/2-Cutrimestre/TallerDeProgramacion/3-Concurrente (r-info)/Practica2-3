@@ -1,0 +1,75 @@
+programa practica2
+procesos
+  proceso recoletarF (ES f : numero)
+  comenzar
+    si(HayFlorEnLaEsquina)
+      tomarFlor
+      f := f +1
+  fin
+  proceso recolectarP(ES p : numero)
+  comenzar
+    si(HayPapelEnLaEsquina)
+      tomarPapel
+      p := p +1
+  fin
+  proceso recolectarF (ES p : numero)
+  comenzar
+    si(HayFlorEnLaEsquina)
+      tomarFlor
+      p := p +1
+  fin
+  proceso equipoA (ES p : numero)
+  comenzar
+    repetir 8
+      recolectarP(p)
+      mover
+  fin
+  proceso equipoB (ES f : numero)
+  comenzar
+    repetir 8
+      recolectarF(f)
+      mover
+  fin
+areas
+  ciudad1 : AreaC(1,1,100,100)
+robots
+  robot tipo
+  variables
+    p : numero
+  comenzar
+    derecha
+    si(PosCa = 1)
+      si(PosAv = 1)
+        p := 0
+        equipoA(p)
+        EnviarMensaje(p,A2)
+      sino
+        RecibirMensaje(p,A1)
+        equipoA(p)
+        Informar(p)
+    sino
+      si(PosAv = 1)
+        p := 0
+        equipoB(p)
+        EnviarMensaje(p,B2)
+      sino
+        RecibirMensaje(p,B1)
+        equipoB(p)
+        Informar(p)
+  fin
+
+variables
+  A1 : tipo
+  A2 : tipo
+  B1: tipo
+  B2 : tipo
+comenzar
+  AsignarArea(A1,ciudad1)
+  AsignarArea(A2,ciudad1)
+  AsignarArea(B1,ciudad1)
+  AsignarArea(B2,ciudad1)
+  Iniciar(A1,1,1)
+  Iniciar(A2,10,1)
+  Iniciar(B1,1,5)
+  Iniciar(B2,10,5)
+fin

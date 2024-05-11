@@ -1,0 +1,108 @@
+programa practicaFinal
+areas
+  avenida1 : AreaPC(1,1,1,100)
+  avenida2 : AreaPC(2,1,2,100)
+  avenida3 : AreaPC(3,1,3,100)
+  areaP : AreaP(100,100,100,100)
+robots
+  robot Servidor
+  variables
+    id : numero
+    flores : numero
+    av : numero
+    ca : numero
+    cant : numero
+  comenzar
+    EnviarMensaje(1,c1)
+    EnviarMensaje(2,c2)
+    EnviarMensaje(3,c3)
+    cant := 0
+    mientras cant < 3
+      RecibirMensaje(id,*)
+      si id = 1
+        RecibirMensaje(flores,c1)
+        si(flores <> 0)
+          RecibirMensaje(av,c1)
+          RecibirMensaje(ca,c1)
+          Pos(av,ca)
+          repetir flores
+            depositarFlor
+          Pos(100,100)
+          EnviarMensaje(V,c1)
+        sino
+          cant := cant + 1
+      sino
+        si id = 2
+          RecibirMensaje(flores,c2)
+          si(flores <> 0)
+            RecibirMensaje(av,c2)
+            RecibirMensaje(ca,c2)
+            Pos(av,ca)
+            repetir flores
+              depositarFlor
+            Pos(100,100)
+            EnviarMensaje(V,c2)
+          sino
+            cant := cant + 1
+        sino
+          RecibirMensaje(flores,c3)
+          si(flores <> 0)
+            RecibirMensaje(av,c3)
+            RecibirMensaje(ca,c3)
+            Pos(av,ca)
+            repetir flores
+              depositarFlor
+            Pos(100,100)
+            EnviarMensaje(V,c3)
+          sino
+            cant := cant + 1
+  fin
+  robot Cliente
+  variables
+    flores : numero
+    id : numero
+    ca : numero
+    limit : boolean
+  comenzar
+    ca := PosCa
+    RecibirMensaje(id,servidor)
+    mientras PosCa < 100
+      EnviarMensaje(id,servidor)
+      Random(flores,1,4)
+      EnviarMensaje(flores,servidor)
+      EnviarMensaje(PosAv,servidor)
+      ca := PosCa
+      EnviarMensaje(ca+1,servidor)
+      RecibirMensaje(limit,servidor)
+      mover
+      repetir flores
+        tomarFlor
+      Pos(PosAv,ca)
+      mientras(PosCa+1 < 100)&&(flores > 0)
+        flores := flores -1
+        depositarFlor
+        mover
+      si PosCa = 100
+        EnviarMensaje(id,servidor)
+        EnviarMensaje(0,servidor)
+  fin
+variables
+  c1 : Cliente
+  c2 : Cliente
+  c3 : Cliente
+  servidor : Servidor
+comenzar
+  AsignarArea(c1,avenida1)
+  AsignarArea(c2,avenida2)
+  AsignarArea(c3,avenida3)
+  AsignarArea(servidor,avenida1)
+  AsignarArea(servidor,avenida2)
+  AsignarArea(servidor,avenida3)
+  AsignarArea(servidor,areaP)
+  Iniciar(c1,1,1)
+  Iniciar(c2,2,1)
+  Iniciar(c3,3,1)
+  Iniciar(servidor,100,100)
+fin
+  
+  

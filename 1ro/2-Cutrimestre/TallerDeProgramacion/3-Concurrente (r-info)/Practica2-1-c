@@ -1,0 +1,65 @@
+programa Practica21
+areas
+  ciudad1 : AreaC (1,1,100,100)
+robots
+  robot recolector
+  variables
+    flores : numero
+    tipo : numero
+  comenzar
+    RecibirMensaje(tipo,jefe)
+    flores := 0
+    repetir 9
+      si(HayFlorEnLaEsquina)
+        tomarFlor
+        flores := flores + 1
+      mover
+    EnviarMensaje(tipo,jefe)
+    EnviarMensaje(flores,jefe)
+  fin
+  robot jefe
+  variables
+    max : numero
+    maxTipo : numero
+    num : numero
+    tipo : numero
+  comenzar
+    EnviarMensaje(1,robot1)
+    EnviarMensaje(2,robot2)
+    EnviarMensaje(3,robot3)
+    EnviarMensaje(4,robot4)
+    EnviarMensaje(5,robot5)
+    EnviarMensaje(6,robot6)
+    max := -1
+    maxTipo := 0
+    repetir 6
+      RecibirMensaje(num, *)
+      si(max < num)
+        max := num
+        RecibirMensaje(maxTipo,*)
+    Informar(max, maxTipo)
+  fin
+variables
+  robot1 : recolector
+  robot2 : recolector
+  robot3 : recolector
+  robot4 : recolector
+  robot5 : recolector
+  robot6 : recolector
+  jefe : jefe
+comenzar
+  AsignarArea(robot1, ciudad1)
+  AsignarArea(robot2, ciudad1)
+  AsignarArea(robot3, ciudad1)
+  AsignarArea(robot4, ciudad1)
+  AsignarArea(robot5, ciudad1)
+  AsignarArea(robot6, ciudad1)
+  AsignarArea(jefe, ciudad1)
+  Iniciar(robot1,1,1)
+  Iniciar(robot2,2,11)
+  Iniciar(robot3,3,21)
+  Iniciar(robot4,4,31)
+  Iniciar(robot5,5,41)
+  Iniciar(robot6,6,51)
+  Iniciar(jefe,2,1)
+fin

@@ -1,0 +1,114 @@
+programa Practica4
+procesos
+  proceso equipoRojo (ES cont : numero)
+  comenzar
+    si(HayFlorEnLaEsquina)
+      tomarFlor
+      cont:= cont+1
+  fin
+  proceso equipoAzul(ES cont : numero)
+  comenzar
+    si(HayPapelEnLaEsquina)
+      tomarPapel
+      cont:= cont + 1
+  fin
+areas
+  equipoRojo : AreaPC(2,1,3,100)
+  equipoAzul : AreaPC(1,98,100,99)
+  ciudad : AreaC(4,1,4,1)
+robots
+  robot rojo
+  variables
+    cont : numero
+    tipo : numero
+  comenzar
+    cont := 0
+    RecibirMensaje(tipo,jefe)
+    repetir 96
+      equipoRojo(cont)
+      mover
+    repetir 2
+      BloquearEsquina(PosAv,PosCa+1)
+      mover
+      equipoRojo(cont)
+    mover
+    LiberarEsquina(PosAv,PosCa-2)
+    LiberarEsquina(PosAv,PosCa-1)
+    equipoRojo(cont)
+    EnviarMensaje(tipo,jefe)
+    EnviarMensaje(cont,jefe)
+  fin
+  robot azul
+  variables
+    cont : numero
+    tipo : numero
+  comenzar
+    cont := 0
+    RecibirMensaje(tipo,jefe)
+    derecha
+    equipoAzul(cont)
+    repetir 2
+      BloquearEsquina(PosAv + 1, PosCa)
+      mover
+      equipoAzul(cont)
+    mover
+    LiberarEsquina(PosAv-2,PosCa)
+    LiberarEsquina(PosAv-1,PosCa)
+    repetir 96
+      equipoAzul(cont)
+      mover
+    EnviarMensaje(tipo,jefe)
+    EnviarMensaje(cont,jefe)
+  fin
+  robot jefe
+  variables
+    rojo1 : numero
+    rojo2 : numero
+    azul1 : numero
+    azul2 : numero
+    tipo : numero
+  comenzar
+    EnviarMensaje(1,rojo1)
+    EnviarMensaje(2,rojo2)
+    EnviarMensaje(3,azul3)
+    EnviarMensaje(4,azul4)
+    repetir 4
+      RecibirMensaje(tipo, *)
+      si(tipo = 1)
+        RecibirMensaje(rojo1,rojo1)
+      sino
+        si(tipo = 2)
+          RecibirMensaje(rojo2,rojo2)
+        sino
+          si(tipo = 3)
+            RecibirMensaje(azul1,azul3)
+          sino
+            RecibirMensaje(azul2,azul4)
+    rojo1 := rojo1 + rojo2
+    azul1 := azul1 + azul2
+    si(rojo1 < azul1)
+      Informar(2)
+    sino
+      si(rojo1>azul1)
+        Informar(1)
+      sino
+        Informar(0)
+  fin
+variables
+  rojo1 : rojo
+  rojo2 : rojo
+  azul3 : azul
+  azul4 : azul
+  jefe : jefe
+comenzar
+  AsignarArea(jefe,ciudad)
+  AsignarArea(rojo1,equipoRojo)
+  AsignarArea(rojo2,equipoRojo)
+  AsignarArea(azul3,equipoAzul)
+  AsignarArea(azul4,equipoAzul)
+  Iniciar(jefe,4,1)
+  Iniciar(rojo1,2,1)
+  Iniciar(rojo2,3,1)
+  Iniciar(azul3,1,98)
+  Iniciar(azul4,1,99)
+fin

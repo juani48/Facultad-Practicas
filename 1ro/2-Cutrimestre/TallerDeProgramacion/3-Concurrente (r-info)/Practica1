@@ -1,0 +1,34 @@
+programa juan
+areas
+  ciudad1: AreaC(1,1,100,100)
+robots
+  robot tipo1
+  variables
+    num : numero
+    floresTotales : numero
+    floresNoTotales : numero
+  comenzar
+    num := 1
+    repetir 3
+      Pos(num,1)
+      floresNoTotales := 0
+      floresTotales := 0
+      repetir 10
+        si(HayFlorEnLaEsquina)
+          tomarFlor
+          floresTotales := floresTotales + 1
+        sino
+          floresNoTotales := floresNoTotales + 1
+        mover
+      Informar(floresTotales)
+      Informar(floresNoTotales)
+      repetir floresTotales
+        depositarFlor
+      num := num + 2
+  fin
+variables
+  robot1 : tipo1
+comenzar
+  AsignarArea(robot1,ciudad1)
+  Iniciar(robot1, 1,1)
+fin

@@ -1,0 +1,104 @@
+programa practica2
+procesos
+  proceso recolectar (ES num : numero)
+  comenzar
+    si(HayFlorEnLaEsquina)
+      tomarFlor
+      num := num +1
+    sino
+      si(HayPapelEnLaEsquina)
+        tomarPapel
+        num := num+1
+  fin
+areas
+  ciudad1 : AreaC(1,1,100,100)
+robots
+ robot recolector
+ variables
+   cont : numero
+   ca : numero
+   av : numero
+   ok : boolean
+   tipo : numero
+  comenzar
+    RecibirMensaje(tipo, jefe)
+    ok := verdadero
+    mientras ok
+      si(ok)
+        RecibirMensaje(cont,jefe)
+        Random(ca,25,75)
+        Random(av,25,75)
+        Pos(av,ca)
+        recolectar(cont)
+        EnviarMensaje(cont,jefe)
+        si(tipo = 1)
+          Pos(25,1)
+        sino
+          si(tipo = 2)
+            Pos(30,1)
+          sino
+            si(tipo = 3)
+              Pos(35,1)
+            sino
+              Pos(40,1)
+  fin
+  robot jefe
+  variables
+    cont1 : numero
+    cont2 : numero
+    cont3 : numero
+    cont4 : numero
+    tipo : numero
+    max : numero
+  comenzar
+    EnviarMensaje(1,robot1)
+    EnviarMensaje(2,robot2)
+    EnviarMensaje(3,robot3)
+    EnviarMensaje(4,robot4)
+    cont1 := 0
+    cont2:= 0
+    cont3:=0
+    cont4:= 0
+    repetir 10
+      Random(tipo,1,4)
+      si(tipo = 1)
+        EnviarMensaje(cont1,robot1)
+        RecibirMensaje(cont1,robot1)
+      sino
+        si(tipo = 2)
+          EnviarMensaje(cont2,robot2)
+          RecibirMensaje(cont2,robot2)
+        sino
+          si(tipo = 3)
+            EnviarMensaje(cont3,robot3)
+            RecibirMensaje(cont3,robot3)
+          sino
+            EnviarMensaje(cont4,robot4)
+            RecibirMensaje(cont4,robot4)
+    max := cont1
+    tipo := 1
+    si(max < cont2)
+      max:= cont2
+      tipo := 2
+    si(max < cont3)
+      max := cont3
+    si(max < cont4)
+      max := cont4
+      tipo := 4
+    
+  fin
+variables
+  A1 : tipo
+  A2 : tipo
+  B1: tipo
+  B2 : tipo
+comenzar
+  AsignarArea(A1,ciudad1)
+  AsignarArea(A2,ciudad1)
+  AsignarArea(B1,ciudad1)
+  AsignarArea(B2,ciudad1)
+  Iniciar(A1,1,1)
+  Iniciar(A2,10,1)
+  Iniciar(B1,1,5)
+  Iniciar(B2,10,5)
+fin

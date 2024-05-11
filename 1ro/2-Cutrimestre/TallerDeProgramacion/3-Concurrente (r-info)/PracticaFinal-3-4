@@ -1,0 +1,72 @@
+programa practicaFinal
+areas
+  areaC : AreaC(10,10,11,11)
+  areaCoordinador : AreaP (1,1,1,1)
+  areaPC : AreaPC (9,9,9,12)
+robots
+  robot Coordinador
+  variables
+    tipoRobot : numero
+  comenzar
+    EnviarMensaje(1,robot1)
+    EnviarMensaje(2,robot2)
+    EnviarMensaje(3,robot3)
+    EnviarMensaje(4,robot4)
+    repetir 4
+      RecibirMensaje(tipoRobot,*)
+    Informar(tipoRobot)
+    Pos(11,11)
+    mientras HayFlorEnLaEsquina
+      tomarFlor
+  fin
+  robot Recolector
+  variables
+    tipo : numero
+    cond : boolean
+    PAv : numero
+    PCa : numero
+  comenzar
+    PAv := PosAv
+    PCa := PosCa
+    cond := V
+    RecibirMensaje(tipo,coordinador)
+    mientras cond
+      BloquearEsquina(10,10)
+      Pos(10,10)
+      si HayFlorEnLaEsquina
+        tomarFlor
+        BloquearEsquina(11,11)
+        Pos(11,11)
+        LiberarEsquina(10,10)
+        depositarFlor
+        Pos(PAv,PCa)
+        LiberarEsquina(11,11)
+      sino
+        EnviarMensaje(tipo,coordinador)
+        cond := F
+        Pos(PAv,PCa)
+        LiberarEsquina(10,10)
+  fin
+variables
+  robot1 : Recolector
+  robot2 : Recolector
+  robot3 : Recolector
+  robot4 : Recolector
+  coordinador : Coordinador
+comenzar
+  AsignarArea(robot1,areaC)
+  AsignarArea(robot2,areaC)
+  AsignarArea(robot3,areaC)
+  AsignarArea(robot4,areaC)
+  AsignarArea(coordinador,areaC)
+  AsignarArea(robot1,areaPC)
+  AsignarArea(robot2,areaPC)
+  AsignarArea(robot3,areaPC)
+  AsignarArea(robot4,areaPC)
+  AsignarArea(coordinador,areaCoordinador)
+  Iniciar(robot1,9,9)
+  Iniciar(robot2,9,10)
+  Iniciar(robot3,9,11)
+  Iniciar(robot4,9,12)
+  Iniciar(coordinador,1,1)
+fin

@@ -1,0 +1,98 @@
+programa practica5
+procesos
+  proceso posicionar ( E av : numero; E ca : numero; E cant : numero)
+  comenzar
+    BloquearEsquina(100,1)
+    repetir cant
+      Pos(100,1)
+      tomarPapel
+      Pos(av,ca)
+      depositarPapel
+    LiberarEsquina(100,1)
+  fin
+  proceso depositar (ES cant : numero)
+  variables
+    cant1 : numero
+  comenzar
+    BloquearEsquina(100,1)
+    Pos(100,1)
+    Random(cant1,1,5)
+    repetir cant1
+      depositarPapel
+    Pos(13,1)
+    LiberarEsquina(100,1)
+    cant := cant1
+  fin
+areas
+  areaC1 : AreaP (10,1,10,1)
+  areaC2 : AreaP (11,1,11,1)
+  areaC3 : AreaP (12,1,12,1)
+  areaS : AreaP (13,1,13,1)
+  comun : AreaC (100,1,100,1)
+robots
+  robot cliente
+  variables
+    tipo : numero
+    av : numero
+    ca : numero
+    cant : numero
+  comenzar
+    av := PosAv
+    ca := PosCa
+    RecibirMensaje(tipo,servidor)
+    repetir 4
+      EnviarMensaje(tipo,servidor)
+      RecibirMensaje(cant, servidor)
+      posicionar(av,ca,cant)
+      EnviarMensaje(V,servidor)
+    EnviarMensaje(F,servidor)
+  fin
+  robot servidor
+  variables
+    papeles : numero
+    tipo : numero
+    cant : numero
+    ok : boolean
+  comenzar
+    EnviarMensaje(1, cliente1)
+    EnviarMensaje(2, cliente2)
+    EnviarMensaje(3, cliente3)
+    mientras HayPapelEnLaEsquina
+      tomarPapel
+    ok := V
+    mientras (ok)
+      ok := F
+      RecibirMensaje(tipo,*)
+      si(tipo = 1)
+        depositar(cant)
+        EnviarMensaje(cant,cliente1)
+        RecibirMensaje(ok,cliente1)
+      sino
+        si (tipo = 2)
+          depositar(cant)
+          EnviarMensaje(cant,cliente2)
+          RecibirMensaje(ok,cliente2)
+        sino
+          depositar(cant)
+          EnviarMensaje(cant,cliente3)
+          RecibirMensaje(ok,cliente3)
+  fin
+variables
+  cliente1 : cliente
+  cliente2 : cliente
+  cliente3 : cliente
+  servidor : servidor
+comenzar
+  AsignarArea(servidor,areaS)
+  AsignarArea(cliente1,areaC1)
+  AsignarArea(cliente2,areaC2)
+  AsignarArea(cliente3,areaC3)
+  AsignarArea(cliente1,comun)
+  AsignarArea(cliente2,comun)
+  AsignarArea(cliente3,comun)
+  AsignarArea(servidor,comun)
+  Iniciar(cliente1,10,1)
+  Iniciar(cliente2,11,1)
+  Iniciar(cliente3,12,1)
+  Iniciar(servidor,13,1)
+fin

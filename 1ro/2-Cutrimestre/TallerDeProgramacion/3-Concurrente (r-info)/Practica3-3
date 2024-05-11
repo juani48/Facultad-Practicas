@@ -1,0 +1,131 @@
+programa practica3e1
+areas
+  inicio : AreaC (2,2,10,10)
+  ciudadF : AreaPC(1,1,5,1)
+robots
+  robot jefe
+  variables
+    tipo : numero
+    av : numero
+    ca : numero
+    max : numero
+    num : numero
+    tipoMax : numero
+    ok : boolean
+  comenzar
+    EnviarMensaje(1,robot1)
+    EnviarMensaje(2,robot2)
+    EnviarMensaje(3,robot3)
+    EnviarMensaje(4,robot4)
+    Random(av,2,10)
+    Random(ca,2,10)
+    EnviarMensaje(av,robot1)
+    EnviarMensaje(av,robot2)
+    EnviarMensaje(av,robot3)
+    EnviarMensaje(av,robot4)
+    EnviarMensaje(ca,robot1)
+    EnviarMensaje(ca,robot2)
+    EnviarMensaje(ca,robot3)
+    EnviarMensaje(ca,robot4)
+    ok := true
+    mientras(ok)
+      Random(tipo,1,4)
+      si(tipo = 1)
+        EnviarMensaje(ok,robot1)
+        RecibirMensaje(ok,robot1)
+      sino
+        si(tipo = 2)
+          EnviarMensaje(ok,robot2)
+          RecibirMensaje(ok,robot2)
+        sino
+          si(tipo = 3)
+            EnviarMensaje(ok,robot3)
+            RecibirMensaje(ok,robot3)
+          sino
+            EnviarMensaje(ok,robot4)
+            RecibirMensaje(ok,robot4)
+    EnviarMensaje(ok,robot1)
+    EnviarMensaje(ok,robot2)
+    EnviarMensaje(ok,robot3)
+    EnviarMensaje(ok,robot4)
+    max := -1
+    repetir 4
+      RecibirMensaje(tipo,*)
+      si(tipo = 1)
+        RecibirMensaje(num,robot1)
+        si(num < max)
+          max := num
+          tipoMax := 1
+      sino
+        si(tipo = 2)
+          RecibirMensaje(num,robot2)
+          si(num < max)
+            max:= num
+            tipoMax := 2
+        sino
+          si(tipo = 3)
+            RecibirMensaje(num,robot3)
+            si(num < max)
+              max := num
+              tipoMax := 3
+          sino
+            RecibirMensaje(num, robot4)
+            si(num < max)
+              max := num
+              tipoMax:= 4
+    Informar(tipoMax)
+  fin
+  robot recolector
+  variables
+    Pav : numero
+    Pca : numero
+    tipo : numero
+    av : numero
+    ca : numero
+    ok : boolean
+    cont : numero
+  comenzar
+    Pav := PosAv
+    Pca := PosCa
+    cont := 0
+    RecibirMensaje(tipo,jefe)
+    RecibirMensaje(av,jefe)
+    RecibirMensaje(ca,jefe)
+    RecibirMensaje(ok,jefe)
+    minetras (ok = true)
+      BloquearEsquina(av,ca)
+      Pos(av,ca)
+      si(HayFlorEnLaEsquina)
+        tomarFlor
+        cont := cont +1
+        EnviarMensaje(true,jefe)
+      sino
+        EnviarMensaje(false,jefe)
+      Pos(Pav,Pca)
+      Liberar(av,ca)
+      RecibirMensaje(ok,jefe)
+    EnviarMensaje(tipo,jefe)
+    EnviarMensaje(tipo,jefe)
+  fin
+variables
+  jefe : jefe
+  robot1 : recolector
+  robot2 : recolector 
+  robot3 : recolector
+  robot4 : recolector
+comenzar
+  AsignarArea(jefe,inicio)
+  AsignarArea(robot1,inicio)
+  AsignarArea(robot2,inicio)
+  AsignarArea(robot3,inicio)
+  AsignarArea(robot4,inicio)
+  AsignarArea(robot1,ciudadF)
+  AsignarArea(robot2,ciudadF)
+  AsignarArea(robot3,ciudadF)
+  AsignarArea(robot4,ciudadF)
+  Iniciar(jefe,1,1)
+  Iniciar(robot1,2,1)
+  Iniciar(robot2,3,1)
+  Iniciar(robot3,4,1)
+  Iniciar(robot4,5,1)
+fin

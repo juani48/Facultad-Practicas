@@ -1,0 +1,96 @@
+programa Practica4
+procesos
+  proceso juntar (ES cont : numero)
+  comenzar
+    si(HayFlorEnLaEsquina)
+      tomarFlor
+      cont:= cont+1
+  fin
+areas
+  ciudad1 : AreaP(1,1,100,1)
+  ciudad2 : AreaP(1,2,100,2)
+  ciudad3 : AreaP(1,3,100,3)
+  ciudad4 : AreaP (1,4,1,4)
+  ciudad : AreaC(50,50,50,50)
+robots
+  robot recolector
+  variables
+    cont : numero
+    av : numero
+    ca : numero
+  comenzar
+    derecha
+    cont := 0
+    repetir 9
+      repetir 10
+        juntar(cont)
+        mover
+      av := PosAv
+      ca := PosCa
+      BloquearEsquina(50,50)
+      Pos(50,50)
+      mientras (cont > 0)
+        si(HayFlorEnLaBolsa)
+          depositarFlor
+          cont := cont -1
+      Pos(av,ca)
+      LiberarEsquina(50,50)
+      EnviarMensaje(1,jefe)
+      RecibirMensaje(cont,jefe)
+    repetir 9
+      juntar(cont)
+      mover
+    av := PosAv
+    ca := PosCa
+    BloquearEsquina(50,50)
+    Pos(50,50)
+    mientras(cont > 0)
+      si(HayFlorEnLaBolsa)
+        depositarFlor
+        cont:= cont-1
+    Pos(av,ca)
+    LiberarEsquina(50,50)
+    EnviarMensaje(1,jefe)
+    RecibirMensaje(cont,jefe)
+    Informar(1)
+  fin
+  robot jefe
+  variables
+    cont : numero
+    num : numero
+  comenzar
+    cont := 0
+    repetir 10
+      repetir 3
+        RecibirMensaje(num, *)
+      BloquearEsquina(50,50)
+      Pos(50,50)
+      mientras HayFlorEnLaEsquina
+        tomarFlor
+        cont := cont +1
+      Pos(1,4)
+      LiberarEsquina(50,50)
+      EnviarMensaje(0,robot1)
+      EnviarMensaje(0,robot2)
+      EnviarMensaje(0,robot3)
+    Informar(cont)
+  fin
+variables
+  robot1 : recolector
+  robot2 : recolector
+  robot3 : recolector
+  jefe : jefe
+comenzar
+  AsignarArea(jefe,ciudad4)
+  AsignarArea(robot1,ciudad1)
+  AsignarArea(robot2,ciudad2)
+  AsignarArea(robot3,ciudad3)
+  AsignarArea(jefe,ciudad)
+  AsignarArea(robot1,ciudad)
+  AsignarArea(robot2,ciudad)
+  AsignarArea(robot3,ciudad)
+  Iniciar(jefe,1,4)
+  Iniciar(robot1,1,1)
+  Iniciar(robot2,1,2)
+  Iniciar(robot3,1,3)
+fin

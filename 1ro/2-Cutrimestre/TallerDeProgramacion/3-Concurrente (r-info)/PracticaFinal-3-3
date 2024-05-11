@@ -1,0 +1,69 @@
+programa practicaFinal
+procesos
+  proceso juntar (ES flor : numero)
+  comenzar
+    si(HayFlorEnLaEsquina)
+      tomarFlor
+      flor := flor + 1
+  fin
+  proceso ir (E av : numero; E ca : numero)
+  comenzar
+    BloquearEsquina(av,ca)
+    Pos(av,ca)
+  fin
+  proceso volver (E av : numero; E ca : numero)
+  comenzar
+    Pos(av,ca)
+    LiberarEsquina(av,ca)
+  fin
+areas
+  areaComun : AreaC(1,1,5,1)
+  areaConflicto : AreaPC(2,2,10,10)
+robots
+  robot jefe
+  variables
+    Av : numero
+    Ca : numero
+    terminar : boolean
+    max : numero
+    codMax : numero
+  comenzar
+    Random(Av,2,10)
+    Random(Ca,2,10)
+    EnviarMensaje(1,robot1)
+    EnviarMensaje(2,robot2)
+    EnviarMensaje(3,robot3)
+    EnviarMensaje(4,robot4)
+    max := 0
+    EnviarMensaje(Av,robot1)
+    EnviarMensaje(Av,robot2)
+    EnviarMensaje(Av,robot3)
+    EnviarMensaje(Av,robot4)
+    EnviarMensaje(Ca,robot1)
+    EnviarMensaje(Ca,robot2)
+    EnviarMensaje(Ca,robot3)
+    EnviarMensaje(Ca,robot4)
+    terminar := true
+    mientras(terminar)
+      Random(codMax,1,4)
+      si(codMax = 1)
+        EnviarMensaje(terminar,robot1)
+        RecibirMensaje(terminar,robot1)
+        sino
+          si(codMax = 2)
+            EnviarMensaje(terminar,robot2)
+            RecibirMensaje(terminar,robot2)
+            sino
+              si(codMax = 3)
+                EnviarMensaje(terminar,robot3)
+                RecibirMensaje(terminar,robot3)
+                sino
+                  EnviarMensaje(terminar,robot1)
+                  RecibirMensaje(terminar,robot1)
+    EnviarMensaje(terminar,robot1)
+    EnviarMensaje(terminar,robot2)
+    EnviarMensaje(terminar,robot3)
+    EnviarMensaje(terminar,robot4)
+    max := -1
+    repetir 4
+  fin

@@ -1,0 +1,97 @@
+programa PracticaFinal
+procesos
+  proceso recolectarF(ES flores : numero)
+  comenzar
+    mientras(HayFlorEnLaEsquina)
+      tomarFlor
+      flores := flores + 1
+  fin
+  proceso recolectarP(ES papeles : numero)
+  comenzar
+    mientras(HayPapelEnLaEsquina)
+      tomarPapel
+      papeles := papeles + 1
+  fin
+areas
+  areaFloreros : AreaPC(1,1,5,10)
+  areaPapeleros : AreaPC(6,1,10,9)
+  areaComun : AreaC(6,10,10,10)
+robots
+  robot Papelero
+  variables
+    intentos : numero
+    PCa : numero
+    PAv : numero
+    papeles : numero
+    CaIni : numero
+    AvIni : numero
+  comenzar
+    CaIni := PosCa
+    AvIni := PosAv
+    intentos := 3
+    papeles := 0
+    Informar(20)
+    repetir intentos
+      Random(PCa, 1,9)
+      Random(PAv,6,10)
+      BloquearEsquina(PAv,PCa)
+      Pos(PAv,PCa)
+      recolectarP(papeles)
+      Pos(AvIni,CaIni)
+      LiberarEsquina(PAv,PCa)
+    Informar(20)
+    repetir papeles
+      ir(10,10)
+      depositarPapel
+      volver(AvIni,CaIni) 
+    Informar(20)  
+  fin
+  robot Florero
+  variables
+    intentos : numero
+    PCa : numero
+    PAv : numero
+    flores : numero
+    CaIni : numero
+    AvIni : numero
+  comenzar
+    CaIni := PosCa
+    AvIni := PosAv
+    intentos := 5
+    flores := 0
+    Informar(10)
+    repetir intentos
+      Random(PCa, 1,10)
+      Random(PAv,1,5)
+      BloquearEsquina(PAv,PCa)
+      Pos(PAv,PCa)
+      recolectarF(flores)
+      Pos(AvIni,CaIni)
+      LiberarEsquina(PAv,PCa)
+
+    Informar(10)
+    repetir flores
+      ir(10,10)
+      depositarFlor
+      volver(AvIni,CaIni)    
+    Informar(10)
+  fin
+variables
+  flor1 : Florero
+  flor2 : Florero
+  papel1 : Papelero
+  papel2 : Papelero
+comenzar
+  AsignarArea(flor1,areaComun)
+  AsignarArea(flor2,areaComun)
+  AsignarArea(papel1,areaComun)
+  AsignarArea(papel2,areaComun)
+  AsignarArea(flor1,areaFloreros)
+  AsignarArea(flor2,areaFloreros)
+  AsignarArea(papel1,areaPapeleros)
+  AsignarArea(papel2,areaPapeleros)
+  Iniciar(flor1,6,10)
+  Iniciar(flor2,7,10)
+  Iniciar(papel1,8,10)
+  Iniciar(papel2,9,10)
+fin

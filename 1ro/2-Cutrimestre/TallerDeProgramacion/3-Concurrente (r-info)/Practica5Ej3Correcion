@@ -1,0 +1,93 @@
+programa practica5
+procesos
+  proceso cambiar (ES f : numero ; E ca : numero)
+  variables
+    av : numero
+  comenzar
+    av := PosAv
+    BloquearEsquina(10,10)
+    Pos(10,10)
+    depositar(f)
+    Pos(av, ca)
+    LiberarEsquina(10,10)
+    EnviarMensaje(2,jefe)
+  fin
+  proceso todo (ES f : numero)
+  comenzar
+    mientras HayFlorEnLaEsquina
+      tomarFlor
+      f := f +1
+  fin
+  proceso flores (ES f : numero)
+  comenzar
+    mientras (HayFlorEnLaEsquina)&(f < 10)
+      tomarFlor
+      f := f +1
+  fin
+  proceso depositar (ES f : numero)
+  comenzar
+    mientras (f > 0)
+      depositarFlor
+      f := f - 1
+  fin
+areas
+  calle3 : AreaP (1,3,100,3)
+  calle4 : AreaP (1,4,100,4)
+  calle5 : AreaP (1,5,1,5)
+  encuentro : AreaC (10,10,10,10)
+robots
+  robot recolector
+  variables
+    av : numero
+    ca : numero
+    flores : numero
+  comenzar
+    derecha
+    ca := PosCa
+    av := 0
+    flores := 0
+    repetir 99
+      flores(flores)
+      si (flores = 10 | av = 5)
+        cambiar(flores, ca)
+        av := 0
+      sino
+        mover
+        av := av + 1
+    mientras (HayFlorEnLaEsquina)
+      flores(flores)
+      cambiar(flores,ca)
+    EnviarMensaje(1,jefe)
+  fin
+  robot jefe
+  variables
+    flores : numero
+    ok : numero
+  comenzar
+    flores := 0
+    ok := 2
+    mientras (ok = 2)
+      repetir 2
+        RecibirMensaje(ok,*)
+      BloquearEsquina(10,10)
+      Pos(10,10)
+      todo(flores)
+      Pos(1,5)
+      LiberarEsquina(10,10)
+    Informar(flores)
+  fin
+variables
+  jefe : jefe
+  robot1 : recolector
+  robot2 : recolector
+comenzar
+  AsignarArea(jefe,calle5)
+  AsignarArea(robot1,calle3)
+  AsignarArea(robot2,calle4)
+  AsignarArea(jefe,encuentro)
+  AsignarArea(robot1,encuentro)
+  AsignarArea(robot2,encuentro)
+  Iniciar(jefe,1,5)
+  Iniciar(robot1,1,3)
+  Iniciar(robot2,1,4)
+fin

@@ -1,0 +1,92 @@
+programa practica3e1
+procesos
+  proceso flores (ES f : numero)
+  comenzar
+    mientras(HayFlorEnLaEsquina)
+      tomarFlor
+      f := f+1
+  fin
+  proceso papeles (ES p : numero)
+  comenzar
+    mientras(HayPapelEnLaEsquina)
+      tomarPapel
+      p := p+1
+  fin
+areas
+  inicio : AreaC (6,10,10,10)
+  ciudadF : AreaPC(1,1,5,10)
+  ciudadP : AreaPC(6,1,10,9)
+robots
+  robot papelero
+  variables
+    Pca : numero
+    Pav : numero
+    ca : numero
+    av : numero
+    cont :numero
+  comenzar
+    Pav := PosAv
+    Pca := PosCa
+    cont := 0
+    repetir 3
+      Random(av,6,10)
+      Random(ca,1,9)
+      BloquearEsquina(av,ca)
+      Pos(av,ca)
+      papeles(cont)
+      Pos(Pav,Pca)
+      LiberarEsquina(av,ca)
+    BloquearEsquina(10,10)
+    Pos(10,10)
+    mientras(cont <> 0)
+      depositarPapel
+      cont := cont -1
+    Pos(Pav,Pca)
+    LiberarEsquina(10,10)
+  fin
+  robot florero
+  variables
+    Pca : numero
+    Pav : numero
+    ca : numero
+    av : numero
+    cont :numero
+  comenzar
+    Pav := PosAv
+    Pca := PosCa
+    cont := 0
+    repetir 5
+      Random(av,1,5)
+      Random(ca,1,10)
+      BloquearEsquina(av,ca)
+      Pos(av,ca)
+      flores(cont)
+      Pos(Pav,Pca)
+      LiberarEsquina(av,ca)
+    BloquearEsquina(10,10)
+    Pos(10,10)
+    mientras(cont <> 0)
+      depositarFlor
+      cont := cont -1
+    Pos(Pav,Pca)
+    LiberarEsquina(10,10)
+  fin
+variables
+  florero1 : florero
+  florero2 : florero
+  papelero1 : papelero
+  papelero2 : papelero
+comenzar
+  AsignarArea(florero1,inicio)
+  AsignarArea(florero2,inicio)
+  AsignarArea(florero1 , ciudadF)
+  AsignarArea(florero2,ciudadF)
+  AsignarArea(papelero1,inicio)
+  AsignarArea(papelero2,inicio)
+  AsignarArea(papelero1,ciudadP)
+  AsignarArea(papelero2,ciudadP)
+  Iniciar(florero1,6,10)
+  Iniciar(florero2,7,10)
+  Iniciar(papelero1,8,10)
+  Iniciar(papelero2,9,10)
+fin
