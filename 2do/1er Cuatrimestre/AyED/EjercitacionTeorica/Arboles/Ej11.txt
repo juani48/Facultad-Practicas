@@ -1,0 +1,9 @@
+Obtenga la expresión prefija de la siguiente expresión postfija: A B C * D - E F / G / - *.
+
+			*
+			-
+		-		/
+	   *        D	    /        G
+	A  B  C		  E   F
+
+Expresion prefija = * - - * A B C D / / E F G

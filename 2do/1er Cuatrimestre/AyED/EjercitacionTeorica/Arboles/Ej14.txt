@@ -1,0 +1,8 @@
+En un árbol binario lleno, si hay L hojas, entonces el número total de nodos N es:
+
+a) N = 2*L
+b) N = L + 1
+c) N = L – 1
+d) N = 2*L – 1
+
+Respuesta = d)

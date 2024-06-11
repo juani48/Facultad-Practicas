@@ -1,0 +1,15 @@
+Construya el árbol de expresión correspondiente a la siguiente expresión prefija: + + a e / * - b c d f. 
+
+			+
+		   +         /
+		 a   e	  *    f
+			-   d
+		      b   c
+
+¿Cuál es la profundidad del nodo d?
+(a) 1 
+(b) 2 
+(c) 3 
+(d) 4
+
+Respuesta = (c)

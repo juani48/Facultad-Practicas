@@ -1,0 +1,3 @@
+¿Cuál es el número mínimo y máximo de nodos de un árbol general completo de altura h y grado k?
+
+(k^{h}+k-2) / (k-1) y (k^{h+1}– 1) / (k-1).

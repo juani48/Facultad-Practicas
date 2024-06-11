@@ -1,0 +1,7 @@
+¿Cuál es la cantidad mínima de nodos en un árbol general completo de grado 3 y altura 4?
+a) 40
+b) 41
+c) 121
+d) 122
+
+Respuesta = N minima = (k^{h} +k-2) / (k-1) => (3^{4}+3 -2) / (3-1) => (3^4 + 1) / 2 => / 2 => 82 / 2 => 41

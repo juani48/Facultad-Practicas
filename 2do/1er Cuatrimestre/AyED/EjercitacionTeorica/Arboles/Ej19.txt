@@ -1,0 +1,6 @@
+Un árbol general lleno de grado 4, tiene 21 nodos.
+a) ¿Cuál es la altura del árbol?
+b) Desarrolle el proceso realizado para obtener la respuesta anterior
+
+N = (k^{h+1}– 1) / (k-1) => 21 = (4^{h+1} -1) / (4-1) => 
+

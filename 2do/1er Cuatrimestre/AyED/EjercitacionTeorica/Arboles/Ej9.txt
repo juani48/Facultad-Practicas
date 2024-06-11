@@ -1,0 +1,7 @@
+Construya el árbol de expresión correspondiente a la siguiente expresión infija: ( A + ( B * C ) ) * ( D – E ).
+
+			*
+		+		-
+	   *	     A	    D       E
+        B     C
+

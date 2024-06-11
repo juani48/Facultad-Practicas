@@ -1,0 +1,10 @@
+Reconstruya el árbol binario T cuyo recorrido preorden es 2 5 3 9 7 1 6 4 8 y su recorrido inorden es 9 3 7 5 1 2 6 8 4.
+
+Por el recorrido en preorden sabemos que 2 es la raiz y por el recorrido inorden sabemos que su subarbol izq tiene 9 3 7 5 1 y su subarbol derecho tiene 6 4 8
+Por el recorrido preorden sabemos que la raiz del subarbol izq de 2 es el 5, con subarbol izq 9 3 7 y der 1 .
+Por el recorrido en preorden sabemos que la raiz del subarbol der de 2 es el 6, con subarbol izq nulo y subarbol der 8 4
+
+			2
+		    5       6
+		3      1       4
+	     9    7          8
