@@ -1,0 +1,10 @@
+Defina árbol binario completo y árbol binario lleno. Ejemplifique. ¿Es verdad que todo árbol binario completo es lleno? ¿Y viceversa?
+
+Un arboo binaria T de altura h se considera lleno cuando la raiz de T no posee hijos o cuando todos los nodos intermedios de T poseen dos hijos y los nodos terminales
+se encuntran en el nivel h.
+Un arbol binario Y de altura j se considera completo cuando es lleno en la altura j-1 y el nivel j se complta de izquierda a derecha.
+
+Solo es verdad que todo arbol binario lleno es completo, y no todo arbol binario completo es lleno. esto debido a que la misma definicion de un arbol binario completo indica
+que puede o no tener la canitdad maxima de notos detinales en su nivel h (dado un arbol con altura h) y un arbol lleno debe tener la canitdad maxima de hojas en su ultimo nivel.
+Por esta misma razon un arbol binario lleno si se lo puede considerar completo, debido a que su ultmo nivel (aun teniedo su cantidad maxima de nodos) se estaria "completando"
+de redecha a izquierda.

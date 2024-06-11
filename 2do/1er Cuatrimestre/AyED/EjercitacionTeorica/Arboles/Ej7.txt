@@ -1,0 +1,9 @@
+¿Cuál es el número mínimo de nodos en un árbol binario completo de altura 4?
+
+(a) 10 
+(b) 15 
+(c) 12 
+(d) 31 
+(e) 16
+
+N = (2^{h}-1 + 1) => 2^4 -1 + 1 = 16

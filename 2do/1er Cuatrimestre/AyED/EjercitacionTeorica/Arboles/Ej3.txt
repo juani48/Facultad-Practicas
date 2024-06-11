@@ -1,0 +1,10 @@
+Suponga que para un árbol binario T con N nodos (N>1), el último nodo en postorden es el mismo que el último nodo en inorden, ¿qué se puede concluir?
+
+(a) El subárbol izquierdo de T es vacío
+(b) El subárbol derecho de T es vacío
+(c) Ningún nodo en el árbol tiene dos hijos
+(d) Hay a lo sumo 3 nodos en el árbol
+
+La respuesta correcta es la b). En un recorrido posorden el ultimo elemento es la raiz y este tipo de reccorido primero analiza los hijos y por ultimo el padre; y en un recorrido
+inorden primero se aniliza el hijo izquierdo, luego el padre y por ultimo el hijo derecho. Si la raiz no tuviera hijo derecho el recorrido inorden analiza todo su subarbol
+izquierdo, luego analizaria al padre y terminaria la ejecucion.

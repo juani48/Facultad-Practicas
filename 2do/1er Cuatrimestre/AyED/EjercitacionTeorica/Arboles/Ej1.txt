@@ -1,0 +1,16 @@
+Recorrido postorden = A G F E B J I H C D  // recorrido inorden = A B G E F D J H I C
+¿cuántos son los descendientes del nodo “C”?
+
+Por el recorrido postorden D es raiz y por el recorrido inorden el subarbol izq de D es A B G E F y el subarbol der de D es J H I
+
+Por el recorrido postorden sabemos que del subarbol izq de D, B es la raiz y por el recorrido inorden, su sub arbol izq es A y el der G E F
+Por el recorrido postorden sabemos que del subarbol der de D, C es la raiz y por el recorrido inorden su subarbol izq es J H I.
+
+Se puede inturi que el subarbol der de B es G y F como hijos y E como raiz, al igual que en C su subarbol izq es J y I como hijos y H como raiz.
+
+						D
+				       B		C
+				   A	   E         H
+					 G    F    J   I
+
+La cantidad de descendientes del nodo C son 3.
