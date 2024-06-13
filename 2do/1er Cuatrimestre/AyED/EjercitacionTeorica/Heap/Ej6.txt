@@ -1,0 +1,59 @@
+Aplique el algoritmo BuildHeap, para construir una min-heap en tiempo lineal, con los siguientes valores: {150, 80, 40, 10, 70, 110, 30, 120, 140, 60, 50, 130, 100, 20, 90}
+
+- heap inicial = [15|150|80|40|10|70|110|30|120|140|60|50|130|100|20|90]
+
+- se toma como valor inicial tamaño_heap / 2, y se flitra hacia abajo hasta que el elemento se encuentre un
+nodo terminal. Se ira decrementando el indice hasta ya no tener nodos que ordenar.
+
+- Ordenar heap[7] => 30
+	- se compara la clave 30 con sus hijos, heap[7*2] => 20 y heap[7*2+1] => 90
+	- se intercambia con el menor de sus hijos
+	{15}[150|80|40|10|70|110|20|120|140|60|50|130|100|30|90]
+
+- Ordenar heap[6] => 110
+	- se compara la clave 110 con sus hijos, heap[6*2] => 130 y heap[6*2+1] => 100
+	- se intercambia con el menor de sus hijos
+	{15}[150|80|40|10|70|100|20|120|140|60|50|130|110|30|90]
+
+- Ordenar heap[5] => 70
+	- se compara la clave 70 con sus hijos, heap[5*2] => 60 y heap[5*2+1] => 50
+	- se intercambia con el menor de sus hijos
+	{15}[150|80|40|10|50|100|20|120|140|60|70|130|110|30|90]
+
+- Ordenar heap[4] => 10
+	- se compara la clave 10 con sus hijos, heap[4*2] => 120 y heap[4*2+1] => 140
+	- como ninguno de sus hijos tiene un clave menor, no se modifica la heap
+	{15}[150|80|40|10|50|100|20|120|140|60|70|130|110|30|90]
+
+- Ordenar heap[3] => 40
+	- se compara la clave 40 con sus hijos, heap[3*2] => 100 y heap[3*2+1] => 20
+	- se intercambia con el menor de sus hijos
+	{15}[150|80|20|10|50|100|40|120|140|60|70|130|110|30|90]
+
+	- como heap[7] no es un nodo terminal, se compara la clave 40 con sus hijos, heap[7*2] => 30 y heap[7*2+1] => 90
+	- se intercambia con el menor de sus hijos
+	{15}[150|80|20|10|50|100|30|120|140|60|70|130|110|40|90]
+
+- Ordenar heap[2] => 80
+	- se compara la clave 80 con sus hijos, heap[2*2] => 10 y heap[2*2+1] => 50
+	- se intercambia con el menor de sus hijos
+	{15}[150|10|20|80|50|100|30|120|140|60|70|130|110|40|90]
+
+	- como heap[4] no es un nodo terminal, se compara la clave 80 con sus hijos, heap[4*2] => 120 y heap[4*2+1] => 140
+	- como ninguno de sus hijos tiene un clave menor, no se modifica la heap
+	{15}[150|10|20|80|50|100|30|120|140|60|70|130|110|40|90]
+
+- Ordenar heap[1] => 150
+	- se compara la clave 150 con sus hijos, heap[1*2] => 10 y heap[1*2+1] => 20
+	- se intercambia con el menor de sus hijos
+	{15}[10|150|20|80|50|100|30|120|140|60|70|130|110|40|90]
+
+	- como heap[2] no es un nodo terminal, se compara la clave 150 con sus hijos, heap[2*2] => 80 y heap[2*2+1] => 50
+	- se intercambia con el menor de sus hijos
+	{15}[10|50|20|80|150|100|30|120|140|60|70|130|110|40|90]
+
+	- como heap[5] no es un nodo terminal, se compara la clave 150 con sus hijos, heap[5*2] => 60 y heap[5*2+1] => 70
+	- se intercambia con el menor de sus hijos
+	{15}[10|50|20|80|60|100|30|120|140|150|70|130|110|40|90]
+
+

@@ -1,0 +1,3 @@
+Dados los siguientes árboles, indique si representan una heap. Justifique su respuesta.
+El primer arbol no representa un heap porque no respeta la definicion de un arbol completo, el cual se debe completar de izquierda a derecha.
+El sgundo arbol es un max-heap ya que respeta las definiciones de un arbol competo y mantiene las propiedades de orden y estructurales.

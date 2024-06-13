@@ -1,0 +1,137 @@
+A partir de una heap inicialmente vacía, inserte de a uno los siguientes valores: 6, 4, 15, 2, 10, 11, 8, 1, 13, 7, 9, 12, 5, 3, 14.
+
+- inserto 6
+	- se incrementa en 1 la cantidad de elementos maximos.
+	[1|6]
+
+- inserto 4
+	- se incrementa en 1 la cantidad de elementos maximos.
+	[2|6| ]
+	
+	- se realiza un filtrado hacia arriba con la clave 4, se compara con su padre (pos/2 => 6) y como la calve a insertar es menor se intercambian.
+	[2|4|6]
+
+- inserto 15
+	- se incrementa en 1 la cantidad de elementos maximos.
+	[3|4|6| ]
+
+	- se relaiza un flitrado haciar arriba con la clave 15, se compara con su padre (pos/2 => 4), como la calve a insertar no es menor se inserta el 15 en pos.
+	[3|4|6|15]
+
+- inserto 2
+	- se incrementa en 1 la cantidad de elementos maximos.
+	[4|4|6|15| ]
+
+	- se relaiza un flitrado haciar arriba con la clave 2, se compara con su padre (pos/2 => 6), como la calve a insertar es menor se intercambian.
+	[4|4| |15|6]
+
+	- se relaiza un flitrado haciar arriba con la clave 2, se compara con su padre (pos/2 => 4), como la calve a insertar es menor se intercambian.
+	[4|2|4|15|6]
+
+- inserto 10
+	- se incrementa en 1 la cantidad de elementos maximos.
+	[5|2|4|15|6| ]
+	
+	- se relaiza un flitrado haciar arriba con la clave 10, se compara con su padre (pos/2 => 4), como la calve a insertar no es menor se inserta el 10 en pos.
+	[5|2|4|15|6|10]
+
+- inserto 11
+	- se incrementa en 1 la cantidad de elementos maximos.
+	[6|2|4|15|6|10| ]
+
+	- se relaiza un flitrado haciar arriba con la clave 11, se compara con su padre (pos/2 => 15), como la calve a insertar es menor se intercambian.
+	[6|2|4| |6|10|15]
+
+	- se relaiza un flitrado haciar arriba con la clave 11, se compara con su padre (pos/2 => 2), como la calve a insertar no es menor se inserta el 11 en pos.
+	[6|2|4|11|6|10|15]
+
+- inserto 8
+	- se incrementa en 1 la cantidad de elementos maximos.
+	[7|2|4|11|6|10|15| ]
+
+	- se relaiza un flitrado haciar arriba con la clave 8, se compara con su padre (pos/2 => 11), como la calve a insertar es menor se intercambian.
+	[7|2|4| |6|10|15|11]
+
+	- se relaiza un flitrado haciar arriba con la clave 8, se compara con su padre (pos/2 => 2), como la calve a insertar no es menor se inserta el 8 en pos.
+	[7|2|4|8|6|10|15|11]
+ 
+- inserto 1
+	- se incrementa en 1 la cantidad de elementos maximos.
+	[8|2|4|8|6|10|15|11| ]
+
+	- se relaiza un flitrado haciar arriba con la clave 1, se compara con su padre (pos/2 => 6), como la calve a insertar es menor se intercambian.
+	[8|2|4|8| |10|15|11|6]
+
+	- se relaiza un flitrado haciar arriba con la clave 1, se compara con su padre (pos/2 => 4), como la calve a insertar es menor se intercambian.
+	[8|2| |8|4|10|15|11|6]
+	
+	- se relaiza un flitrado haciar arriba con la clave 1, se compara con su padre (pos/2 => 2), como la calve a insertar es menor se intercambian.
+	[8|1|2|8|4|10|15|11|6]
+
+- inserto 13
+	- se incrementa en 1 la cantidad de elementos maximos.
+	[9|1|2|8|4|10|15|11|6| ]
+
+	- se relaiza un flitrado haciar arriba con la clave 13, se compara con su padre (pos/2 => 4), como la calve a insertar no es menor se inserta el 13 en pos.
+	[9|1|2|8|4|10|15|11|6|13]
+
+- inserto 7
+	- se incrementa en 1 la cantidad de elementos maximos.
+	[10|1|2|8|4|10|15|11|6|13| ]
+
+	- se relaiza un flitrado haciar arriba con la clave 7, se compara con su padre (pos/2 => 10), como la calve a insertar es menor se intercambian.
+	[10|1|2|8|4| |15|11|6|13|10]
+
+	- se relaiza un flitrado haciar arriba con la clave 7, se compara con su padre (pos/2 => 2), como la calve a insertar no es menor se inserta el 7 en pos.
+	[10|1|2|8|4|7|15|11|6|13|10]
+
+- inserto 9
+	- se incrementa en 1 la cantidad de elementos maximos.
+	[11|1|2|8|4|7|15|11|6|13|10| ]
+
+	- se relaiza un flitrado haciar arriba con la clave 9, se compara con su padre (pos/2 => 7), como la calve a insertar no es menor se inserta el 9 en pos.
+	[11|1|2|8|4|7|15|11|6|13|10|9]
+
+- inserto 12
+	- se incrementa en 1 la cantidad de elementos maximos.
+	[12|1|2|8|4|7|15|11|6|13|10|9| ]
+
+	- se relaiza un flitrado haciar arriba con la clave 12, se compara con su padre (pos/2 => 15), como la calve a insertar es menor se intercambian.
+	[12|1|2|8|4|7| |11|6|13|10|9|15]
+
+	- se relaiza un flitrado haciar arriba con la clave 12, se compara con su padre (pos/2 => 8), como la calve a insertar no es menor se inserta el 12 en pos.
+	[12|1|2|8|4|7|12|11|6|13|10|9|15]
+
+- inserto 5
+	- se incrementa en 1 la cantidad de elementos maximos.
+	[13|1|2|8|4|7|12|11|6|13|10|9|15| ]
+
+	- se relaiza un flitrado haciar arriba con la clave 5, se compara con su padre (pos/2 => 12), como la calve a insertar es menor se intercambian.
+	[13|1|2|8|4|7| |11|6|13|10|9|15|12]
+	
+	- se relaiza un flitrado haciar arriba con la clave 5, se compara con su padre (pos/2 => 8), como la calve a insertar es menor se intercambian.
+	[13|1|2| |4|7|8|11|6|13|10|9|15|12]
+
+	- se relaiza un flitrado haciar arriba con la clave 5, se compara con su padre (pos/2 => 1), como la calve a insertar no es menor se inserta el 5 en pos.
+	[13|1|2|5|4|7|8|11|6|13|10|9|15|12]
+
+- inserto 3
+	- se incrementa en 1 la cantidad de elementos maximos.
+	[14|1|2|5|4|7|8|11|6|13|10|9|15|12| ]
+
+	- se relaiza un flitrado haciar arriba con la clave 3, se compara con su padre (pos/2 => 11), como la calve a insertar es menor se intercambian.
+	[14|1|2|5|4|7|8| |6|13|10|9|15|12|11]
+
+	
+	- se relaiza un flitrado haciar arriba con la clave 3, se compara con su padre (pos/2 => 5), como la calve a insertar es menor se intercambian.
+	[14|1|2| |4|7|8|5|6|13|10|9|15|12|11]
+
+	- se relaiza un flitrado haciar arriba con la clave 3, se compara con su padre (pos/2 => 1), como la calve a insertar no es menor se inserta el 3 en pos.
+	[14|1|2|3|4|7|8|5|6|13|10|9|15|12|11]
+
+- inserto 14
+	- se incrementa en 1 la cantidad de elementos maximos.
+	[15|1|2|3|4|7|8|5|6|13|10|9|15|12|11| ]
+
+	- se relaiza un flitrado haciar arriba con la clave 14, se compara con su padre (pos/2 => 5), como la calve a insertar no es menor se inserta el 14 en pos.
+	[15|1|2|3|4|7|8|5|6|13|10|9|15|12|11|14]

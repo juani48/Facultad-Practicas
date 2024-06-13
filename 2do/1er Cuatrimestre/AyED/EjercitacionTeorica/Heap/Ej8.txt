@@ -1,0 +1,147 @@
+Construir una max-heap binaria con los siguientes datos: {5, 8, 12, 9, 7, 10, 21, 6, 14, 4}
+a) Insertándolos de a uno
+b) Usando el algoritmo BuildHeap
+
+----a)----
+
+Inserto 5
+	{1}[5]
+
+Inserto 8
+	{2}[5|8]
+	
+	- se compara la clave ingresada con su padre, heap[2/2] => 5
+	- como la clave del nodo padre es menor, se intercambian
+	{2}[8|5]
+
+Inserto 12
+	{3}[8|5|12]
+
+	- se compara la clave ingresada con su padre, heap[3/2] => 8
+	- como la clave del nodo padre es menor, se intercambian
+	{3}[12|5|8]
+
+Inserto 9
+	{4}[12|5|8|9]
+
+	- se compara la clave ingresada con su padre, heap[4/2] => 5
+	- como la clave del nodo padre es menor, se intercambian
+	{4}[12|9|8|5]
+
+	- se compara la clave ingresada con su padre, heap[2/2] => 12
+	- como la clave del nodo padre es mayor, la heap no se modifica
+
+Inserto 7
+	{5}[12|9|8|5|7]
+
+	- se compara la clave ingresada con su padre, heap[5/2] => 8
+	- como la clave del nodo padre es mayor, la heap no se modifica
+	{5}[12|9|8|5|7]
+
+Inserto 10
+	{6}[12|9|8|5|7|10]
+	
+	- se compara la clave ingresada con su padre, heap[6/2] => 8
+	- como la clave del nodo padre es menor, se intercambian
+	{6}[12|9|10|5|7|8]
+
+	- se compara la clave ingresada con su padre, heap[3/2] => 12
+	- como la clave del nodo padre es mayor, la heap no se modifica
+	{6}[12|9|10|5|7|8]
+
+Inserto 21
+	{7}[12|9|10|5|7|8|21]
+
+	- se compara la clave ingresada con su padre, heap[7/2] => 10
+	- como la clave del nodo padre es menor, se intercambian
+	{7}[12|9|21|5|7|8|10]
+
+	- se compara la clave ingresada con su padre, heap[3/2] => 12
+	- como la clave del nodo padre es menor, se intercambian
+	{7}[21|9|12|5|7|8|10]
+
+Inserto 6
+	{8}[21|9|12|5|7|8|10|6]
+	
+	- se compara la clave ingresada con su padre, heap[8/2] => 5
+	- como la clave del nodo padre es menor, se intercambian
+	{8}[21|9|12|6|7|8|10|5]
+
+	- se compara la clave ingresada con su padre, heap[4/2] => 9
+	- como la clave del nodo padre es mayor, la heap no se modifica
+	{8}[21|9|12|6|7|8|10|5]
+
+Inserto 14
+	{9}[21|9|12|6|7|8|10|5|14]
+
+	- se compara la clave ingresada con su padre, heap[9/2] => 6
+	- como la clave del nodo padre es menor, se intercambian
+	{9}[21|9|12|14|7|8|10|5|6]
+
+	- se compara la clave ingresada con su padre, heap[4/2] => 9
+	- como la clave del nodo padre es menor, se intercambian
+	{9}[21|14|12|9|7|8|10|5|6]
+
+	- se compara la clave ingresada con su padre, heap[4/2] => 9
+	- como la clave del nodo padre es mayor, la heap no se modifica
+	{9}[21|14|12|9|7|8|10|5|6]
+
+Inserto 4
+	{10}[21|14|12|9|7|8|10|5|6|4]
+
+	- se compara la clave ingresada con su padre, heap[10/2] => 7
+	- como la clave del nodo padre es mayor, la heap no se modifica
+	{10}[21|14|12|9|7|8|10|5|6|4]
+
+----b)----
+heap inicial = {10}[5|8|12|9|7|10|21|6|14|4]
+
+- se toma la mitad de la heap => tamaño_heap / 2 = 5
+- se le hace un filtrado hacia abajo, hasta que llege a un nodo teminal o sea el mas grande de sus hijos
+- se decrementa el index (5)
+
+- heap[5] => 7
+	- se compara la clave 7 con sus hijos, heap[5*2] => 4 y heap[5*2 + 1] => no existe
+	- como el contenido de los hijos no es mayor, la heap se mantiene igual
+	{10}[5|8|12|9|7|10|21|6|14|4]
+
+- se decrementa el index (4)
+- heap[4] => 9
+	- se compara la clave 9 con sus hijos, heap[4*2] => 6 y heap[4*2 + 1] => 14
+	- como el contenido de uno de los hijos es mayor, se intercambia
+	{10}[5|8|12|14|7|10|21|6|9|4]
+
+- se decrementa el index (3)
+- heap[3] => 12
+	- se compara la clave 12 con sus hijos, heap[3*2] => 10 y heap[3*2 + 1] => 21
+	- como el contenido de uno de los hijos es mayor, se intercambia
+	{10}[5|8|21|14|7|10|12|6|9|4]
+
+- se decrementa el index (2)
+- heap[2] => 8
+	- se compara la clave 8 con sus hijos, heap[2*2] => 14 y heap[2*2 + 1] => 7
+	- como el contenido de uno de los hijos es mayor, se intercambia
+	{10}[5|14|21|8|7|10|12|6|9|4]
+
+	- como heap[4] no es un nodo terminal, se compara la clave 8 con sus hijos, heap[4*2] => 6 y heap[4*2 + 1] => 9
+	- como el contenido de uno de los hijos es mayor, se intercambia
+	{10}[5|14|21|9|7|10|12|6|8|4]
+
+- se decrementa el index (1)
+- heap[1] => 5
+	- se compara la clave 5 con sus hijos, heap[1*2] => 14 y heap[1*2 + 1] => 21
+	- como el contenido de uno de los hijos es mayor, se intercambia
+	{10}[21|14|5|9|7|10|12|6|8|4]
+
+	- como heap[3] no es un nodo terminal, se compara la clave 5 con sus hijos, heap[2*2] => 10 y heap[2*2 + 1] => 12
+	- como el contenido de uno de los hijos es mayor, se intercambia
+	{10}[21|14|12|9|7|10|5|6|8|4]
+
+
+
+
+
+
+
+
+	

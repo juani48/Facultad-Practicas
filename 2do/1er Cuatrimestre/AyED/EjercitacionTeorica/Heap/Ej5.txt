@@ -1,0 +1,29 @@
+A partir de una min-heap inicialmente vacía, dibuje la evolución del estado de la heap al ejecutar las siguientes operaciones:
+-Insert(5)
+	[1|5]
+-Insert(4)
+	[2|4|5]
+-Insert(7)
+	[3|4|5|7]
+-Insert(1)
+	[4|1|4|7|5]
+-DeleteMin()
+	[3|4|7|5]
+-Insert(3)
+	[4|3|4|5|7]
+-Insert(6)
+	[5|3|4|5|7|6]
+-DeleteMin()
+	[4|4|5|7|6]
+-DeleteMin()
+	[3|5|7|6]
+Insert(8)
+	[4|5|7|6|8]
+-DeleteMin()
+	[3|7|6|8]
+-Insert(2)
+	[4|2|7|8|6]
+-DeleteMin()
+	[3|7|8|6]
+-DeleteMin()
+	[2|8|6]

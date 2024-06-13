@@ -1,0 +1,7 @@
+a) ¿Cuántos elementos hay, al menos, en una heap de altura h?
+b) ¿Dónde se encuentra ubicado el elemento mínimo en una max-heap?
+c) ¿El siguiente arreglo es una max-heap : [23, 17, 14, 6, 13, 10, 1, 5, 7, 12] ?
+
+a) hay por lo menos 2^{h} elementos
+b) entre la posicion (tamaño_heap/2) + 2 y la posicion (tamaño_heap/2) + 1
+c) verdadero
