@@ -1,0 +1,8 @@
+Aplicando el recorrido DFS al grafo dirigido de la Figura 4, cuáles son los vértices alcanzables desde el vértice 1 y en qué orden.
+
+1, 2, 5, 4 --- Arranco por el 3, 6
+
+Aplicando el recorrido BFS al grafo dirigido de la Figura 4, cuáles son los vértices alcanzablesdesde el vértice 1 y en qué orden
+
+1, 2, 4, 5 --- Arranco por el 3, 6
+

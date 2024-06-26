@@ -1,0 +1,8 @@
+El siguiente árbol, es el árbol que deriva de un recorrido BFS de un grafo dirigido G, ¿cuál de lassiguientes aristas no puede estar en G?
+
+i) (F,C)
+ii) (D,A)
+iii) (A,E)
+iv) (G,E)
+
+Respuesta: La arrista de (A,E) no puede estar en el grafo

@@ -1,0 +1,8 @@
+Aplique las versiones de ordenación topológicas vistas en clase permite obtener la ordenación topológica del DAG de la Figura 7.
+1 (usando arreglo)
+2 (usandoCola o Pila)
+3 (usando DFS)
+
+1) Arreglo de grados_ in => 1, 4, 2, 6, 3, 5, 7
+2) Pila = 1, 4, 2, 6, 3, 5, 7 => 7, 5, 3, 6, 2, 4, 1
+3) DFS con Pila = 1, 2, 5, 7, 4, 6, 3 => 3, 6, 4, 7, 5, 2 , 1 

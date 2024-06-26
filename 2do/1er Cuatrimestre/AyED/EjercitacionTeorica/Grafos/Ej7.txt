@@ -1,0 +1,8 @@
+Dado el grafo de la Figura 6, indicar cuál de las siguientes posibilidades es una ordenación
+topológica válida.
+v) e, h, g, d, f, b, a, c
+vi) e, g, f, b, a, c, d, h
+vii) Existe más de una posible ordenación topológica válida.
+viii)Ninguna de las otras respuestas es correcta.
+
+Respuesta: Existe más de una posible ordenación topológica válida.

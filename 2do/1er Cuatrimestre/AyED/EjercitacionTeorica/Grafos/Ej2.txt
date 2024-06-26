@@ -1,0 +1,8 @@
+¿Cuál de los siguientes es un recorrido BFS válido para el grafo de la figura?
+
+(a) MNOPQR
+(b) NQMPOR
+(c) QMNPRO
+(d) QMNPOR
+
+Respuesta: Los resulados corretos son c) y d)

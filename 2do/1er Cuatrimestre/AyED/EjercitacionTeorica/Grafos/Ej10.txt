@@ -1,0 +1,7 @@
+10) Dado el grafo pesado de la figura.
+a- ¿El algoritmo de Dijkstra funciona correctamente en este caso en particular, tomando como vértice origen a A?
+b- Si la respuesta es afirmativa, aplíquelo. Si la respuesta es negativa fundamente por qué no funciona el algoritmo.
+
+El algoritmo de Dijkstra no funciona correctamente, debido a que solo se puede apliar a grafos con pesos positivos.
+En este caso el grfo posee pesos positivos y negativos, por lo que la estrategia adecuada es ir encolando los vertices.
+Aun asi se puede aplicar el algoritmo de Dijkstra sort top debido a que el grafo no posee ciclos

@@ -1,0 +1,7 @@
+Dado el siguiente grafo dirigido, en el siguiente bosque abarcador del DFS realizado a partir delvértice (1): 1, 2, 4, 3, 8, 5, 7, 6, habrá:
+(a) 1 arco de cruce,
+(b) 2 arcos de cruce,
+(c) más de 2 arcos de cruce
+(d) Ninguna de las opciones
+
+Respeusata: b) dos arcos de cruce ( de (8,5) y de (7,6)

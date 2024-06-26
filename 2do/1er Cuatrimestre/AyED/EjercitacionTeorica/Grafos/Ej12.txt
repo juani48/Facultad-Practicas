@@ -1,0 +1,20 @@
+Ejecute el algoritmo de Prim en el siguiente grafo, partiendo del vértice A. 
+¿Cuál es la suma de los pesos de la primera, tercera y quinta arista seleccionadas según el algoritmo?
+(a) 9
+(b) 10
+(c) 11 
+(d) 12 
+(e) 13
+
+Nro. de iteración del algoritmo-----Vértices----Distancia (0,v)----Vért. Previo----Visitado
+
+		1			A	0			-		1
+		2			B	2			A		1
+		4			C	7			B		1
+		5			D	3			C		1
+		8			F	12/-11/-3		B-E-G		1
+		7			G	10/-9			B-C		1
+		6			H	8/-4			C-D		1
+		3			E	7/-2			A-B		1
+
+Repuesta = e)13
