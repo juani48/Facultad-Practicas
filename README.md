@@ -16,9 +16,9 @@
       * [Arboles Generales](https://github.com/juani48/Facultad-Practicas/tree/main/2do/1er%20Cuatrimestre/AyED/ArbolesGenerales-Practica3)
       * [Grafos](https://github.com/juani48/Facultad-Practicas/tree/main/2do/1er%20Cuatrimestre/AyED/Grafos-Pratica5)
       * [Ejercicios Teoricos](https://github.com/juani48/Facultad-Practicas/tree/main/2do/1er%20Cuatrimestre/AyED/EjercitacionTeorica)
-         * [Arboles](https://github.com/juani48/Facultad-Practicas/tree/main/2do/1er%20Cuatrimestre/AyED/EjercitacionTeorica/Arboles)
-         * [Heap](https://github.com/juani48/Facultad-Practicas/tree/main/2do/1er%20Cuatrimestre/AyED/EjercitacionTeorica/Heap)
-         * [Grafos](https://github.com/juani48/Facultad-Practicas/tree/main/2do/1er%20Cuatrimestre/AyED/EjercitacionTeorica/Grafos)
+         - [Arboles](https://github.com/juani48/Facultad-Practicas/tree/main/2do/1er%20Cuatrimestre/AyED/EjercitacionTeorica/Arboles)
+         - [Heap](https://github.com/juani48/Facultad-Practicas/tree/main/2do/1er%20Cuatrimestre/AyED/EjercitacionTeorica/Heap)
+         - [Grafos](https://github.com/juani48/Facultad-Practicas/tree/main/2do/1er%20Cuatrimestre/AyED/EjercitacionTeorica/Grafos)
     * [Fundamentos de Organizacion de Datos](https://github.com/juani48/Facultad-Practicas/tree/main/2do/1er%20Cuatrimestre/FOD)
     
     
