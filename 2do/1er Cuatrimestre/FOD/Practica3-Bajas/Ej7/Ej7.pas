@@ -1,5 +1,4 @@
 program ej7;
-Uses sysutils;
 type
     especie = record
       cod : integer;
