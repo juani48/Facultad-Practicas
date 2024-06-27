@@ -1,0 +1,20 @@
+## Indice
+*[Primer año](https://github.com/juani48/Facultad-Practicas/tree/main/1ro)
+  *[Primer cuatrimestre](https://github.com/juani48/Facultad-Practicas/tree/main/1ro/1-Cutrimestre)
+    *[Conceptos de Algoritmos, Datos y Programas](https://github.com/juani48/Facultad-Practicas/tree/main/1ro/1-Cutrimestre/CADP)
+  *[Segundo cuatrimestre](https://github.com/juani48/Facultad-Practicas/tree/main/1ro/2-Cutrimestre)
+    *[Taller de programacion](https://github.com/juani48/Facultad-Practicas/tree/main/1ro/2-Cutrimestre/TallerDeProgramacion)
+      *[Imperativo-Pascal](https://github.com/juani48/Facultad-Practicas/tree/main/1ro/2-Cutrimestre/TallerDeProgramacion/1-Imperativo%20(Pascal))
+      *[Objetos-Java](https://github.com/juani48/Facultad-Practicas/tree/main/1ro/2-Cutrimestre/TallerDeProgramacion/2-Objetos%20(Java))
+      *[Concurrente-R-Info](https://github.com/juani48/Facultad-Practicas/tree/main/1ro/2-Cutrimestre/TallerDeProgramacion/3-Concurrente%20(r-info))
+*[Segundo año](https://github.com/juani48/Facultad-Practicas/tree/main/2do)
+  *[Primer cuatrimestre](https://github.com/juani48/Facultad-Practicas/tree/main/2do/1er%20Cuatrimestre)
+    *[Seminario de lenguaje - .NET](https://github.com/juani48/Facultad-Practicas/tree/main/2do/1er%20Cuatrimestre)
+    *[Algoritmos y Estructuras de Datos](https://github.com/juani48/Facultad-Practicas/tree/main/2do/1er%20Cuatrimestre/AyED)
+      *[Definicion de clases](https://github.com/juani48/Facultad-Practicas/tree/main/2do/1er%20Cuatrimestre/AyED/JavaClases)
+      *[Arboles Binarios](https://github.com/juani48/Facultad-Practicas/tree/main/2do/1er%20Cuatrimestre/AyED/ArbolesBInarios-Practica2)
+      *[Arboles Generales](https://github.com/juani48/Facultad-Practicas/tree/main/2do/1er%20Cuatrimestre/AyED/ArbolesGenerales-Practica3)
+      *[Grafos](https://github.com/juani48/Facultad-Practicas/tree/main/2do/1er%20Cuatrimestre/AyED/Grafos-Pratica5)
+    *[Fundamentos de Organizacion de Datos](https://github.com/juani48/Facultad-Practicas/tree/main/2do/1er%20Cuatrimestre/FOD)
+    
+    
