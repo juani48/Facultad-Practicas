@@ -1,0 +1,7 @@
+
+1) Busque una definición de los términos monousuario, multiusuario, monotarea y multitarea en el ámbito de la informática.
+Respuesta:
+• Monousuario: Es un sistema operativo que solo puede ser ocupado por un único usuario en un determinado tiempo. Ejemplo de sistemas monousuario son las versiones domésticas.
+• Multiusuario: Sistema operativo informático que puede ser compartido por varios usuarios al mismo tiempo.
+• Monotarea: Aquel sistema operativo que solamente puede ejecutar un proceso del programa de computación a la misma vez.
+• Multitarea: Característica de los sistemas operativos modernos que permite que varios procesos o aplicaciones se ejecuten aparentemente al mismo tiempo, compartiendo uno o más procesadores.

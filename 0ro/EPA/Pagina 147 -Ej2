@@ -1,0 +1,44 @@
+programa Pag147Ej2
+procesos {dentro del proceso van las variables}
+  proceso TomarFlor (ES CantFlores : numero)
+  variables
+    contador : numero
+  comenzar
+    contador := 0
+    mientras (HayFlorEnLaEsquina)
+      tomarFlor
+      CantFlores := CantFlores + 1
+      contador := contador + 1
+    si (contador <> 0)
+      Pos(PosAv, PosCa + 1)
+      repetir contador
+        depositarFlor
+      Pos(PosAv, PosCa - 1)
+  fin
+areas 
+  ciudad: AreaC(1,1,100,100) 
+robots
+  robot robot1
+  variables
+    CantFlores : numero
+  comenzar
+    CantFlores := 0
+    derecha
+    repetir 49
+      repetir 99
+        TomarFlor (CantFlores)
+        mover
+      TomarFlor (CantFlores)
+      Pos(1, PosCa + 2)
+    repetir 99
+      TomarFlor (CantFlores)
+      mover
+    TomarFlor (CantFlores)
+    Informar (CantFlores)
+  fin
+variables 
+  R-info: robot1 
+comenzar 
+  AsignarArea(R-info,ciudad) 
+  Iniciar(R-info,1,1) 
+fin 

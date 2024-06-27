@@ -1,0 +1,16 @@
+
+1)a. ¿Cuáles son las funciones básicas de una computadora?
+
+Respuesta: Las funciones básicas de una computadora son 4:
+• Recibir información.
+• Expresar información.
+• Almacenar información.
+• Y analizar información según el programa asignado de la PC.
+
+1)b. ¿Cuál cree que es la diferencia del software que posee una máquina fotográfica moderna (con “programas”), el controlador de un lavarropas automático y una PC?
+Respuesta: La diferencia de software que se encuentra es que tanto la maquina fotográfica como el lavarropas poseen un programa estricto que rige sus funciones principales, por ejemplo el lavarropas tiene un programa en el que su función es lavar la ropa, aunque posea variedades de lavados su función principal sigue siendo la misma; en cambio una PC, al ser una maquina flexible y adaptable a la comodidad del usuario y con la posibilidad no solo de reprogramarse sino también de agregar más funciones y programas, tiene mas variedad y complejidad en software.
+
+3) Investigue los valores de los tiempos “humanos” (en palabras por minuto) al vincularse con una computadora (al teclear, oir o hablar) y de los tiempos “electrónicos” de procesamiento (en veces por segundo) para guardar 1000 palabras en memoria principal, realizar 1000 sumas u obtener 1000 hojas de papel impresas en forma completa. Verifique la rapidez de una computadora respecto al ser humano.
+Respuesta:  Los humanos con una pequeña experiencia en teclados puede alcanzar 20 ppm (Palabras Por Minuto), un digitador promedio alcanza alrededor de 30 a 45 ppm (usualmente lo mínimo requerido para posiciones laborales), mientras que los digitadores avanzados pueden llegar hasta 100 ppm.
+En cambio una computadora puede llegar a realizar por ejemplo 200 millones de operaciones por segundo.
+

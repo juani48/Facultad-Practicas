@@ -1,0 +1,8 @@
+1) ¿Cuál es la razón técnica por la cual la mayoría de las computadoras son básicamente sistemas digitales binarios?
+La razón técnica es que las computadoras al estar manejada internamente por circuitos electrónicos, solo puede poseer dos estados, tensión (1) y sin tensión (0).
+
+4) Si las computadoras están constituidas por circuitos o chips que implementan funciones lógicas por interconexión de puertas lógicas. ¿Qué utilidad o ventajas se obtendría si un usuario pudiera establecer o programar la interconexión de las puertas lógicas de un chip? Investigue si existen los supuestos circuitos con lógica programable.
+Al poder programar las puertas lógicas de un circuito o de un chip, se podría controlar la respuesta o modificar algún valor de entrada a esta, y con eso se podría controlar todo el funcionamiento básico de una computadora. 
+
+5) ¿Cuál es el funcionamiento del siguiente circuito que justifica se lo denomine como decodificador 3 a 8?
+La función de un decodificador 3 a 8, es la de ofrecer el resultado de una suma lógica entre cada una las variables posibles entre 3 dígitos, tomando en cuenta los complementos lógicos de cada una de mis 3 variables principales.

@@ -1,0 +1,4 @@
+
+1) ¿Qué son los múltiplos y submúltiplos de una unidad? ¿cuáles son y cómo se representan?
+• Los múltiplos son las unidades de medida más grandes que el metro. Son el decámetro, el hectómetro y el kilómetro.
+• Los submúltiplos son las unidades de medida más pequeñas que el metro. Son el decímetro, el centímetro y el milímetro.

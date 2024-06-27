@@ -1,0 +1,60 @@
+programa Pag147Ej1
+procesos {dentro del proceso van las variables}
+  proceso RecorrerAvenida (ES CantPapeles : numero ; ES CantFlores : numero)
+  variables
+    contador : numero
+  comenzar
+    repetir 9
+      contador := 0
+      mientras (HayPapelEnLaEsquina)
+        tomarPapel
+        CantPapeles := CantPapeles + 1
+        contador := contador + 1
+      repetir (contador)
+        depositarPapel
+      contador := 0
+      mientras (HayFlorEnLaEsquina)
+        tomarFlor
+        CantFlores := CantFlores + 1
+        contador := contador +1 
+      repetir (contador)
+        depositarFlor
+      mover
+    contador := 0
+    mientras (HayPapelEnLaEsquina)
+      tomarPapel
+      CantPapeles := CantPapeles + 1
+      contador := contador + 1
+    repetir (contador)
+      depositarPapel
+    contador := 0
+    mientras (HayFlorEnLaEsquina)
+      tomarFlor
+      CantFlores := CantFlores + 1
+      contador := contador +1 
+    repetir (contador)
+      depositarFlor
+
+  fin
+areas 
+  ciudad: AreaC(1,1,100,100) 
+robots 
+  robot robot1
+  variables {variables del programa principal}
+    CantPapeles : numero
+    CantFlores : numero
+  comenzar
+    CantPapeles := 0
+    CantFlores := 0
+    repetir 9
+      RecorrerAvenida (CantPapeles , CantFlores)
+      Pos (PosAv + 1, 1)
+    RecorrerAvenida (CantPapeles , CantFlores)
+    Informar (CantPapeles, CantFlores)
+  fin
+variables 
+  R-info: robot1 
+comenzar 
+  AsignarArea(R-info,ciudad) 
+  Iniciar(R-info,1,1) 
+fin 

@@ -1,0 +1,8 @@
+
+1) ¿Qué es una red LAN? ¿Cómo pueden comunicarse las máquinas de una red LAN? ¿Tendría alguna ventaja la comunicación inalámbrica en el caso de una red LAN?
+Respuesta: Una red LAN, es una red de computadoras que se encuentran cerca físicamente, en las que normalmente la comunicación y conexión es por cable telefónico o coaxial, fibra óptica o inalámbrica.
+La únicas ventajas que presentaría una conexión inalámbrica en una red LAN seria la velocidad de comunicación; ya que por lo general un cable coaxial logra comunicar 100 millones de bits por segundo, mientras que una fibra óptica logra alcanzar los 1000 millones de bits por segundo. A su vez una conexión inalámbrica ofrece una alta inmunidad al ruido.
+
+2) ¿Qué es una red WAN? ¿Cómo pueden comunicarse las máquinas de una red WAN? ¿Tendría alguna ventaja la comunicación satelital en el caso de una red WAN?
+Respuesta: Una red WAN es el resultado de una red de computadoras que se encuentran a grandes distancias o puede estar formado por subredes LAN. Normalmente la comunicación inter-computadoras tiende a ser más inalámbrica debido a las largas distancias que tendrías que recorres los cables, por eso se suele recurrir a comunicaciones de fibra óptica o enlaces satelitales remotos teniendo estaciones repetidoras tanto en tierra como en satélites.
+En este caso la comunicación satelital tiene a ayudar a conectar varias redes LAN y formar así una gran red WAN, un ejemplo de esto es la misma internet, la cual está conformada por redes LAN de diferentes instituciones que aceptaron conectarse a una red y un servidor central.

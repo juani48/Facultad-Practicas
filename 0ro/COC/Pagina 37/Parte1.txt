@@ -1,0 +1,63 @@
+1) Tener muchos registros en una UCP de computadora suele considerarse una ventaja. Sin embargo todos los microprocesadores tienen un número limitado de registros (por ejemplo menos de 300). ¿Ud. puede describir por qué?
+Respuesta: El hecho de tener más memoria si puede llegar a facilitar el la cantidad de bits empleados en la identificación de los datos, pero a mayor capacidad también aumenta el tiempo de acceso, y normalmente queremos que el procesador no pierda tiempo esperando instrucciones o datos, además en los registros se almacena información que suele ser crucial para el funcionamiento normal del sistema de cómputo; por ende no queremos ralentizar el tiempo de espera para la búsqueda de un dato crucial.
+
+2) En general la memoria interna o propia de una computadora es varias veces menor que la memoria externa accesible por el mismo procesador (por ejemplo 8 GB de RAM contra 1 TB de disco). ¿Puede Ud. dar la razón principal de esta característica?
+Respuesta:  En la RAM se suele guardar información no solo temporal sino también instrucciones de programas y datos, que se estén utilizando en el momento y el hecho de que sea de por ejemplo 8 GB favorece a la rápida accesibilidad de los datos; mientras que en las memorias periféricas, como los discos rígidos, contiene información que no se suele utilizar activamente en la computadora y por eso se necesita un mayor número byte.
+
+3) En algunas computadoras se duplican los buses, por ejemplo el de datos y el de direcciones. También en ocasiones se duplican (o multiplican) las unidades de cálculo aritmético-lógico. ¿Cuál es el beneficio? ¿Se aplican estas técnicas a las PCs comerciales de uso masivo?
+Respuesta: El beneficio de aumentar tanto la cantidad de buses de direcciones y de datos como también la cantidad de UALs, es que se aumenta la velocidad y el tiempo, tanto de comunicación como de transferencia de datos con los periticos o los demás componentes del sistema de cómputo; como también mejorar la velocidad de procesamiento de ejercicios aritmético-lógicos.
+Dicho cambien en la cantidad de buses y en la cantidad de UAL no se aplica a las PCs comerciales, ya que aumentaría drásticamente sus precio y serian económicamente inviables para un empresa.
+
+4) Suponga que su computadora maneja una impresora. Seguramente Ud. ha recibido mensajes del tipo “Impresora detenida o Falla en la impresora” cuando se terminó el papel en una impresión o se atascó una hoja. ¿Por qué conviene que estas señales de la impresora a la computadora viajen por una línea de control que genera una interrupción?
+Respuesta: Conviene que las interrupciones se generen para que la CPU no siga esperando en infinitos ciclos de instrucción y que no se pierda tiempo de procesado.
+5) Investigue el significado de las palabras RISC y CISC e indique las ventajas y/o desventajas de los procesadores RISC y CISC.
+
+Respuesta:
+-RISC: Es una filosofía de diseño de CPU para computadora que está a favor de conjuntos de instrucciones pequeñas y simples que toman menor tiempo para ejecutarse
+-CISC: Es un tipo de arquitectura de computadoras que promueve el uso de gran número de instrucciones, permitiendo operaciones complejas entre operandos situados en memoria o en registros internos.
+	
+RISC
+-Ventajas:
+	-Mejor rendimiento gracias al menor número de instrucciones.
+	-Requieren de menos transistores.
+	-Permiten crear procesadores con “espacio” libre para añadir otros circuitos.
+	-Menos consumo de energía y generan menos calor.
+-Desventajas:
+	-El rendimiento del procesador puede variar dependiendo del código que se ejecuta.
+	-La mayoría de software y compiladores hacen uso de instrucciones complejas.
+	- Necesitan de memorias muy rápidas.
+CISC
+-Ventajas:
+	-Para el compilador se requiere de poco esfuerzo para traducir programas.
+	-El tamaño del código es corto
+	-Requieren de menos cantidad de memoria RAM.
+	-Permiten ajustar la velocidad y el voltaje del reloj.
+	-Requiere de menos instrucciones configuradas.
+-Desventajas:
+	-Pueden requerir de varios ciclos de reloj para completar una instrucción.
+	-El rendimiento del equipo sufre un descenso debido a la velocidad del reloj.
+	-La ejecución mediante canalización es complicada.
+	-Requiere muchos más transistores.
+	-Utilizan sobre el 20% de las instrucciones existentes.
+	-Más generación de temperatura, mayor consumo y mayor requisito de espacio físico.
+
+6) En el esquema simplificado del sistema de cómputo mostrado, ¿qué función cumple la UC?
+Respuesta: La Unidad de Control (UC) controla las operaciones aritmética-lógicas de la UAL.
+
+7) Si contestó la pregunta anterior, ¿dónde obtiene la UC la información de las tareas que debe realizar?
+Respuesta: Normalmente la información está en el mismo código, sino los datos almacenados en las memorias internas o externas especifican que se debe hacer con la información adquirida.
+
+8) ¿Qué acciones se llevan a cabo en el ciclo de búsqueda del ciclo de instrucción?
+Respuesta: El ciclo de búsqueda consiste en leer la información de, por lo menos, una posición de memoria.
+
+9) ¿Qué son los registros de la CPU?
+Respuesta: Los registros de la CPU, son mínimas memorias internas, que suelen contener datos del funcionamiento normal del sistema.
+
+10) ¿Cómo sabe la UC donde encontrar la próxima instrucción a ejecutar?
+Respuesta:  La UC sabe dónde encontrar la próxima instrucción de programa porque, se lo indica el mismo programa o porque el contador de programa, ubicado en los registros, le indicia la ubicación de la próxima instrucción a ser buscada y ejecutada.
+
+11) Se mencionó que todos los dispositivos se conectan al mismo medio de comunicación compartido que es el bus, ¿Por qué cree que son necesarias las direcciones?
+Respuesta:  Las direcciones son necesarias para poder ubicar e identificar tanto los demás componente del sistema de cómputo para que la CPU se comunique, como para también encontrar una byte especifico que contiene información o instrucciones.
+
+12) Piense en las desventajas de no tener una estructura de bus ¿Qué sucedería al querer conectar al sistema de cómputo un nuevo dispositivo?
+Respuesta: Simplemente la CPU no lograría identificar al nuevo dispositivo, y si se lo lograra encontrar no hay como se genere una comunicación y un intercambio de datos.
