@@ -1,18 +1,10 @@
-## Getting Started
-
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
-
-## Folder Structure
-
-The workspace contains two folders by default, where:
-
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
-
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
-
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
-
-## Dependency Management
-
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+## Indice Grafos
+  * [Ejercicio 2](https://github.com/juani48/Facultad-Practicas/tree/main/2do/1er%20Cuatrimestre/AyED/Pratica5-Grafos/src/Ej2)
+  * [Ejercicio 3](https://github.com/juani48/Facultad-Practicas/tree/main/2do/1er%20Cuatrimestre/AyED/Pratica5-Grafos/src/Ej3)
+  * [Ejercicio 4](https://github.com/juani48/Facultad-Practicas/tree/main/2do/1er%20Cuatrimestre/AyED/Pratica5-Grafos/src/Ej4)
+  * [Ejercicio 5](https://github.com/juani48/Facultad-Practicas/tree/main/2do/1er%20Cuatrimestre/AyED/Pratica5-Grafos/src/Ej5)
+  * [Ejercicio 6](https://github.com/juani48/Facultad-Practicas/tree/main/2do/1er%20Cuatrimestre/AyED/Pratica5-Grafos/src/Ej6)
+## Extras
+Consultar [Enunciados](https://github.com/juani48/Facultad-Practicas/blob/main/2do/1er%20Cuatrimestre/AyED/Pratica5-Grafos/TP5%20-%20Grafos.pdf).
+Consultar [Clases](https://github.com/juani48/Facultad-Practicas/tree/main/2do/1er%20Cuatrimestre/AyED/Pratica5-Grafos/src/Clases).
+Consultar [Interfaces](https://github.com/juani48/Facultad-Practicas/tree/main/2do/1er%20Cuatrimestre/AyED/Pratica5-Grafos/src/Interface)
