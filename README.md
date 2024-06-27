@@ -12,9 +12,13 @@
     * [Seminario de lenguaje - .NET](https://github.com/juani48/Facultad-Practicas/tree/main/2do/1er%20Cuatrimestre)
     * [Algoritmos y Estructuras de Datos](https://github.com/juani48/Facultad-Practicas/tree/main/2do/1er%20Cuatrimestre/AyED)
       * [Definicion de clases](https://github.com/juani48/Facultad-Practicas/tree/main/2do/1er%20Cuatrimestre/AyED/JavaClases)
-      * [Arboles Binarios](https://github.com/juani48/Facultad-Practicas/tree/main/2do/1er%20Cuatrimestre/AyED/ArbolesBInarios-Practica2)
+      * [Arboles Binarios](https://github.com/juani48/Facultad-Practicas/tree/main/2do/1er%20Cuatrimestre/AyED/ArbolesBInarios-Practica2) 
       * [Arboles Generales](https://github.com/juani48/Facultad-Practicas/tree/main/2do/1er%20Cuatrimestre/AyED/ArbolesGenerales-Practica3)
       * [Grafos](https://github.com/juani48/Facultad-Practicas/tree/main/2do/1er%20Cuatrimestre/AyED/Grafos-Pratica5)
+      * [Ejercicios Teoricos](https://github.com/juani48/Facultad-Practicas/tree/main/2do/1er%20Cuatrimestre/AyED/EjercitacionTeorica)
+         * [Arboles](https://github.com/juani48/Facultad-Practicas/tree/main/2do/1er%20Cuatrimestre/AyED/EjercitacionTeorica/Arboles)
+         * [Heap](https://github.com/juani48/Facultad-Practicas/tree/main/2do/1er%20Cuatrimestre/AyED/EjercitacionTeorica/Heap)
+         * [Grafos](https://github.com/juani48/Facultad-Practicas/tree/main/2do/1er%20Cuatrimestre/AyED/EjercitacionTeorica/Grafos)
     * [Fundamentos de Organizacion de Datos](https://github.com/juani48/Facultad-Practicas/tree/main/2do/1er%20Cuatrimestre/FOD)
     
     
