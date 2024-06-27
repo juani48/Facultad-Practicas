@@ -24,4 +24,4 @@
       * [Archivos Secuenciales ordenados](https://github.com/juani48/Facultad-Practicas/tree/main/2do/1er%20Cuatrimestre/FOD/Practica2-Algor%C3%ADtmica%20Cl%C3%A1sica)
       * [Bajas en archivos secuenciales](https://github.com/juani48/Facultad-Practicas/tree/main/2do/1er%20Cuatrimestre/FOD/Practica3-Bajas)
 
->Ejercicios sujetos a errores, principalmentes las practicas de 1er año, tomalas como apoyos o guias a la hora de resolvae ractividades.
+>Ejercicios sujetos a errores, principalmentes las practicas de 1er año, tomarlas como apoyos o guias a la hora de resolver actividades.
