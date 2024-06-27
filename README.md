@@ -1,3 +1,5 @@
+# Facultad de Informaticas | UNLP
+Practicas de la carrera de Lincenciatura en Sistemas, plan de estudio [2021](https://www.info.unlp.edu.ar/licenciatura-en-sistemas-plan-2021/).
 ## Indice
 * [Primer año](https://github.com/juani48/Facultad-Practicas/tree/main/1ro)
   * [Primer cuatrimestre](https://github.com/juani48/Facultad-Practicas/tree/main/1ro/1-Cutrimestre)
@@ -22,5 +24,5 @@
     * [Fundamentos de Organizacion de Datos](https://github.com/juani48/Facultad-Practicas/tree/main/2do/1er%20Cuatrimestre/FOD)
       * [Archivos Secuenciales ordenados](https://github.com/juani48/Facultad-Practicas/tree/main/2do/1er%20Cuatrimestre/FOD/Practica2-Algor%C3%ADtmica%20Cl%C3%A1sica)
       * [Bajas en archivos secuenciales](https://github.com/juani48/Facultad-Practicas/tree/main/2do/1er%20Cuatrimestre/FOD/Practica3-Bajas)
-    
-    
+
+>Ejercicios sujetos a errores, principalmentes las practicas de 1er año, tomarlas como apoyos o guias a la hora de resolver actividades.
