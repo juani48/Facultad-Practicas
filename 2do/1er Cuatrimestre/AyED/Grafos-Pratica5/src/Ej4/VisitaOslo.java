@@ -3,41 +3,16 @@ package Ej4;
 import java.util.ArrayList;
 import java.util.List;
 
-import Clases.Queue;
 import Interface.Edge;
 import Interface.Graph;
 import Interface.Vertex;
 
 public class VisitaOslo {
 
-    private static Vertex<String> paseoEnBici(Graph<String> lugares, String objetivo, List<String> lugaresRestringidos){
-        Queue<Vertex<String>> queue = new Queue<>();
-        boolean[] visitado = new boolean[lugares.getSize()];
-        for(int i = 0; i < lugares.getSize(); i++){
-
-            if(!visitado[i]){
-                queue.enqueue(lugares.getVertex(i));
-                while(!queue.isEmpty()){
-                    Vertex<String> aux = queue.dequeue();
-                    if(!lugaresRestringidos.contains(aux.getData())){
-                        if(aux.getData() == objetivo){
-                            return aux;
-                        }
-                        visitado[aux.getPosition()] = true;
-                        for(var edge: lugares.getEdges(aux)){
-                            queue.enqueue(edge.getTarget());
-                        }
-                    }
-                }
-            }
-        }
-        return null;
-    }
-
     public static List<String> paseoEnBici(Graph<String> lugares, String inicio, String destino, int maxTiempo, List<String> lugaresRestringidos){
         List<String> list = new ArrayList<>();
         if(!lugares.isEmpty()){
-            Vertex<String> vertex = paseoEnBici(lugares, inicio, lugaresRestringidos);
+            Vertex<String> vertex = lugares.search(inicio);
             if(vertex != null){
                 List<String> camino = new ArrayList<>();
                 boolean[] visitado = new boolean[lugares.getSize()];

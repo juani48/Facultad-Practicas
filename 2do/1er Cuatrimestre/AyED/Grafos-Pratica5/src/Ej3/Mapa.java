@@ -16,38 +16,11 @@ public class Mapa {
         this.graph = graph;
     }
 
-    private Vertex<String> devolverCamino(String objetivo){
-
-        Queue<Vertex<String>> queue = new Queue<Vertex<String>>();
-        boolean[] visitado = new boolean[graph.getSize()];
-        for(int i = 0; i < graph.getSize(); i++){
-
-            if(!visitado[i]){
-                queue.enqueue(graph.getVertex(i));
-
-                while(!queue.isEmpty()){
-                    Vertex<String> aux = queue.dequeue();
-                    if(!visitado[aux.getPosition()]){
-                        visitado[aux.getPosition()] = true;
-                        if(aux.getData() == objetivo){
-                            return aux;
-                        }
-                        for(var edge : graph.getEdges(aux)){
-                            queue.enqueue(edge.getTarget());
-                        }
-                    }
-                    
-                }
-            }
-        }
-        return null;
-    }
-
     public List<String> devolverCamino (String ciudad1, String ciudad2){ //DFS
         List<String> list = new ArrayList<String>();
         if(!graph.isEmpty()){
             boolean[] visitado = new boolean[graph.getSize()];
-            Vertex<String> inicio = devolverCamino(ciudad1);
+            Vertex<String> inicio = graph.search(ciudad1);
             if(inicio != null){
                 devolverCamino(inicio, ciudad2, list, visitado);
             }
@@ -74,40 +47,11 @@ public class Mapa {
 
     //---------------------------------------------------------------
 
-    private Vertex<String> devolverCaminoExceptuando(String objetivo, List<String> ciudades){
-        Queue<Vertex<String>> queue = new Queue<>();
-        boolean[] visitado = new boolean[graph.getSize()];
-        for(int i = 0; i < graph.getSize(); i++){
-
-            if(!visitado[i]){
-
-                queue.enqueue(graph.getVertex(i));
-
-                while(!queue.isEmpty()){
-                    Vertex<String> aux = queue.dequeue();
-                    if(!visitado[aux.getPosition()]){
-                        visitado[aux.getPosition()] = true;
-                        if(!ciudades.contains(aux.getData())){
-                            if(aux.getData() == objetivo){
-                                return aux;
-                            }
-                            for(var edge : graph.getEdges(aux)){
-                                queue.enqueue(edge.getTarget());
-                            }
-                        }
-
-                    }
-                }
-            }
-        }
-        return null;
-    }
-
     public List<String> devolverCaminoExceptuando (String ciudad1, String ciudad2, List<String> ciudades){
         List<String> list = new ArrayList<>();
         if(!graph.isEmpty()){
-            Vertex<String> inicio = devolverCaminoExceptuando(ciudad1, ciudades);
-            if(inicio != null){
+            Vertex<String> inicio = graph.search(ciudad1);
+            if(inicio != null && !ciudades.contains(inicio.getData())){
                 boolean[] visitado = new boolean[graph.getSize()];
                 devolverCaminoExceptuando(inicio, ciudad2, ciudades, visitado, list);
             }
@@ -137,31 +81,10 @@ public class Mapa {
 
     //----------------------------------------------------------------------
 
-    private Vertex<String> caminoMasCorto(String objetivo){
-        Queue<Vertex<String>> queue = new Queue<>();
-        boolean[] visitado = new boolean[graph.getSize()];
-        for(int i = 0; i < graph.getSize(); i++){
-
-            if(!visitado[i]){
-                queue.enqueue(graph.getVertex(i));
-                while(!queue.isEmpty()){
-                    Vertex<String> aux = queue.dequeue();
-                    if(aux.getData() == objetivo){
-                        return aux;
-                    }
-                    for(var edge : graph.getEdges(aux)){
-                        queue.enqueue(edge.getTarget());
-                    }
-                }
-            }
-        }
-        return null;
-    }
-
     public List<String> caminoMasCorto(String ciudad1, String ciudad2){
         List<String> list = new ArrayList<>();
         if(!graph.isEmpty()){
-            Vertex<String> inicio = caminoMasCorto(ciudad1);
+            Vertex<String> inicio = graph.search(ciudad1);
             if(inicio != null){
                 boolean[] visitado = new boolean[graph.getSize()];
                 List<String> minimo = new ArrayList<>();
@@ -192,31 +115,10 @@ public class Mapa {
 
     //----------------------------------------------------------------------------------
 
-    private Vertex<String> caminoSinCargarCombustible(String objetivo){
-        Queue<Vertex<String>> queue = new Queue<>();
-        boolean[] visitado = new boolean[graph.getSize()];
-        for(int i = 0; i < graph.getSize(); i++){
-
-            if(!visitado[i]){
-                queue.enqueue(graph.getVertex(i));
-                while(!queue.isEmpty()){
-                    Vertex<String> aux = queue.dequeue();
-                    if(aux.getData() == objetivo){
-                        return aux;
-                    }
-                    for(var edge : graph.getEdges(aux)){
-                        queue.enqueue(edge.getTarget());
-                    }
-                }
-            }
-        }
-        return null;
-    }
-
     public List<String> caminoSinCargarCombustible(String ciudad1, String ciudad2, int tanqueAuto){
         List<String> list = new ArrayList<>();
         if(!graph.isEmpty()){
-            Vertex<String> inicio = caminoSinCargarCombustible(ciudad1);
+            Vertex<String> inicio = graph.search(ciudad1);
             if(inicio != null){
                 List<String> camino = new ArrayList<>();
                 boolean[] visitado = new boolean[graph.getSize()];
