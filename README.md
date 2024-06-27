@@ -1,5 +1,5 @@
 # Facultad de Informaticas | UNLP
-Practicas de la carrera de [Lincenciatura en Sistemas, plan de estudio 2021](https://www.info.unlp.edu.ar/licenciatura-en-sistemas-plan-2021/)
+Practicas de la carrera de Lincenciatura en Sistemas, plan de estudio [2021](https://www.info.unlp.edu.ar/licenciatura-en-sistemas-plan-2021/).
 ## Indice
 * [Primer año](https://github.com/juani48/Facultad-Practicas/tree/main/1ro)
   * [Primer cuatrimestre](https://github.com/juani48/Facultad-Practicas/tree/main/1ro/1-Cutrimestre)
