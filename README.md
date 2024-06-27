@@ -1,3 +1,4 @@
+# Practicas de la Facultad de Informaticas | UNLP
 ## Indice
 * [Primer año](https://github.com/juani48/Facultad-Practicas/tree/main/1ro)
   * [Primer cuatrimestre](https://github.com/juani48/Facultad-Practicas/tree/main/1ro/1-Cutrimestre)
@@ -22,5 +23,5 @@
     * [Fundamentos de Organizacion de Datos](https://github.com/juani48/Facultad-Practicas/tree/main/2do/1er%20Cuatrimestre/FOD)
       * [Archivos Secuenciales ordenados](https://github.com/juani48/Facultad-Practicas/tree/main/2do/1er%20Cuatrimestre/FOD/Practica2-Algor%C3%ADtmica%20Cl%C3%A1sica)
       * [Bajas en archivos secuenciales](https://github.com/juani48/Facultad-Practicas/tree/main/2do/1er%20Cuatrimestre/FOD/Practica3-Bajas)
-    
-    
+## Aclaraciones
+>Ejercicios sujetos a errores, principalmentes las practicas de 1er año, tomalas como apoyos o guias.
