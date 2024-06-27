@@ -1,18 +1,12 @@
-## Getting Started
+## Inidice Arboles Binarios
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+  * [Ejercicio 2](https://github.com/juani48/Facultad-Practicas/tree/main/2do/1er%20Cuatrimestre/AyED/ArbolesBInarios-Practica2/src/Ej2)
+  * [Ejercicio 3](https://github.com/juani48/Facultad-Practicas/tree/main/2do/1er%20Cuatrimestre/AyED/ArbolesBInarios-Practica2/src/Ej3)
+  * [Ejercicio 4](https://github.com/juani48/Facultad-Practicas/tree/main/2do/1er%20Cuatrimestre/AyED/ArbolesBInarios-Practica2/src/Ej4)
+  * [Ejercicio 5](https://github.com/juani48/Facultad-Practicas/tree/main/2do/1er%20Cuatrimestre/AyED/ArbolesBInarios-Practica2/src/Ej5)
+  * [Ejercicio 6](https://github.com/juani48/Facultad-Practicas/tree/main/2do/1er%20Cuatrimestre/AyED/ArbolesBInarios-Practica2/src/Ej6)
+  * [Ejercicio 7](https://github.com/juani48/Facultad-Practicas/tree/main/2do/1er%20Cuatrimestre/AyED/ArbolesBInarios-Practica2/src/Ej7)
+  * [Ejercicio 8](https://github.com/juani48/Facultad-Practicas/tree/main/2do/1er%20Cuatrimestre/AyED/ArbolesBInarios-Practica2/src/Ej8)
 
-## Folder Structure
-
-The workspace contains two folders by default, where:
-
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
-
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
-
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
-
-## Dependency Management
-
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+Consultar [Enunciados](https://github.com/juani48/Facultad-Practicas/blob/main/2do/1er%20Cuatrimestre/AyED/ArbolesBInarios-Practica2/ArbolesBInarios.pdf)
+Consultar [Clases](https://github.com/juani48/Facultad-Practicas/tree/main/2do/1er%20Cuatrimestre/AyED/ArbolesBInarios-Practica2/src/Clases)
