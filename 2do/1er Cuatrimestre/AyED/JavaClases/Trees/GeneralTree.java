@@ -1,7 +1,9 @@
-package JavaClases;
+package JavaClases.Trees;
 
 import java.util.LinkedList;
 import java.util.List;
+
+import JavaClases.Lists.Queue;
 
 public class GeneralTree<T>{
 

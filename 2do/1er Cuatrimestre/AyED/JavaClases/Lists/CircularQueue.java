@@ -1,4 +1,4 @@
-package JavaClases;
+package JavaClases.Lists;
 
 public class CircularQueue<T> extends Queue<T> {
 	private Queue<T> _dato;

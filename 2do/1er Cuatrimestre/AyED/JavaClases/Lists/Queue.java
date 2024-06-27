@@ -1,4 +1,4 @@
-package JavaClases;
+package JavaClases.Lists;
 
 import java.util.LinkedList;
 import java.util.List;

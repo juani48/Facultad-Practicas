@@ -1,6 +1,7 @@
-package JavaClases;
+package JavaClases.Trees;
 
-import JavaClases.BinaryTree;
+import JavaClases.Lists.Queue;
+import JavaClases.Trees.BinaryTree;
 
 public class BinaryTree <T> {
 	
