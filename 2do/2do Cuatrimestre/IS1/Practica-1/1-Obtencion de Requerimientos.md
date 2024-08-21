@@ -36,7 +36,7 @@
 2. _Se desea desarrollar un **sistema para gestionar y administrar la atención de pacientes en una clínica privada**[^1] **especializada en tratamientos alérgicos**[^2]. Cuando un **paciente**[^1] nuevo es ingresado a la clínica el **empleado**[^1] registra todos sus **datos personales**[^4], posteriormente un **enfermero**[^1] registra los **controles y realiza las anotaciones habituales**[^4] (temperatura, presión, peso, reacciones alérgicas etc.). Luego, el paciente es derivado con alguno de los **doctores**[^1] de la clínica, quién registra qué **tratamientos**[^4] deberá realizar. El **médico**[^1] también se encarga de registrar si el paciente debe **quedar internado y debe mantener su historia clínica**[^4] durante el período que dure el tratamiento. Se sabe que el **director**[^1] de la clínica puede consultar las **historias clínicas de todos los pacientes**[^4] 
 . **El sistema debe adecuarse a las normativas**[^3] impuestas por el ministerio de salud de la provincia de Bs As._
 
-[^1] Stakeholder: Se habla de las personas (integrantes o personal)
-[^2] Dominio-Caracterisitcas: 
-[^3] Dominio-Restricciones: 
-[^4] Fuente de infomracion: 
+[^1]: Stakeholder: Se habla de las personas (integrantes o personal)
+[^2]: Dominio-Caracterisitcas 
+[^3]: Dominio-Restricciones
+[^4]: Fuente de infomracion 
