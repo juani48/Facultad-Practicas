@@ -40,3 +40,6 @@
 [^2]: Dominio-Caracterisitcas 
 [^3]: Dominio-Restricciones
 [^4]: Fuente de infomracion 
+### 2 - Habiendo resuelto los problemas presentados, ¿por qué considera que los requerimientos de los distintos stakeholders podrían entrar en conflicto?
+Considero que los requerimientos de los distintos stakeholders entrarian en conlfico, porque cada uno de ellos posee una mirada y uso diferente del sistema.
+>Ejemplo: Un empleado solo querra ingresar los datos personales del paciente y no tener que registrar controles de tempretaura y presion.
