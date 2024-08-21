@@ -1,0 +1,10 @@
+b-¿Por qué procesarMovimientos es tan ineficiente? Tenga en cuenta que pueden existir
+millones de movimientos diarios que abarquen gran parte de las cuentas bancarias
+
+Respuesta: procesarMovimientos es inefistes al poseer una iteracion dentro de otra, para recorrer cada cuenta, 
+dentro de cada consulta. Siendo esta de orden cuadrado.
+
+c.- ¿En qué se diferencia procesarMovimientosOptimizado? Observe las operaciones que se realizan para cada consulta.
+
+Respuesta: procesarMovimientosOptimizado no posee dos iteraciones anidadas, por lo que su orden se reduce en comparacion
+con procesarMovimientos, a un orden total es lineal.

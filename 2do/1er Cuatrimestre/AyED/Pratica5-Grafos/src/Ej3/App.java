@@ -95,16 +95,16 @@ public class App {
         System.out.println(mapa.devolverCaminoExceptuando("Museo del Barco Polar", "Museo Munch",excepciones));
 
         //c
-        System.out.println("\n\ncaminoMasCorto():");
+        System.out.println("\nC():");
         System.out.println(mapa.caminoMasCorto("Fortaleza Akershus", "Holmenkollen"));
         System.out.println(mapa.caminoMasCorto("Holmenkollen", "N/A"));
         System.out.println(mapa.caminoMasCorto("Museo del Barco Polar", "Museo Munch"));
 
         //d
-        System.out.println("\n\ncaminoSinCargarCombustible():");
+        System.out.println("\nD");
         System.out.println(mapa.caminoSinCargarCombustible("Fortaleza Akershus", "Holmenkollen",91));
-        System.out.println(mapa.caminoSinCargarCombustible("Fortaleza Akershus", "Holmenkollen",90));
-        System.out.println(mapa.caminoSinCargarCombustible("Fortaleza Akershus", "Holmenkollen",86));
+        System.out.println(mapa.caminoSinCargarCombustible("Fortaleza Akershus", "Holmenkollen",88));
+        System.out.println(mapa.caminoSinCargarCombustible("Fortaleza Akershus", "Holmenkollen",70));
 
         //e
         System.out.println("\n\ncaminoSinCargarCombustible():");

@@ -6,7 +6,7 @@ import Interface.Vertex;
 
 public class App {
     public static void main(String[] args) throws Exception {
-         Graph<Persona> graph = new AdjListGraph<Persona>();
+        Graph<Persona> graph = new AdjListGraph<Persona>();
         Vertex<Persona> abuelo1 = graph.createVertex(new Persona("Abuelo1", false));
         Vertex<Persona> abuelo2 = graph.createVertex(new Persona("Abuelo2", false));
         Vertex<Persona> abuelo3 = graph.createVertex(new Persona("Abuelo3", true));

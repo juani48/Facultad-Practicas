@@ -1,6 +1,8 @@
 package Ej3;
 
+import java.nio.channels.AcceptPendingException;
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 
 import Clases.AdjListGraph;
@@ -16,6 +18,7 @@ public class Mapa {
         this.graph = graph;
     }
 
+    //A
     public List<String> devolverCamino (String ciudad1, String ciudad2){ //DFS
         List<String> list = new ArrayList<String>();
         if(!graph.isEmpty()){
@@ -45,7 +48,7 @@ public class Mapa {
         return false;
     }
 
-    //---------------------------------------------------------------
+    //---------------------b------------------------------------------
 
     public List<String> devolverCaminoExceptuando (String ciudad1, String ciudad2, List<String> ciudades){
         List<String> list = new ArrayList<>();
@@ -79,74 +82,84 @@ public class Mapa {
         return false;
     }
 
-    //----------------------------------------------------------------------
+    //-------------------------c---------------------------------------------
 
     public List<String> caminoMasCorto(String ciudad1, String ciudad2){
         List<String> list = new ArrayList<>();
         if(!graph.isEmpty()){
             Vertex<String> inicio = graph.search(ciudad1);
-            if(inicio != null){
+            if(inicio != null && graph.search(ciudad2) != null){
                 boolean[] visitado = new boolean[graph.getSize()];
-                List<String> minimo = new ArrayList<>();
-                caminoMasCorto(inicio, ciudad2, visitado, list, minimo, 0, 999);
+                Camino min = new Camino(999, list);
+                Camino actual = new Camino(0, new LinkedList<>());
+                caminoMasCorto(inicio, ciudad2, visitado, min, actual);
+                System.out.println(min.peso);
+                list = min.lugares;
             }
         }
         return list;
     }
 
-    private void caminoMasCorto(Vertex<String> vertex, String objetivo, boolean[] visitado, List<String> list, List<String> minimo, int total, int min){
+    private void caminoMasCorto(Vertex<String> vertex, String objetivo, boolean[] visitado, Camino min, Camino actual){
         visitado[vertex.getPosition()] = true;
-        minimo.add(vertex.getData());
+        actual.lugares.add(vertex.getData());
 
-        if(vertex.getData() == objetivo && total < min){
-            list.removeAll(list);
-            list.addAll(minimo);
-            min = total;
+        if(vertex.getData() == objetivo && actual.peso <= min.peso){
+            min.lugares = new LinkedList<>(actual.lugares);
+            min.peso = actual.peso;
         }
+        int peso = actual.peso;
+        List<String> lugaresL = new LinkedList<>(actual.lugares);
         for(var edge : graph.getEdges(vertex)){
-            total += edge.getWeight();
-            if(!visitado[edge.getTarget().getPosition()] && total < min){
-                caminoMasCorto(edge.getTarget(), objetivo, visitado, list, minimo, total, min);
+            actual.peso += edge.getWeight();
+            if(!visitado[edge.getTarget().getPosition()]    ){
+                caminoMasCorto(edge.getTarget(), objetivo, visitado, min, actual);
             }
+            actual.peso = peso;
+            actual.lugares = new LinkedList<>(lugaresL);
         }
-        minimo.remove(minimo.size() - 1);
         visitado[vertex.getPosition()] = false;
     }
 
-    //----------------------------------------------------------------------------------
+    //-------------------------D---------------------------------------------------------
 
     public List<String> caminoSinCargarCombustible(String ciudad1, String ciudad2, int tanqueAuto){
         List<String> list = new ArrayList<>();
         if(!graph.isEmpty()){
             Vertex<String> inicio = graph.search(ciudad1);
             if(inicio != null){
-                List<String> camino = new ArrayList<>();
                 boolean[] visitado = new boolean[graph.getSize()];
-                caminoSinCargarCombustible(inicio, ciudad2, visitado,list, camino, 999, 0, tanqueAuto);
+                Camino min = new Camino(999, new LinkedList<>());
+                Camino actual = new Camino(0, new LinkedList<>());
+                caminoSinCargarCombustible(inicio, ciudad2, visitado,min, actual, tanqueAuto);
+                list = min.lugares;
             }
         }
         return list;
     }
 
-    private void caminoSinCargarCombustible(Vertex<String> vertex, String objetivo, boolean[] visitado, List<String> list, List<String> camino, int tanqueMinimo, int tanqueUsado, int tanqueTotal){
+    private void caminoSinCargarCombustible(Vertex<String> vertex, String objetivo, boolean[] visitado, Camino min, Camino actual, int tanqueTotal){
         visitado[vertex.getPosition()] = true;
-        camino.add(vertex.getData());
-        if(vertex.getData() == objetivo && tanqueUsado < tanqueMinimo){
-            list.removeAll(list);
-            list.addAll(camino);
-            tanqueMinimo = tanqueUsado;
+        actual.lugares.add(vertex.getData());
+        if(vertex.getData() == objetivo && actual.peso < min.peso){
+            min.lugares = new LinkedList<>(actual.lugares);
+            min.peso = actual.peso;
         }
+        int peso = actual.peso;
+        List<String> lugares = new LinkedList<>(actual.lugares);
         for(var edge : graph.getEdges(vertex)){
-            int peso = tanqueUsado + edge.getWeight();
-            if(!visitado[edge.getTarget().getPosition()] && tanqueUsado <= tanqueTotal){
-                caminoSinCargarCombustible(edge.getTarget(), objetivo, visitado, list, camino, tanqueMinimo, peso, tanqueTotal);
+            actual.peso += edge.getWeight();
+            if(!visitado[edge.getTarget().getPosition()] && actual.peso <= tanqueTotal){
+                caminoSinCargarCombustible(edge.getTarget(), objetivo, visitado, min, actual, tanqueTotal);
             } 
+            actual.lugares = new LinkedList<>(lugares);
+            actual.peso = peso;
         }
-        camino.remove(camino.size() - 1);
+
         visitado[vertex.getPosition()] = false;
     }
 
-    //------------------------------------------------------------------
+    //-----------------------E-------------------------------------------
 
     private Vertex<String> caminoConMenorCargaDeCombustible(String objetivo){
         Queue<Vertex<String>> queue = new Queue<>();
