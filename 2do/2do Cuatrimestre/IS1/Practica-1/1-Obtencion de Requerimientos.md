@@ -27,3 +27,16 @@
 * Limitaciones cognitivas del desarrollador.
 * Conflictos dentro de la conducta humana. 
 * Problemas técnicos.
+
+# Parte II - Problemas:
+
+### 1 - Indicar para cada problema quiénes podrían ser los Stakeholders, los puntos de vista y las fuentes de información.
+1. _En un **sistema de registro de asistencia**[^2] a través de técnicas biométricas (huella digital) de **estudiantes universitarios**[^1] para la **cátedra de Ingeniería I**[^1]. Este sistema se alimentará de un listado[^4] otorgado por la **oficina de alumnos**[^1] de la facultad. Además, necesita la autorización del **Jefe de Trabajos Prácticos**[^1] del turno correspondiente para luego los alumnos poder **registrar el presente**[^4]. También, el **profesor a cargo de la materia**[^1] podrá consultar y listar el estado de cada alumno perteneciente a su cátedra. **El sistema sólo se utilizará en el ámbito de la facultad de Informática**[^2] y **deberá adecuarse a la reglamentación**[^3] [^4] sobre privacidad de los datos en el ámbito de la misma._
+
+2. _Se desea desarrollar un **sistema para gestionar y administrar la atención de pacientes en una clínica privada**[^1] **especializada en tratamientos alérgicos**[^2]. Cuando un **paciente**[^1] nuevo es ingresado a la clínica el **empleado**[^1] registra todos sus **datos personales**[^4], posteriormente un **enfermero**[^1] registra los **controles y realiza las anotaciones habituales**[^4] (temperatura, presión, peso, reacciones alérgicas etc.). Luego, el paciente es derivado con alguno de los **doctores**[^1] de la clínica, quién registra qué **tratamientos**[^4] deberá realizar. El **médico**[^1] también se encarga de registrar si el paciente debe **quedar internado y debe mantener su historia clínica**[^4] durante el período que dure el tratamiento. Se sabe que el **director**[^1] de la clínica puede consultar las **historias clínicas de todos los pacientes**[^4] 
+. **El sistema debe adecuarse a las normativas**[^3] impuestas por el ministerio de salud de la provincia de Bs As._
+
+[^1] Stakeholder: Se habla de las personas (integrantes o personal)
+[^2] Dominio-Caracterisitcas: 
+[^3] Dominio-Restricciones: 
+[^4] Fuente de infomracion: 
