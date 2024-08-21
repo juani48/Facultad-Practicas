@@ -14,9 +14,9 @@
 
 4) Definir las fuentes más importantes para la obtención de información.
 * Las fuentes mas importantes para la obtencion de la informaicon son 3:
-    * Documentacion.
-    * Stakeholders.
-    * Especificaciones de sistemas similares.
+  * Documentacion.
+  * Stakeholders.
+  * Especificaciones de sistemas similares.
 
 5) Indicar los puntos de vista (de manera genérica) que se pueden reconocer en un proyecto de software.
 * Interactuadores: Stakeholders que interactuan directamente con el sistema.
