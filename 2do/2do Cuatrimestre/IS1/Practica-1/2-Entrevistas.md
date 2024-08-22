@@ -63,7 +63,7 @@ _No es adecuada porque no se dirige correctamente al gerente de ventas._
 
 ### A - Explicar brevemente cómo resolvería tal situación.
 
-Le preguntaría al entrevistado, si no prefiere postergar la entrevista para otro momento e intentaría reprogramar dicha entrevista en el momento.
+Le preguntaría primero, si se siente nervioso porque está atrasado con otro trabajo que tiene que terminar. Luego, le preguntaria si no prefiere postergar la entrevista para otro momento e intentaría reprogramar dicha entrevista en el momento. Luego consultaria con la persona a cargo de mi entrevistado si verdaderamente habia algun trabajon que mi entrevistado debeira realziar lo mas rapido posible. Finalmente, anotaria todo tipo de anormalidad.
 
 ### B - Qué opciones propone para el caso en que la entrevista no pueda reprogramarse.
 
