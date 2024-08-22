@@ -92,7 +92,7 @@ Casi todo el informe contiene información irrelevante.
 
 ### Preparar una entrevista para obtener los requerimientos del siguiente problema:
 
-### Se desea desarrollar un sistema que permita compartir un vehículo para un viaje. La idea es que cuando una persona tiene que realizar un viaje lo publique en la aplicación. Luego el resto de los usuarios se postulan para acompañarla y el chofer podrá seleccionar quienes viajan. El objetivo es abaratar costos y evitar congestiones en el tránsito._
+### Se desea desarrollar un sistema que permita compartir un vehículo para un viaje. La idea es que cuando una persona tiene que realizar un viaje lo publique en la aplicación. Luego el resto de los usuarios se postulan para acompañarla y el chofer podrá seleccionar quienes viajan. El objetivo es abaratar costos y evitar congestiones en el tránsito.
 
 1. Presentarme.
 2. Preguntas respecto al usuario que inicia el viaje: 
