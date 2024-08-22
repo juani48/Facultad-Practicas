@@ -33,7 +33,9 @@ Se podría considerar que en el ejemplo de formato de entrevista, se realiza una
 
 ## Situación 1
 
-Tiene una entrevista con el gerente de ventas de una empresa el cual desea informatizar dicho sector pero no tuvo tiempo de preparar las preguntas por lo que le pidió a un nuevo empleado que le prepare algunas. Cuando las lee, se da cuenta que son inadecuadas. Leer las preguntas y volver a redactarlas de una manera más apropiada. Especificar por qué le parece inadecuada cada una de ellas.
+Tiene una entrevista con el gerente de ventas de una empresa el cual desea informatizar dicho sector pero no tuvo tiempo de preparar las preguntas por lo que le pidió a un nuevo empleado que le prepare algunas. Cuando las lee, se da cuenta que son inadecuadas. 
+
+Leer las preguntas y volver a redactarlas de una manera más apropiada. Especificar por qué le parece inadecuada cada una de ellas.
 
 ### A - Sus subordinados me dijeron que la empresa no anda bien. ¿Es cierto?
 
