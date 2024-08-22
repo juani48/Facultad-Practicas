@@ -33,7 +33,7 @@ Se podría considerar que en el ejemplo de formato de entrevista, se realiza una
 
 ## Situación 1
 
-Tiene una entrevista con el gerente de ventas de una empresa el cual desea informatizar dicho sector pero no tuvo tiempo de preparar las preguntas por lo que le pidió a un nuevo empleado que le prepare algunas. Cuando las lee, se da cuenta que son inadecuadas. 
+### Tiene una entrevista con el gerente de ventas de una empresa el cual desea informatizar dicho sector pero no tuvo tiempo de preparar las preguntas por lo que le pidió a un nuevo empleado que le prepare algunas. Cuando las lee, se da cuenta que son inadecuadas. 
 
 Leer las preguntas y volver a redactarlas de una manera más apropiada. Especificar por qué le parece inadecuada cada una de ellas.
 
@@ -59,7 +59,7 @@ _No es adecuada porque no se dirige correctamente al gerente de ventas._
 
 ## Situación 2
 
-Apenas ha entrado a la oficina de su entrevistado se da cuenta que él no ha dejado de revisar papeles, mirar el reloj y hacer llamadas telefónicas. Usted supone que se siente nervioso porque está atrasado con otro trabajo que tiene que terminar.
+### Apenas ha entrado a la oficina de su entrevistado se da cuenta que él no ha dejado de revisar papeles, mirar el reloj y hacer llamadas telefónicas. Usted supone que se siente nervioso porque está atrasado con otro trabajo que tiene que terminar.
 
 ### A - Explicar brevemente cómo resolvería tal situación.
 
@@ -71,7 +71,7 @@ O realizar algún tipo de video llamada; o le dejaría un formulario con las pre
 
 ## Situación 3
 
-El siguiente es el primer informe de una entrevista realizada por uno de los miembros de su equipo de análisis de sistemas: “En mi opinión, el resultado de la entrevista fue muy bueno. El entrevistado me permitió hablar con él durante una hora y media. Me relató toda la historia del negocio, que fue muy interesante. También mencionó que las cosas no han cambiado desde que él ha estado en la empresa, hace aproximadamente 16 años. En breve nos reuniremos nuevamente para terminar la entrevista, pues, no tuvimos tiempo para analizar las preguntas que preparé “.
+### El siguiente es el primer informe de una entrevista realizada por uno de los miembros de su equipo de análisis de sistemas: “En mi opinión, el resultado de la entrevista fue muy bueno. El entrevistado me permitió hablar con él durante una hora y media. Me relató toda la historia del negocio, que fue muy interesante. También mencionó que las cosas no han cambiado desde que él ha estado en la empresa, hace aproximadamente 16 años. En breve nos reuniremos nuevamente para terminar la entrevista, pues, no tuvimos tiempo para analizar las preguntas que preparé “.
 
 ### A - Leer atentamente el informe de la entrevista y explicar qué sensación le deja dicho informe.
 
@@ -92,7 +92,7 @@ Casi todo el informe contiene información irrelevante.
 
 ### Preparar una entrevista para obtener los requerimientos del siguiente problema:
 
-_Se desea desarrollar un sistema que permita compartir un vehículo para un viaje. La idea es que cuando una persona tiene que realizar un viaje lo publique en la aplicación. Luego el resto de los usuarios se postulan para acompañarla y el chofer podrá seleccionar quienes viajan. El objetivo es abaratar costos y evitar congestiones en el tránsito._
+### Se desea desarrollar un sistema que permita compartir un vehículo para un viaje. La idea es que cuando una persona tiene que realizar un viaje lo publique en la aplicación. Luego el resto de los usuarios se postulan para acompañarla y el chofer podrá seleccionar quienes viajan. El objetivo es abaratar costos y evitar congestiones en el tránsito._
 
 1. Presentarme.
 2. Preguntas respecto al usuario que inicia el viaje: 
