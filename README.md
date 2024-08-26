@@ -27,7 +27,7 @@ Practicas de la carrera de Lincenciatura en Sistemas, plan de estudio [2021](htt
       * [Arboles B](https://github.com/juani48/Facultad-Practicas/tree/main/2do/1er%20Cuatrimestre/FOD/Practica4-Arboles)
       * [Hashing](https://github.com/juani48/Facultad-Practicas/tree/main/2do/1er%20Cuatrimestre/FOD/Practica5-Hashing)
   * [Segundo cuatrimestre]([https://github.com/juani48/Facultad-Practicas/tree/main/2do](https://github.com/juani48/Facultad-Practicas/tree/main/2do/2do%20Cuatrimestre))
-    * [Diseño de Bases de Datos]
+    * [Diseño de Bases de Datos](https://github.com/juani48/Facultad-Practicas/tree/main/2do/2do%20Cuatrimestre/DBD)
     * [Ingeniería de Software 1](https://github.com/juani48/Facultad-Practicas/tree/main/2do/2do%20Cuatrimestre/IS1)
       * [Técnicas de Elicitación de Requerimientos](https://github.com/juani48/Facultad-Practicas/tree/main/2do/2do%20Cuatrimestre/IS1/Practica-1)
     * [Orientación a Objetos 1]
