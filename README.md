@@ -18,7 +18,9 @@ Practicas de la carrera de Lincenciatura en Sistemas, plan de estudio [2021](htt
 * [Segundo año](https://github.com/juani48/Facultad-Practicas/tree/main/2do)
 * 
   * [Primer cuatrimestre](https://github.com/juani48/Facultad-Practicas/tree/main/2do/1er%20Cuatrimestre)
+    
     * [Seminario de lenguaje - .NET](https://github.com/juani48/Facultad-Practicas/tree/main/2do/1er%20Cuatrimestre)
+      
     * [Algoritmos y Estructuras de Datos](https://github.com/juani48/Facultad-Practicas/tree/main/2do/1er%20Cuatrimestre/AyED)
       * [Definicion de clases](https://github.com/juani48/Facultad-Practicas/tree/main/2do/1er%20Cuatrimestre/AyED/JavaClases)
       * [Arboles Binarios](https://github.com/juani48/Facultad-Practicas/tree/main/2do/1er%20Cuatrimestre/AyED/Practica2-ArbolesBInarios) 
@@ -28,6 +30,7 @@ Practicas de la carrera de Lincenciatura en Sistemas, plan de estudio [2021](htt
          - [Arboles](https://github.com/juani48/Facultad-Practicas/tree/main/2do/1er%20Cuatrimestre/AyED/EjercitacionTeorica/1-Arboles)
          - [Heap](https://github.com/juani48/Facultad-Practicas/tree/main/2do/1er%20Cuatrimestre/AyED/EjercitacionTeorica/2-Heap)
          - [Grafos](https://github.com/juani48/Facultad-Practicas/tree/main/2do/1er%20Cuatrimestre/AyED/EjercitacionTeorica/3-Grafos)
+           
     * [Fundamentos de Organizacion de Datos](https://github.com/juani48/Facultad-Practicas/tree/main/2do/1er%20Cuatrimestre/FOD)
       * [Archivos Secuenciales ordenados](https://github.com/juani48/Facultad-Practicas/tree/main/2do/1er%20Cuatrimestre/FOD/Practica2-Algor%C3%ADtmica%20Cl%C3%A1sica)
       * [Bajas en archivos secuenciales](https://github.com/juani48/Facultad-Practicas/tree/main/2do/1er%20Cuatrimestre/FOD/Practica3-Bajas)
@@ -35,9 +38,13 @@ Practicas de la carrera de Lincenciatura en Sistemas, plan de estudio [2021](htt
       * [Hashing](https://github.com/juani48/Facultad-Practicas/tree/main/2do/1er%20Cuatrimestre/FOD/Practica5-Hashing)
 
   * [Segundo cuatrimestre]([https://github.com/juani48/Facultad-Practicas/tree/main/2do](https://github.com/juani48/Facultad-Practicas/tree/main/2do/2do%20Cuatrimestre))
+    
     * [Diseño de Bases de Datos](https://github.com/juani48/Facultad-Practicas/tree/main/2do/2do%20Cuatrimestre/DBD)
+      
     * [Ingeniería de Software 1](https://github.com/juani48/Facultad-Practicas/tree/main/2do/2do%20Cuatrimestre/IS1)
       * [Técnicas de Elicitación de Requerimientos](https://github.com/juani48/Facultad-Practicas/tree/main/2do/2do%20Cuatrimestre/IS1/Practica-1)
+      * [Historia de Usuario](https://github.com/juani48/Facultad-Practicas/tree/main/2do/2do%20Cuatrimestre/IS1/Practica-2)
+        
     * [Orientación a Objetos 1]
     * [Introducción a los Sistemas Operativos](https://github.com/juani48/Facultad-Practicas/tree/main/2do/2do%20Cuatrimestre/ISO)
 
