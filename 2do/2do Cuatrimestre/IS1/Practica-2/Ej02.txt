@@ -1,0 +1,117 @@
+## ID: Iniciar Sesión.
+### TITULO: Como empleado administrativo o alumno, quiero ingresar al sistema, para cargar o inscribirme a posgrados.
+Reglas de Negocios: ---
+
+## Criterios de Aceptación (Iniciar Sesión)
+{
+### Escenario 1: Autentificación exitosa.
+Dado: Que existe un registro con el nombre de usuario ‘ABC’ y la contraseña ‘D1234’.
+Cuando: El usuario ingrese el nombre de usuario ‘ABC’ y la contraseña ‘D1234’ y presione “Iniciar Sesión”.
+Entonces: El sistema redirige al usuario listado de posgrados.
+
+### Escenario 2: Autentificación fallida por nombre de usuario erróneo.
+Dado: Que existe un registro con el nombre de usuario ‘ABC’ y la contraseña ‘D1234’.
+Cuando: El usuario ingrese el nombre de usuario ‘CBA y la contraseña ‘D1234’ y presione “Iniciar Sesión”.
+Entonces: El sistema informara “Autentificación fallida, el nombre de usuario es incorrecto”.
+
+### Escenario 3: Autentificación fallida por contraseña errona.
+Dado: Que existe un registro con el nombre de usuario ‘ABC’ y la contraseña ‘D1234’.
+Cuando: El usuario ingrese el nombre de usuario ‘ABC’ y la contraseña ‘4321D y presione “Iniciar Sesión”.
+Entonces: El sistema informara “Autentificación fallida, la contraseña es incorrecto”.
+}
+
+-------------------------------------------------------------------------------------------------------------
+
+## ID: Registrar Sesión.
+### TITULO: Como empleado administrativo o alumno, quiero registrarme en el sistema, para cargar o inscribirme a posgrados.
+Reglas de negocios: El nombre de usuario es único. La contraseña debe poseer, como mínimo 6 caracteres.
+
+## Criterios de Aceptación (Registrar Sesión).
+{
+Escenario 1: Registro exitoso.
+Dado: Que no existe un registro del nombre del usuario ‘ABC’ y la contraseña ‘D12345’.
+Cuando: El usuario ingrese el nombre de usuario ‘ABC’ y la contraseña ‘D12345’ y presione “Registrase”.
+Entonces: El sistema registra al usuario y lo redirige al listado de posgrados.
+
+### Escenario 2: Registro fallido por nombre de usuario duplicado.
+Dado: Que ya existe un registro del nombre de usuario ‘CBA’ pero no de la contraseña ‘D12345’.
+Cuando: El usuario ingrese el nombre de usuario ‘CBA’  y la contraseña ‘D12345’ y presione “Registrar”.
+Entonces: El sistema informara “Falla al registrar al usuario, el nombre de usuario ya existe”. 
+
+### Escenario 3: Registro fallido por contraseña incorrecta.
+Dado: Que no existe un registro del nombre del usuario ‘ABC’ y la contraseña ‘D12345’.
+Cuando: El usuario ingrese el nombre de usuario ‘ABC  y la contraseña ‘1234’ y presione “Registrar”.
+Entonces: El sistema informara “Falla al registrar al usuario, la contraseña tiene menos de 6 caracteres”. 
+}
+
+-------------------------------------------------------------------------------------------------------------
+
+## ID: Cargar Posgrados.
+### TITULO: Como empleado administrativo, quiero cargar los posgrados, para que los alumnos se inscriban.
+Reglas de Negocios: El nombre del posgrado no puede repetirse. El posgrado no puede durar más de 5 años.
+
+## Criterios de Aceptación (Cargar Posgrados)
+{
+Escenario 1: Carga exitosa.
+Dado: Que el nombre del posgrado ‘ABC’ no se encuentra repetido y que su duración es de 4 años.
+Cuando: El empleado administrativo ingrese el nombre del posgrado ‘ABC’ y su duración en 4 años y presione “Cargar posgrado”.
+Entonces: El sistema informara “Carga exitosa”.
+
+Escenario 2: Carga fallida por nombre repetido.
+Dado: Que el nombre del posgrado ‘CBA’ se encuentra repetido y que su duración es de 4 años.
+Cuando: El empleado administrativo ingrese el nombre del posgrado ‘CBA’ y su duración en 4 años y presione “Cargar posgrado”.
+Entonces: El sistema informara “Carga  fallida, el nombre del posgrado se repite”.
+
+Escenario 3: Carga fallida por límite de duración excedida.
+Dado: Que el nombre del posgrado ‘ABC’ no se encuentra repetido y que su duración es de 6 años.
+Cuando: El empleado administrativo ingrese el nombre del posgrado ‘ABC’ y su duración en 6 años y presione “Cargar posgrado”.
+Entonces: El sistema informara “Carga  fallida, el posgrado excede la duración máxima”.
+}
+
+-------------------------------------------------------------------------------------------------------------
+
+## ID: Inscripción a Posgrados.
+### TITULO: Como alumno, quiero inscribirme a los posgrados, para poder cursarlos.
+Reglas de Negocios: El alumno debe pagar con tarjeta la inscripción.
+
+## Criterios de Aceptación (Inscripción a Posgrados)
+{
+Escenario 1: Inscripción exitosa.
+Dado: Que las condiciones son adecuadas para un pago exitoso.
+Cuando: El alumno ingrese selecciones el posgrado ‘ABC’ y presione “Inscribir”. 
+Entonces: El sistema redirige al alumno al pago de la inscripción, espera respuesta e inscribe al alumno y devuelve los comprobantes de pago e inscripción.
+
+Escenario 2: Inscripción fallida por error de pago.
+Dado: Que las condiciones son adecuadas para un pago exitoso.
+Cuando: El alumno ingrese selecciones el posgrado ‘ABC’ y presione “Inscribir”. 
+Entonces: El sistema redirige al alumno al pago de la inscripción, espera respuesta e informa “Inscripción fallida, error al pagar la inscripción”.
+}
+
+-------------------------------------------------------------------------------------------------------------
+
+## ID: Pagar con Tarjeta.
+### TITUTLO: Como alumno, quiero pagar la inscripción, para tener mis comprobantes de inscripción y pago.
+Reglas de Negocios: Solo se aceptan números de tarjetas de crédito. La tarjeta debe tener fondos.
+
+## Criterios de Aceptación (Pagar con Tarjeta)
+{
+Escenario 1: Pago exitoso.
+Dado: Que la conexión con el servidor del banco es exitosa, que le numero ‘1234’ corresponde a una tarjeta de crédito y la tarjeta tiene saldo.
+Cuando: El alumno ingrese el código de tarjeta ‘1234’ y presione “Pagar inscripción”.
+Entonces: El sistema registra el pago y retorna un resultado exitoso.
+
+Escenario 2: Pago fallido por código de tarjeta inexistente.
+Dado: Que la conexión con el servidor del banco es exitosa, que le numero ‘4321’ no corresponde a una tarjeta de crédito y la tarjeta tiene saldo.
+Cuando: El alumno ingrese el código de tarjeta ‘4321’ y presione “Pagar inscripción”.
+Entonces: El sistema retorna error por número de tarjeta inexistente.
+
+Escenario 3: Pago fallido por saldo insuficiente.
+Dado: Que la conexión con el servidor del banco es exitosa, que le numero ‘1234’ corresponde a una tarjeta de crédito y la tarjeta no tiene saldo.
+Cuando: El alumno ingrese el código de tarjeta ‘1234’ y presione “Pagar inscripción”.
+Entonces: El sistema retorna error por saldo insuficiente.
+
+Escenario 4: Pago fallido por error de conexión.
+Dado: Que la conexión con el servidor del banco no es exitosa.
+Cuando: El alumno ingrese el código de tarjeta ‘1234’ y presione “Pagar inscripción”.
+Entonces: El sistema retorna error por conexión fallida.
+}
