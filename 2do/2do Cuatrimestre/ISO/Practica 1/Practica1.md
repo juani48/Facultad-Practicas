@@ -89,7 +89,7 @@ Puedes tener varios instalados en Linux y eliges uno de ellos cada vez que inici
 
 ### E - ¿Dónde se encuentra ubicado dentro del File System?
 
-En */usr/src/linux* el almacena el archivo del código fuente del Núcleo de Linux.
+El Kernel reside */boot*, pero en */usr/src/linux* se almacena el archivo del código fuente del Núcleo de Linux.
 
 ### F - ¿El Kernel de GNU/Linux es monolítico? Justifique
 
