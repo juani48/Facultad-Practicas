@@ -3,7 +3,6 @@
 Regalas de Negocios: No pueden existir códigos de mobiliario repetido. El precio debe cargarse en dólares.
 
 ## Criterios de Aceptación (Cargar Mobiliario)
-
 {
 ### Escenario 1: Carga exitosa.
 Dado: Que el código 1234 no se encuentra cargado.
@@ -23,7 +22,6 @@ Entonces: El sistema informara “Falla en la carga, códigos de mobiliario dupl
 Reglas de Negocios: ---
 
 ## Criterios de Aceptación (Iniciar Sesión)
-
 {
 ### Escenario 1: Autentificación exitosa.
 Dado: Que existe un registro con el nombre de usuario ‘ABC’ y contraseña ‘D1234’.
@@ -34,6 +32,7 @@ Entonces: El sistema redirige al usuario al ingreso de mobiliaria.
 Dado: Que no existe un registro con el nombre de usuario ‘CBA’ y contraseña ‘D1234’
 Cuando: El usuario ingrese el nombre de usuario ‘CBA’ y la contraseña ‘D1234’ y presione ‘Iniciar Sesión”.
 Entonces: El sistema informara “Autentificación fallida, el nombre de usuario es incorrecto”.
+{
 ### Escenario 3: Autentificación fallida por contraseña erróneo.
 Dado: Que no existe un registro con el nombre de usuario ‘ABC y contraseña ‘4321D’.
 Cuando: El usuario ingrese el nombre de usuario ‘ABC y la contraseña ‘4321D’y presione ‘Iniciar Sesión”.
@@ -67,12 +66,12 @@ Entonces: El sistema informara “Falla en la reserva de muebles, no se cumple c
 Reglas de Negocios: El pago de la reserva se realiza únicamente con tarjeta de crédito. Se debe abonar el 20% del total del alquiler.
 
 ## Criterios de Aceptación (Pagar con Tarjeta)
-
 {
 ### Escenario 1: Pago exitoso.
 Dado: Que la conexión con el servidor del banco es exitosa, el número 1234 corresponde a una tarjeta de crédito y la tarjeta tiene saldo para pagar el 20% de la reserva.
 Cuando: El cliente ingrese el número de tarjeta 1234 y presione “Pagar”.
 Entonces: El sistema registra el pago y retorna un resultado exitoso.
+
 ### Escenario 2: Pago fallido por número de tarjeta de crédito inexistente.
 Dado: Que la conexión al servidor del banco en exitosa y el numero 4321 no corresponde a una tarjeta de crédito.
 Cuando: El cliente ingrese el número de tarjeta 4321 y presione “Pagar”.
