@@ -39,7 +39,7 @@ Según el estándar:
 - 2: multiuser, without NFS (modo multiusuario sin soperte de red)
 - 3: full multiuser mode console (modo multiusuario completo por consola)
 - 4: no se utiliza
-- 5: X11 (modo multiusuario completo con login gr´ afico basado en X)
+- 5: X11 (modo multiusuario completo con login gráfico basado en X)
 - 6: reboot
 
 ### D2 - ¿Dónde se define qué Runlevel ejecutar al iniciar el sistema operativo?
