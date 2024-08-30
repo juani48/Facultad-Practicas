@@ -65,9 +65,9 @@ La estructura de la información que almacena es *id:nivelesEjecución:acción:p
 - **Acción**: describe la acción a realizar.
 - **Proceso**: el proceso exacto que será ejecutado.
 
-### F - Suponga que se encuentra en el runlevel <X>. Indique qué comando(s) ejecutaría para cambiar al runlevel <Y>. ¿Este cambio es permanente? ¿Por qué?
+### F - Suponga que se encuentra en el runlevel X. Indique qué comando(s) ejecutaría para cambiar al runlevel Y. ¿Este cambio es permanente? ¿Por qué?
 
-Con el comando _init Y_ se cambia del runlevel <X> al <Y>.
+Con el comando _init Y_ se cambia del runlevel X al Y.
 
 El cambio de runlevel en un sistema Linux no es necesariamente permanente. El runlevel se puede cambiar de manera temporal para la sesión actual o de manera permanente para que el sistema arranque en ese runlevel específico en cada inicio.
 
