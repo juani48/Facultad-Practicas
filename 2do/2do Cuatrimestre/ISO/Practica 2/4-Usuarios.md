@@ -25,11 +25,11 @@ sudo useradd -m -d /home/iso_user iso2024
 
 sudo groupadd catedra
 
-sudo usermod -g catedra
+sudo usermod -g catedra iso2024
 
 sudo su iso2024
 
-cd iso_user
+cd 
 
 touch abc.txt
 
@@ -37,9 +37,11 @@ exit
 
 sudo userdel iso2024
 
+cd /home
+
 sudo groupdel catedra
 
-sudo rm iso_user
+sudo rm -r iso_user
 
 ```
 
