@@ -20,13 +20,38 @@ Usuario root, también llamado súper usuario o administrador. Su UID (User ID) 
 
 ### D - Agregue un nuevo usuario llamado iso2017 a su instalación de GNU/Linux, especifique que su home sea creada en /home/iso_2017, y hágalo miembro del grupo catedra (si no existe, deberá crearlo). Luego, sin iniciar sesión como este usuario cree un archivo en su home personal que le pertenezca. Luego de todo esto, borre el usuario y verifique que no queden registros de él en los archivos de información de los usuarios y grupos.
 
+```
+sudo useradd -m -d /home/iso_user iso2024
+
+sudo groupadd catedra
+
+sudo usermod -g catedra iso2024
+
+sudo su iso2024
+
+cd 
+
+touch abc.txt
+
+exit
+
+sudo userdel iso2024
+
+cd /home
+
+sudo groupdel catedra
+
+sudo rm -r iso_user
+
+```
+
 ### E - Investigue la funcionalidad y parámetros de los siguientes comandos:
 - *useradd* ó *adduser*: El comando agrega un nuevo usuario al sesitma. *useradd [opciones] [NOMBREUSUARIO]*.
   - *-m*: Para crear un usuario con la carpeta de inicio predeterminada (home).
   - *-m -d*: Para crear la carpeta de inicio con otro nombre.
   - *-s*: Cambia el Shell de inicia de sesión de in/bash o bin/sh a uno a elección.
 
-- usermod: Permite modificar todos los parámetros de la cuenta de un usuario creado con anterioridad. usermod [options] [NOMBREUSURAIO]:
+- *usermod*: Permite modificar todos los parámetros de la cuenta de un usuario creado con anterioridad. *usermod [options] [NOMBREUSURAIO]*:
   - *–a* , *- -append*: Agrega al usuario a los grupos complementarios.
   - *-c* , *- -comment [COMENTARIO]*: COMENTARIO será el nuevo valor del campo de comentario en el archivo */etc/passwd*.
   - *-d* , *- -home [HOME_DIR]*: HOME_DIR será el nuevo valor para el directorio de inicio del usuario. Si se utiliza conjuntamente con la opción *-m*, el contenido del directorio de inicio actual se moverá al nuevo directorio de inicio, que se crea si aún no existe.
