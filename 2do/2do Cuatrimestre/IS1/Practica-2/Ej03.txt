@@ -1,0 +1,65 @@
+## ID: Confeccionar minuta
+### TITULO: Como empleado de mesa de entrada, quiero confeccionar una minuta, para su posterior aprobación.
+Reglas de Negocios: El monto del contrato no puede superar $25.000. La duración no puede superar los 6 meses.
+
+## Criterios de Aceptación (Confeccionar minuta)
+{
+### Escenario 1: Confección exitosa.
+Dado: Que el monto del contrato es de $20.000 y la duración es de 5 meses.
+Cuando: El empleado de mesa de entrada ingrese el número de CUIT ‘1234’ y presione “Confeccionar minuta”.
+Entonces: El sistema asociara un número de minuta al contrato e informara “Minuta aceptada”.
+
+### Escenario 2: Confección fallida por monto excedido.
+Dado: Que el monto del contrato es de $30.000 y la duración es de 5 meses.
+Cuando: El empleado de mesa de entrada ingrese el número de CUIT ‘1234’ y presione “Confeccionar minuta”.
+Entonces: El sistema informara “Minuta rechazada, monto máximo excedido”.
+
+### Escenario 3: Confección fallida por duración excedida.
+Dado: Que el monto del contrato es de $20.000 y la duración es de 7 meses.
+Cuando: El empleado de mesa de entrada ingrese el número de CUIT ‘1234’ y presione “Confeccionar minuta”.
+Entonces: El sistema informara “Minuta rechazada, duración máxima excedida”.
+}
+-------------------------------------------------------------------------------------------------------------
+## ID: Aprobar minuta
+### TITULO: Como empleado de rendiciones, quiero aprobar un minuta, para su posterior impresión.
+Reglas de Negocios: La persona no puede tener más de 3 minutas vigentes.
+
+## Criterios de Aceptación (Aprobar minuta)
+{
+### Escenario 1: Aprobación exitosa.
+Dado: Que el número de minuta ‘1234’ está asociado a “Juan”, que tiene 1 sola minuta vigente.
+Cuando: El empleado de rendiciones ingrese el número de minuta ‘1234’ y presione “Inspeccionar minuta”.
+Entonces: El sistema redirige al empleado a la verificación de CUIT, espera respuesta e imprime la minuta”.
+
+### Escenario 2: Aprobación fallida por límite de minutas vigentes
+Dado: Que el número de minuta ‘4321’ esa asociado a “Ignacio”, que tiene 3 minutas vigentes.
+Cuando: El empleado de rendiciones ingrese el número de minuta ‘4321’ y presione “Inspeccionar minuta”.
+Entonces: El sistema informara “Minuta negada, minutas vigentes máximas excedida”.
+
+Escenario 3: Aprobación fallida por error de verificación. 
+Dado: Que el número de minuta ‘1234’ esa asociado a “Juan”, que tiene 1 sola minuta vigente.
+Cuando: El empleado de rendiciones ingrese el número de minuta ‘1234’ y presione “Inspeccionar minuta”.
+Entonces: El sistema redirige al empleado a la verificación de CUIT, espera respuesta e informa “Minuta negada, por error de verificación”.
+}
+-------------------------------------------------------------------------------------------------------------
+## ID: Verificar CUIT
+### TITULO: Como empleado de rendiciones, quiero verificar el CUIT de la persona contratada, para la aprobación de la minuta.
+Reglas de Negocios: ---
+
+## Criterios de Aceptación (Verificar CUIT)
+{
+### Escenario 1: Verificación exitosa.
+Dado: Que la conexión con los servidores de la AFIP es exitosa y que el CUIT ‘1234’ está habilitado.
+Cunado: El empleado de rendiciones ingrese el CUIT ‘1234’ y presione “Verificar CUIT”.
+Entonces: Sistema se conecta con el servidor de la AFIP y retorna éxito.
+
+### Escenario 1: Verificación fallida por error de conexión.
+Dado: Que la conexión con los servidores de la AFIP no es exitosa y que el CUIT ‘1234’ está habilitado.
+Cunado: El empleado de rendiciones ingrese el CUIT ‘1234’ y presione “Verificar CUIT”.
+Entonces: Sistema retorna fracaso por error de conexión..
+
+### Escenario 1: Verificación fallida por CUIT inhabilitado.
+Dado: Que la conexión con los servidores de la AFIP es exitosa y que el CUIT ‘4321’ no está habilitado.
+Cunado: El empleado de rendiciones ingrese el CUIT ‘4321’ y presione “Verificar CUIT”.
+Entonces: Sistema se conecta con el servidor de la AFIP y retorna fracaso por CUIT inhabilitado.
+}
