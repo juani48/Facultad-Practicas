@@ -42,7 +42,7 @@ Practicas de la carrera de Lincenciatura en Sistemas, plan de estudio [2021](htt
   * [Segundo cuatrimestre]([https://github.com/juani48/Facultad-Practicas/tree/main/2do](https://github.com/juani48/Facultad-Practicas/tree/main/2do/2do%20Cuatrimestre))
     
     * [Diseño de Bases de Datos](https://github.com/juani48/Facultad-Practicas/tree/main/2do/2do%20Cuatrimestre/DBD)
-      * [Modelado Conseptual](https://github.com/juani48/Facultad-Practicas/tree/main/2do/2do%20Cuatrimestre/DBD/Practica%201)
+      * [Modelado Conceptual](https://github.com/juani48/Facultad-Practicas/tree/main/2do/2do%20Cuatrimestre/DBD/Practica%201)
       
     * [Ingeniería de Software 1](https://github.com/juani48/Facultad-Practicas/tree/main/2do/2do%20Cuatrimestre/IS1)
       * [Técnicas de Elicitación de Requerimientos](https://github.com/juani48/Facultad-Practicas/tree/main/2do/2do%20Cuatrimestre/IS1/Practica-1)
