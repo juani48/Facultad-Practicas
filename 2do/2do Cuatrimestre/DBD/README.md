@@ -1,5 +1,5 @@
 ## Practicas
-- Modelado Conseptual
+- Modelado Conceptual
   - [Ejercicio 1](https://github.com/juani48/Facultad-Practicas/blob/main/2do/2do%20Cuatrimestre/DBD/Practica%201/Ej01/Ej-01-CasER.png).
   - [Ejercicio 2](https://github.com/juani48/Facultad-Practicas/blob/main/2do/2do%20Cuatrimestre/DBD/Practica%201/Ej02/Ej02-CasER.png).
   - [Ejercicio 3](https://github.com/juani48/Facultad-Practicas/blob/main/2do/2do%20Cuatrimestre/DBD/Practica%201/Ej03/Ej03-CasER.png).
