@@ -45,8 +45,44 @@ Entonces: El sistema informara “Inicio de fallido por contraseña errónea”.
 ## ID: Calcular descuento.
 ### TITULO: Como usuario, quiero calcular mis descuentos, para comprar las bebidas.
 Reglas de Negocios: Si el usuario es premiun, se realiza un 20% de descuento. Si el monto de la compra es superior a $4500, se realiza un 10% de descuento.
+
+Criterios de Aceptación (Calcular descuento)
+{
+Escenario 1: Descuento máximo.
+Dado: Que el usuario es un usuario premiun y que el monto de la compra es de $6000.
+Cuando: El usuario presione “Calcular descuento”.
+Entonces: El sistema informara “Monto total: $4200 – 30% descuento”.
+
+Escenario 2: Sin descuento.
+Dado: Que el usuario no es un usuario premiun y que el monto de la compra es de $4000.
+Cuando: El usuario presione “Calcular descuento”.
+Entonces: El sistema informara “Monto total: $4000 – Sin descuento”.
+
+Escenario 2: Descuento del 10%.
+Dado: Que el usuario no es un usuario premiun y que el monto de la compra es de $6000.
+Cuando: El usuario presione “Calcular descuento”.
+Entonces: El sistema informara “Monto total: $5400 – 10% descuento”.
+
+Escenario 2: Descuento del 20%.
+Dado: Que el usuario es un usuario premiun y que el monto de la compra es de $4000.
+Cuando: El usuario presione “Calcular descuento”.
+Entonces: El sistema informara “Monto total: $3200 – 20% descuento”.
+}
 -------------------------------------------------------------------------------------------------------------
 ## ID: Realizar compra.
 ### TITULO: Como usuario, quiero realizar una compra, para consumir las bebidas.
 Reglas de Negocios: ---
 
+Criterios de Aceptación (Realizar compra)
+{
+Escenario 1: Pago exitoso.
+Dado: Que existen las condiciones para un pago exitoso.
+Cuando: El usuario selecciones las bebidas a comprar y presione “Pagar”.
+Entonces: El sistema redirige al usuario al método de pago, espera respuestas, y registra el pago.
+
+Escenario 2: Pago fallido.
+Dado: Que no existen las condiciones para un pago exitoso.
+Cuando: El usuario selecciones las bebidas a comprar y presione “Pagar”.
+Entonces: El sistema redirige al usuario al método de pago, espera respuestas, e informa “Pago fallido.
+
+}
