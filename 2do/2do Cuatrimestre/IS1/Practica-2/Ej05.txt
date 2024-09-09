@@ -1,0 +1,111 @@
+## ID: Registrar usuario
+### TITULO: Como persona, quiero registrarme, para tener un usuario.
+Reglas de Negocios: El nombre de usuario debe ser único.
+
+## Criterios de Aceptación (Registrar usuario)
+{
+### Escenario 1: Registro exitoso.
+Dado: Que el nombre de usuario “ABC” no se encuentra repetido.
+Cuando: La persona ingrese el nombre de usuario “ABC” y presione “Registrarse al sistema”.
+Entonces: El sistema registra al usuario, y redirige al usuario a la carga de fotos.
+
+### Escenario 2: Registro fallido por nombre de usuario repetido.
+Dado: Que el nombre de usuario “CBA” se encuentra repetido.
+Cuando: La persona ingrese el correo “CBA” y presione “Registrarse al sistema”.
+Entonces: El sistema informara “Registro fallido por nombre de usuario repetido”.
+}
+-------------------------------------------------------------------------------------------------------------
+## ID: Iniciar sesión
+### TITUTLO: Como usuario, quiero iniciar sesión, para poder subir fotos.
+Reglas de negocios: ---
+
+## Criterios de Aceptación (Iniciar sesión)
+{
+### Escenario 1: Autentificación exitosa.
+Dado: Que el nombre de usuario “ABC” corresponden un usuario registrado.
+Cuando: El usuario ingrese el nombre de usuario “ABC” y presione “Iniciar sesión”.
+Entonces: El sistema informara “Inicio de sesión exitoso” y redirige al usuario a la cargad de fotos.
+
+### Escenario 2: Autentificación fallida por correo inexistente
+Dado: Que el nombre de usuario “CBA” no corresponde un usuario registrado.
+Cuando: El usuario ingrese el nombre de usuario “CBA” y presione “Iniciar sesión”.
+Entonces: El sistema informara “Inicio de fallido por nombre de usuario inexistente”.
+}
+-------------------------------------------------------------------------------------------------------------
+## ID: Cerrar sesión.
+### TITULO: Como usuario, quiero cerrar sesión, para la seguridad de mi cuenta.
+Reglas de Negocios: ---
+
+## Criterios de Aceptación (Cerrar sesión)
+{
+### Escenario 1: Cierre de sesión exitoso
+Dado: Que el usuario “ABC” se encuentra activo.
+Cuando: El usuario “ABC” presione “Cerrar Sesión”.
+Entonces: El sistema cerrara la sesión del usuario y lo redirige al inicio de sesión.
+}
+-------------------------------------------------------------------------------------------------------------
+## ID: Cargar fotos.
+### TITULO: Como usuario, quiero subir fotos, para su posterior impresión.
+Reglas de Negocios: El número máximo de fotos subidas es 50.
+
+## Criterios de Aceptación (Seleccionar productos)
+{
+### Escenario 1: Carga exitosa.
+Dado: Que el usuario “ABC” cargo 46 fotos y que existen las condiciones para un pago exitoso.
+Cuando: El usuario “ABC” suba la foto número 46 y presione “Subir Fotos”.
+Entonces: El sistema redirige al usuario al pago con tarjeta, espera respuestas, informara “Carga exitosa” y se le otorga al usuario el código unico “1234”.
+
+### Escenario 2: Carga fallida por límite de fotos excedido.
+Dado: Que el usuario “ABC” cargo 51 fotos.
+Cuando: El usuario “ABC” suba la foto número 51 y presione “Subir Fotos”.
+Entonces: El sistema informara “Carga fallida, por límite de fotos excedido”.
+
+### Escenario 3: Carga fallida por error de pago.
+Dado: Que el usuario “ABC” cargo 35 fotos y que no existen las condiciones para un pago exitoso.
+Cuando: El usuario “ABC” ingrese la foto número 35 y presione “Subir Fotos”.
+Entonces: El sistema redirige al usuario al pago con tarjeta, espera respuestas e informa “Carga fallida, por error de pago”.
+}
+-------------------------------------------------------------------------------------------------------------
+## ID: Pago con tarjeta.
+### Como usuario, quiero pago con tarjeta, para la obtención de mi código único.
+Reglas de Negocios: El pago solo se realiza con tarjetas de crédito. La tarjeta debe tener fondos suficientes.
+
+## Criterios de Aceptación (Pago con tarjeta)
+{
+### Escenario 1: Pago exitoso.
+Dado: Que la conexión con el servidor del banco es exitosa, que el código “1234” corresponde a un tarjeta de crédito y que la tarjeta tiene fondos.
+Cunado: El usuario ingrese el código de tarjeta “1234” y presione “Pagar”.
+Entonces: El sistema registra el pago y retorna un resultado exitoso.
+
+### Escenario 2: Pago fallido por saldo insuficiente.
+Dado: Que la conexión con el servidor del banco es exitosa, que el código “1234” corresponde a un tarjeta de crédito y que la tarjeta no tiene fondos.
+Cuando: El usuario ingrese le código de tarjeta “1234” y presione “Pagar”.
+Entonces: El sistema retorna error por saldo insuficiente.
+
+### Escenario 3: Pago fallido por código de tarjeta inexistente.
+Dado: Que la conexión la servidor del banco es exitosa y que el código de tarjeta “4321” no corresponde a una tarjeta de crédito.
+Cuando: El usuario ingrese le código de tarjeta “4321” y presione “Pagar”.
+Entonces: El sistema retorna error por número de tarjeta inexistente.
+
+### Escenario 4: Pago fallido por error con al conexión al banco.
+Dado: Que la conexión con el servidor del banco no exitosa.
+Cuando: El usuario ingrese el código “1234” y presione “Pagar”.
+Entonces: El sistema retorna error por conexión con el banco fallida.
+}
+-------------------------------------------------------------------------------------------------------------
+## ID: Retirar fotos.
+### Titulo: Como empleado, quiero registrar el código de pago, para entregar las fotos.
+Reglas de negocios: El condigo de pago no debe estar registrado todavía.
+
+## Criterios de Aceptación (Retirar fotos)
+{
+### Escenario 1: Registro exitoso.
+Dado: Que el código “1234” no está registrado y corresponde a las fotos impresas.
+Cuando: El empleado ingrese el código “1234” y presione “Verificar código”
+Entonces: El sistema registra el código e informa “Registro exitoso”.
+
+### Escenario 2: Registro fallido por código duplicado.
+Dado: Que el código “4321” se encuentra registrado.
+Cuando: El empleado ingrese el código “4321” y presione “Verificar código”.
+Entonces: El sistema informa “Registro fallido, por código duplicado”.
+}

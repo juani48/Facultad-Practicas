@@ -14,18 +14,16 @@ Dado: Que el código 1234 ya se encuentra cargado.
 Cuando: El encargado de mobiliario ingrese los datos del mobiliario con el código 1234 y presione “Cargar”.
 Entonces: El sistema informara “Falla en la carga, códigos de mobiliario duplicados”.
 }
-
 -------------------------------------------------------------------------------------------------------------
-
 ## ID: Iniciar Sesión.
-### TITULO: Como usuario, quiero autentificarme, para poder ingresar mobiliaria.
+### TITULO: Como persona, quiero autentificarme, para poder ingresar mobiliaria.
 Reglas de Negocios: ---
 
 ## Criterios de Aceptación (Iniciar Sesión)
 {
 ### Escenario 1: Autentificación exitosa.
 Dado: Que existe un registro con el nombre de usuario ‘ABC’ y contraseña ‘D1234’.
-Cuando: El usuario ingrese el nombre de usuario ‘ABC’ y la contraseña ‘D1234’ y presione ‘Iniciar Sesión”.
+Cuando: La persona ingrese el nombre de usuario ‘ABC’ y la contraseña ‘D1234’ y presione ‘Iniciar Sesión”.
 Entonces: El sistema redirige al usuario al ingreso de mobiliaria.
 
 ### Escenario 2: Autentificación fallida por nombre de usuario erróneo.
@@ -35,18 +33,27 @@ Entonces: El sistema informara “Autentificación fallida, el nombre de usuario
 {
 ### Escenario 3: Autentificación fallida por contraseña erróneo.
 Dado: Que existe un registro con el nombre de usuario ‘ABC’ y contraseña ‘D1234’.
-Cuando: El usuario ingrese el nombre de usuario ‘ABC y la contraseña ‘4321D’y presione ‘Iniciar Sesión”.
+Cuando: La persona ingrese el nombre de usuario ‘ABC y la contraseña ‘4321D’y presione ‘Iniciar Sesión”.
 Entonces: El sistema informara “Autentificación fallida, el contraseña es incorrecto”.
 }
-
 -------------------------------------------------------------------------------------------------------------
+## ID: Cerrar sesión
+### TITULO: Como usuario, quiero cerrar sesión, para la seguridad de mi cuenta.
+Reglas de Negocios: ---
 
+## Criterios de Aceptación (Cerrar sesión)
+{
+### Escenario 1: Cierre de sesión exitoso
+Dado: Que el usuario “ABC” se encuentra activo.
+Cuando: El usuario “ABC” presione “Cerrar Sesión”.
+Entonces: El sistema cerrara la sesión del usuario y lo redirige al inicio de sesión.
+}
+-------------------------------------------------------------------------------------------------------------
 ## ID: Realizar Reserva. 
 ### TITULO: Como cliente, quiero reservar muebles, para eventos personales.
 Reglas de Negocios: La reserva tiene que incluir como mínimo 3 muebles.
 
 ## Criterios de Aceptación (Realizar Reserva)
-
 {
 ### Escenario 1: Reserva Exitoso.
 Dado: Que el cliente selecciono 4 muebles.
@@ -58,9 +65,7 @@ Dado: Que el cliente selecciono 2 muebles.
 Cuando: El cliente realice la reserva de 2 muebles y presione “Reservar”.
 Entonces: El sistema informara “Falla en la reserva de muebles, no se cumple con el mínimo de 3 muebles”.
 }
-
 -------------------------------------------------------------------------------------------------------------
-
 ## ID: Pagar con Tarjeta.
 ### TITULO: Como cliente, quiero pagar la reserva, para obtener mi número de reserva.
 Reglas de Negocios: El pago de la reserva se realiza únicamente con tarjeta de crédito. Se debe abonar el 20% del total del alquiler.

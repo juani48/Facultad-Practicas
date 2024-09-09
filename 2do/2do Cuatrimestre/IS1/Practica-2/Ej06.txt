@@ -1,0 +1,72 @@
+## ID: Registrar libros.
+### TITULO: Como bibliotecaria, quiero registrar los libros donados, para que sean prestados.
+Reglas de Negocios: ---
+
+## Criterios de Aceptación (Registrar libros)
+{
+### Escenario 1: Carga exitosa.
+Dado: Que le libro se encuentra en buen estado.
+Cuando: La bibliotecaria ingrese los datos del ejemplar y presione “Registrar libro”.
+Entonces: El sistema registra el libro e informa “Registro exitoso”.
+}
+-------------------------------------------------------------------------------------------------------------
+## ID: Asociar alumno
+### TITULO: Como alumno, quero asociarme a la biblioteca, para pedir préstamos.
+Reglas de negocios: El DNI no puede estar registrado. El certificado de alumno regular debe ser válido.
+
+## Criterios de Aceptación (Asociar alumno)
+{
+### Escenario 1: Registro exitoso.
+Dado: Que el DNI “1234” no se encuentra registrado y que el certificado de alumno regular es válido.
+Cuando: El alumno ingrese el DNI “1234” y el certificado de alumno regular, y presione “Asociarse a la biblioteca”.
+Entonces: El sistema registra al alumno, informa “Registro exitoso” y le otorga al socio su número de socio correspondiente.
+
+### Escenario 2: Registro fallido por DNI repetido.
+Dado: Que el DNI “4321” ya se encuentra registrado y que el certificado de alumno regular es válido.
+Cuando: El alumno ingrese el DNI “1234” y el certificado de alumno regular, y presione “Asociarse a la biblioteca”.
+Entonces: El sistema informa “Registro fallido, por DNI duplicado”.
+
+### Escenario 3: Registro fallido por certificado de alumno regular invalido.
+Dado: Que le DNI “1234” no se encuentra cargado y que el certificado de alumno regular es invalido.
+Cuando: El alumno ingrese el DNI “1234” y el certificado de alumno regular, y presione “Asociarse a la biblioteca”.
+Entonces: El sistema informa “Registro fallido, por certificado de alumno regular invalido”.
+}
+-------------------------------------------------------------------------------------------------------------
+## ID: Realizar préstamo
+### TITULO: Como bibliotecaria, quiero realizar prestamos, para que los alumnos lean.
+Reglas de Negocios: El socio no debe tener más de 3 préstamos vigentes. El socio no debe tener préstamos vencidos.
+
+## Criterios de Aceptación (Realizar prestamos)
+{
+### Escenario 1: Prestación exitosa.
+Dado: Que el socio “ABC” con número de socio “1234”, tiene 1 préstamo vigente y no tiene préstamos vencidos.
+Cuando: La bibliotecaria ingrese el código de socio “1234” y presione “Realizar préstamo”.
+Entonces: El sistema registra el préstamo e informa “Prestación exitosa”.
+
+### Escenario 2: Prestación fallida por exceso de préstamos vigentes.
+Dado: Que el socio “ABC” con número de socio “1234”, tiene 3 préstamos vigentes y no tiene préstamos vencidos.
+Cuando: La bibliotecaria ingrese el código de socio “1234” y presione “Realizar préstamo”.
+Entonces: El sistema informa “Prestación fallida por límite de préstamos vigentes excedido”.
+
+### Escenario 3: Prestación fallida por prestamos vencidos.
+Dado: Que el socio “ABC” con número de socio “1234”, tiene 2 préstamo vigente y tiene préstamos vencidos.
+Cuando: La bibliotecaria ingrese el código de socio “1234” y presione “Realizar préstamo”.
+Entonces: El sistema informa “Prestación fallida por prestamos vencidos”.
+}
+-------------------------------------------------------------------------------------------------------------
+## ID: Retornar libro.
+### TITULO: Como bibliotecaria, quiero verificar el prestamos de un libro, para suspender o no al socio.
+Reglas de Negocios: ---
+
+## Criterios de Aceptación (Retornar libro)
+{
+### Escenario 1: Devolución en condiciones.
+Dado: Que el préstamo asociado al libro a devolver no se encuentra vencido.
+Cuando: El libro sea devuelto y la bibliotecaria ingrese el código de socio “1234” asociado al libro, y presione “Devolver y verificar préstamo”.
+Entonces: El sistema informara “Retorno del libro en tiempo y forma, préstamo no vencido”.
+
+### Escenario 2: Devolución vencida.
+Dado: Que el préstamo asociado al libro a devolver se encuentra vencido.
+Cuando: El libro sea devuelto y la bibliotecaria ingrese el código de socio “1234” asociado al libro, y presione “Devolver y verificar préstamo”.
+Entonces: El sistema informa “El retorno del libro no fue en tiempo y forma, préstamo vencido” y suspende al socio “1234” por 15 días.
+}

@@ -19,9 +19,7 @@ Dado: Que existe un registro con el nombre de usuario ‘ABC’ y la contraseña
 Cuando: El usuario ingrese el nombre de usuario ‘ABC’ y la contraseña ‘4321D y presione “Iniciar Sesión”.
 Entonces: El sistema informara “Autentificación fallida, la contraseña es incorrecto”.
 }
-
 -------------------------------------------------------------------------------------------------------------
-
 ## ID: Registrar Sesión.
 ### TITULO: Como empleado administrativo o alumno, quiero registrarme en el sistema, para cargar o inscribirme a posgrados.
 Reglas de negocios: El nombre de usuario es único. La contraseña debe poseer, como mínimo 6 caracteres.
@@ -43,9 +41,19 @@ Dado: Que no existe un registro del nombre del usuario ‘ABC’ y la contraseñ
 Cuando: El usuario ingrese el nombre de usuario ‘ABC  y la contraseña ‘1234’ y presione “Registrar”.
 Entonces: El sistema informara “Falla al registrar al usuario, la contraseña tiene menos de 6 caracteres”. 
 }
-
 -------------------------------------------------------------------------------------------------------------
+## ID: Cerrar sesión.
+### TITULO: Como usuario, quiero cerrar sesión, para la seguridad de mi cuenta.
+Reglas de negocios: ---
 
+## Criterios de Aceptación (Cerrar sesión)
+{
+### Escenario 1: Cierre de sesión exitoso.
+Dado: Que el usuario “ABC” se encuentra activo.
+Cuando: El usuario “ABC” presione “Cerrar Sesión”.
+Entonces: El sistema cerrara la sesión del usuario y lo redirige al inicio de sesión.
+}
+-------------------------------------------------------------------------------------------------------------
 ## ID: Cargar Posgrados.
 ### TITULO: Como empleado administrativo, quiero cargar los posgrados, para que los alumnos se inscriban.
 Reglas de Negocios: El nombre del posgrado no puede repetirse. El posgrado no puede durar más de 5 años.
@@ -67,9 +75,7 @@ Dado: Que el nombre del posgrado ‘ABC’ no se encuentra repetido y que su dur
 Cuando: El empleado administrativo ingrese el nombre del posgrado ‘ABC’ y su duración en 6 años y presione “Cargar posgrado”.
 Entonces: El sistema informara “Carga  fallida, el posgrado excede la duración máxima”.
 }
-
 -------------------------------------------------------------------------------------------------------------
-
 ## ID: Inscripción a Posgrados.
 ### TITULO: Como alumno, quiero inscribirme a los posgrados, para poder cursarlos.
 Reglas de Negocios: El alumno debe pagar con tarjeta la inscripción.
@@ -86,9 +92,7 @@ Dado: Que las condiciones son adecuadas para un pago exitoso.
 Cuando: El alumno ingrese selecciones el posgrado ‘ABC’ y presione “Inscribir”. 
 Entonces: El sistema redirige al alumno al pago de la inscripción, espera respuesta e informa “Inscripción fallida, error al pagar la inscripción”.
 }
-
 -------------------------------------------------------------------------------------------------------------
-
 ## ID: Pagar con Tarjeta.
 ### TITUTLO: Como alumno, quiero pagar la inscripción, para tener mis comprobantes de inscripción y pago.
 Reglas de Negocios: Solo se aceptan números de tarjetas de crédito. La tarjeta debe tener fondos.
