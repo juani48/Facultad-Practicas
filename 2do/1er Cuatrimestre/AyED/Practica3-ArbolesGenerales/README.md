@@ -7,4 +7,6 @@
   * [Ejercicio 9](https://github.com/juani48/Facultad-Practicas/tree/main/2do/1er%20Cuatrimestre/AyED/Practica3-ArbolesGenerales/src/Ej9)
 ## Extras
 Consultar [Enunciados](https://github.com/juani48/Facultad-Practicas/blob/main/2do/1er%20Cuatrimestre/AyED/Practica3-ArbolesGenerales/TP3_AG.pdf).
-Consultar [Clases](https://github.com/juani48/Facultad-Practicas/tree/main/2do/1er%20Cuatrimestre/AyED/Practica3-ArbolesGenerales/src/Clases).
+
+Consultar [Colas](https://github.com/juani48/Facultad-Practicas/tree/main/2do/1er%20Cuatrimestre/AyED/JavaClases/Lists).
+-[Arbol General](https://github.com/juani48/Facultad-Practicas/blob/main/2do/1er%20Cuatrimestre/AyED/JavaClases/Trees/GeneralTree.java).

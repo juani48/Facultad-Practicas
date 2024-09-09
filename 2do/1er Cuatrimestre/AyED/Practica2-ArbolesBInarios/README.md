@@ -8,4 +8,6 @@
   * [Ejercicio 8](https://github.com/juani48/Facultad-Practicas/tree/main/2do/1er%20Cuatrimestre/AyED/ArbolesBInarios-Practica2/src/Ej8)
 ## Extras
 Consultar [Enunciados](https://github.com/juani48/Facultad-Practicas/blob/main/2do/1er%20Cuatrimestre/AyED/ArbolesBInarios-Practica2/ArbolesBInarios.pdf).
-Consultar [Clases](https://github.com/juani48/Facultad-Practicas/tree/main/2do/1er%20Cuatrimestre/AyED/ArbolesBInarios-Practica2/src/Clases).
+
+Consultar [Colas](https://github.com/juani48/Facultad-Practicas/tree/main/2do/1er%20Cuatrimestre/AyED/JavaClases/Lists).
+-[Arbol Binario](https://github.com/juani48/Facultad-Practicas/blob/main/2do/1er%20Cuatrimestre/AyED/JavaClases/Trees/BinaryTree.java).
