@@ -58,4 +58,5 @@ Practicas de la carrera de Lincenciatura en Sistemas, plan de estudio [2021](htt
       * [Autoevaluaciones](https://github.com/juani48/Facultad-Practicas/tree/main/2do/2do%20Cuatrimestre/ISO/Autoevaluaciones).
 
 >Ejercicios sujetos a errores, pregunta al Ayudate/JTP la validez del codigo.
+
 >Principalmentes las practicas de 1er año, tomarlas como apoyos o guias a la hora de resolver actividades.
