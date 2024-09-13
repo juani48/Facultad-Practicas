@@ -33,11 +33,7 @@ public class Presupuesto {
 	}
 	
 	public double calcularTotal() {
-		double aux = 0;
-		for(Item x : this.getItems()) {
-			aux += x.costo();
-		}
-		return aux;
+		return this.getItems().stream().mapToDouble(x -> x.costo()).sum();
 	}
 	
 }
