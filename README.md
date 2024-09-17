@@ -43,6 +43,7 @@ Practicas de la carrera de Lincenciatura en Sistemas, plan de estudio [2021](htt
     
     * [Diseño de Bases de Datos](https://github.com/juani48/Facultad-Practicas/tree/main/2do/2do%20Cuatrimestre/DBD).
       * [Modelado Conceptual](https://github.com/juani48/Facultad-Practicas/tree/main/2do/2do%20Cuatrimestre/DBD/Practica%201).
+      * [Modelado Conceptual, logico y físico](https://github.com/juani48/Facultad-Practicas/tree/main/2do/2do%20Cuatrimestre/DBD/Practica%202)
       
     * [Ingeniería de Software 1](https://github.com/juani48/Facultad-Practicas/tree/main/2do/2do%20Cuatrimestre/IS1).
       * [Técnicas de Elicitación de Requerimientos](https://github.com/juani48/Facultad-Practicas/tree/main/2do/2do%20Cuatrimestre/IS1/Practica-1).
@@ -50,12 +51,15 @@ Practicas de la carrera de Lincenciatura en Sistemas, plan de estudio [2021](htt
         
     * [Orientación a Objetos 1](https://github.com/juani48/Facultad-Practicas/tree/main/2do/2do%20Cuatrimestre/OO1).
       * [Practica 1](https://github.com/juani48/Facultad-Practicas/tree/main/2do/2do%20Cuatrimestre/OO1/Practica1).
-      * [Recursos](https://github.com/juani48/Facultad-Practicas/tree/main/2do/2do%20Cuatrimestre/OO1/Recursos).
 
     * [Introducción a los Sistemas Operativos](https://github.com/juani48/Facultad-Practicas/tree/main/2do/2do%20Cuatrimestre/ISO).
       * [Practica 1](https://github.com/juani48/Facultad-Practicas/tree/main/2do/2do%20Cuatrimestre/ISO/Practica%201).
       * [Practica 2](https://github.com/juani48/Facultad-Practicas/tree/main/2do/2do%20Cuatrimestre/ISO/Practica%202).
+      * [Practica 3](https://github.com/juani48/Facultad-Practicas/tree/main/2do/2do%20Cuatrimestre/ISO/Practica%203).
+        * [Conceptos](https://github.com/juani48/Facultad-Practicas/tree/main/2do/2do%20Cuatrimestre/ISO/Practica%203/Conceptos).
+        * [Bash](https://github.com/juani48/Facultad-Practicas/tree/main/2do/2do%20Cuatrimestre/ISO/Practica%203/Scripts).
       * [Autoevaluaciones](https://github.com/juani48/Facultad-Practicas/tree/main/2do/2do%20Cuatrimestre/ISO/Autoevaluaciones).
+        * [Practica 1 y 2](https://github.com/juani48/Facultad-Practicas/blob/main/2do/2do%20Cuatrimestre/ISO/Autoevaluaciones/Practica%201%20y%202.md).
 
 >Ejercicios sujetos a errores, pregunta al Ayudate/JTP la validez del codigo.
 
