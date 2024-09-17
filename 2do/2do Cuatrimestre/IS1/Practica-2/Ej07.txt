@@ -1,0 +1,171 @@
+## ID: Afiliar persona
+### TITULO: Como persona, quiero afiliarme a la mutual, para poseer número de afiliado.
+Reglas de Negocios: La persona debe poseer tarjeta de crédito.
+
+## Criterios de Aceptación (Afilar persona)
+{
+### Escenario 1: Registro exitoso.
+Dado: Que el número de tarjeta “1234” corresponde a una tarjeta de crédito.
+Cuando: La persona ingrese el número de tarjeta “1234” y presione “Afiliar”.
+Entonces: El sistema registra a la persona, informa “Registro exitoso” y retorna el número de afilado “1234”.
+
+### Escenario 2: Registro fallido por código de tarjeta inexistente.
+Dado: Que el número de tarjeta “4321” no corresponde a una tarjeta de crédito.
+Cuando: La persona ingrese el número de tarjeta “4321” y presione “Afiliar”.
+Entonces: El sistema informa “Registro fallido por código de tarjeta inexistente”.
+}
+-------------------------------------------------------------------------------------------------------------
+## ID: Designar personas a cargo
+### TITULO: Como afiliado, quiero designar personas a cargo, para que puedan poseer número de afiliado.
+Reglas de Negocios: Los hijos del afiliado deben ser menores de 18 años.
+
+## Criterios de Aceptación (Designar personas a cargo)
+{
+### Escenario 1: Asignación exitosa.
+Dado: Que el hijo, del afiliado “1234”, es menor de edad (14 años).
+Cuando: El afiliado “1234” ingrese los datos de su hijo y pareja y presione “Asignar personas a cargo”.
+Entonces: El sistema registra las personas a cargo, informa “Asignación exitosa” y retornar el número de afiliado “2134” para el hijo y “4321” para la esposa.
+
+### Escenario 2: Asignación fallida por edad máxima excedida
+Dado: Que los hijos, del afiliado “1234”, no son menores de edad (20 años).
+Cuando: El afiliado “1234” ingrese los datos de sus hijos y/o pareja y presione “Asignar personas a cargo”.
+Entonces: El sistema informa “Asignación fallida, hijos mayores de 18 años”.
+}
+-------------------------------------------------------------------------------------------------------------
+## ID: Verificar pago.
+### TITULO: Como afiliado, quiero verificar el pago del mes anterior, para acceder a los beneficios este mes.
+Reglas de Negocios: -- 
+
+## Criterios de Aceptación (Verificar pago).
+{
+### Escenario 1: Verificación exitosa.
+Dado: Que el afiliado con código “1234” realizo el pago el mes pasado al solicitado.
+Cuando: Ingrese su número de afiliado “1234”, y presione “Verificar cuota”.
+Entonces: El sistema informar “Cuota al día” y retorna éxito.
+
+### Escenario 2: Verificación fallida por pago no realizado.
+Dado: Que el afiliado con código “1234” no realizo el pago el mes pasado al solicitado.
+Cuando: Ingrese su número de afiliado “1234”, y presione “Verificar cuota”.
+Entonces: El sistema informar retorna error por atraso del pago de la cuarto.
+}
+-------------------------------------------------------------------------------------------------------------
+## ID: Brindar ortodoncia.
+### TITULO: Como afiliado, quiero obtener mi servicio de ortodoncia, para su posterior uso.
+Reglas de negocios: Se reconoce sólo 1 afiliado, que debe ser menor de 15 años. Debe ser afiliado desde al menos 9 meses.
+
+## Criterios de Aceptación (Brindar ortodoncia)
+{
+### Escenario 1: Obtención de servicio exitosa.
+Dado: Que fue realizado el pago del mes anterior al solicitado, que el afiliado con código “1234” tiene 12 años y es afiliado hace 1 año y que todavía no solicitado ortodoncias este mes.
+Cuando: El afiliado ingrese el código “1234”, la edad de 12 años y el historial clínico y presione “Pedir ortodoncia”.
+Entonces: El sistema redirige al afiliado a la verificación de su cuota, espera respuesta, registra el pedido e informar “Servicio otorgado exitosamente”. 
+
+### Escenario 2: Obtención de servicio fallida por cupo ya utilizado.
+Dado: Que fue realizado el pago del mes anterior al solicitado, que el afiliado con código “1234” tiene 12 años y es afiliado hace 1 año pero ya se solicitó una ortodoncia este mes.
+Cuando: El afiliado ingrese el código “1234”, la edad de 12 años y el historial clínico y presione “Pedir ortodoncia”.
+Entonces: El sistema informar “Fallo al otorgar el servicio, por cupo ya utilizado”. 
+
+### Escenario 3: Obtención de servicio fallida por edad máxima excedida.
+Dado: Que fue realizado el pago del mes anterior al solicitado, que el afiliado con código “1234” tiene 16 años y es afiliado hace 1 año y que todavía no solicitado ortodoncias este mes.
+Cuando: El afiliado ingrese el código “1234”, la edad de 16 años y el historial clínico y presione “Pedir ortodoncia”.
+Entonces: El sistema informar “Fallo al otorgar el servicio, por edad máxima excedida”. 
+
+### Escenario 4: Obtención de servicio fallida por incumplimiento de tiempo mínimo afiliado.
+Dado: Que fue realizado el pago del mes anterior al solicitado, que el afiliado con código “1234” tiene 12 años y es afiliado hace 5 meses y que todavía no solicitado ortodoncias este mes.
+Cuando: El afiliado ingrese el código “1234”, la edad de 12 años y el historial clínico y presione “Pedir ortodoncia”.
+Entonces: El sistema informar “Fallo al otorgar el servicio, por tiempo mínimo afiliado no alcanzado”. 
+
+### Escenario 5: Obtención de servicio fallida por atraso de cuota.
+Dado: Que no fue realizado el pago del mes anterior al solicitado, que el afiliado con código “1234” tiene 12 años y es afiliado hace 1 año y que todavía no solicitado ortodoncias este mes.
+Cuando: El afiliado ingrese el código “1234”, la edad de 12 años y el historial clínico y presione “Pedir ortodoncia”.
+Entonces: El sistema redirige al afiliado a la verificación de su cuota, espera respuesta e informar “Fallo al otorgar el servicio, por atraso de cuota”.
+}
+-------------------------------------------------------------------------------------------------------------
+## ID: Brindar plantillas.
+### TITULO: Como afiliado, quiero obtener mi servicio de plantillas, para su posterior uso.
+Reglas de negocios: Se reconoce a 2 afiliados por año.
+
+## Criterios de Aceptación (Brindar plantillas)
+{
+### Escenario 1: Obtención de servicio exitosa.
+Dado: Que fue realizado el pago del mes anterior al solicitado, que el afiliado con código “1234” tiene solo 1 solicitud de plantillas en el año.
+Cuando: El afiliado ingrese el código “1234”, la indicación del profesional, factura del comercio que la confeccionó y presione “Pedir plantillas”.
+Entonces: El sistema redirige al afiliado a la verificación de su cuota, espera respuesta, registra el pedido e informar “Servicio otorgado exitosamente”. 
+
+### Escenario 2: Obtención de servicio fallida por cupos ya utilizados.
+Dado: Que fue realizado el pago del mes anterior al solicitado, que el afiliado con código “1234” tiene 2 solicitudes de plantillas en el año.
+Cuando: El afiliado ingrese el código “1234”, la indicación del profesional, factura del comercio que la confeccionó y presione “Pedir plantillas”.
+Entonces: El sistema informar “Fallo al otorgar el servicio, por cupos ya utilizados”. 
+
+### Escenario 3: Obtención de servicio fallida por atraso de cuota.
+Dado: Que no fue realizado el pago del mes anterior al solicitado, que el afiliado con código “1234” tiene solo 1 solicitudes de plantillas en el año.
+Cuando: El afiliado ingrese el código “1234”, la indicación del profesional, factura del comercio que la confeccionó y presione “Pedir plantillas”.
+Entonces: El sistema redirige al afiliado a la verificación de su cuota, espera respuesta e informar “Fallo al otorgar el servicio, por atraso de cuota”.
+}
+-------------------------------------------------------------------------------------------------------------
+## ID: Brindar anteojos.
+### TITULO: Como afiliado, quiero obtener mi servicio de anteojos, para su posterior uso.
+Reglas de negocios: Cualquier afiliado con fecha de afiliación superior a 3 meses. Un par de anteojos cada 18 meses.
+
+## Criterios de Aceptación (Brindar anteojos)
+{
+### Escenario 1: Obtención de servicio exitosa.
+Dado: Que fue realizado el pago del mes anterior al solicitado, que el afiliado con código “1234” tiene solo 1 solicitud de anteojos en 4 meses y es afiliado hace 1 año.
+Cuando: El afiliado ingrese el código “1234” y presione “Pedir anteojos”.
+Entonces: El sistema redirige al afiliado a la verificación de su cuota, espera respuesta, registra el pedido e informar “Servicio otorgado exitosamente”. 
+
+### Escenario 2: Obtención de servicio fallida por cupos ya utilizados.
+Dado: Que fue realizado el pago del mes anterior al solicitado, que el afiliado con código “1234” tiene 2 solicitudes de anteojos en 14 meses y es afiliado hace 1 año.
+Cuando: El afiliado ingrese el código “1234” y presione “Pedir plantillas”.
+Entonces: El sistema informar “Fallo al otorgar el servicio, por cupos ya utilizados”. 
+
+### Escenario 3: Obtención de servicio fallida por incumplimiento de tiempo mínimo afiliado.
+Dado: Que fue realizado el pago del mes anterior al solicitado, que el afiliado con código “1234” no tiene solicitudes de anteojos y es afiliado hace 3 meses.
+Cuando: El afiliado ingrese el código “1234” y presione “Pedir plantillas”.
+Entonces: El sistema informar “Fallo al otorgar el servicio, por tiempo mínimo afiliado no alcanzado”.
+
+### Escenario 4: Obtención de servicio fallida por atraso de cuota.
+Dado: Que no fue realizado el pago del mes anterior al solicitado, que el afiliado con código “1234” tiene solo 1 solicitud de anteojos en 4 meses y es afiliado hace 1 año.
+Cuando: El afiliado ingrese el código “1234” y presione “Pedir anteojos”.
+Entonces: El sistema redirige al afiliado a la verificación de su cuota, espera respuesta e informar “Fallo al otorgar el servicio, por atraso de cuota”.
+}
+-------------------------------------------------------------------------------------------------------------
+## ID: Brindar internación.
+### TITULO: Como afiliado, quiero obtener mi servicio de internación, para su posterior uso.
+Reglas de negocios: ---
+
+## Criterios de Aceptación (Brindar internación)
+{
+### Escenario 1: Obtención de servicio exitosa.
+Dado: Que fue realizado el pago del mes anterior al solicitado y que el afiliado tiene el código “1234”.
+Cuando: El afiliado ingrese el código “1234” y presione “Pedir internación”.
+Entonces: El sistema redirige al afiliado a la verificación de su cuota, espera respuesta, registra el pedido e informar “Servicio otorgado exitosamente”. 
+
+### Escenario 2: Obtención de servicio fallida por atraso de cuota.
+Dado: Que no fue realizado el pago del mes anterior al solicitado y que el afiliado tiene el código “1234”.
+Cuando: El afiliado ingrese el código “1234” y presione “Pedir internación”.
+Entonces: El sistema redirige al afiliado a la verificación de su cuota, espera respuesta e informar “Fallo al otorgar el servicio, por atraso de cuota”.
+}
+-------------------------------------------------------------------------------------------------------------
+## ID: Brindar consulta médica.
+### TITULO: Como afiliado, quiero obtener mi servicio de consulta médica, para su posterior uso.
+Reglas de negocios: Hasta 2 afiliados por mes.
+
+## Criterios de Aceptación (Brindar consulta médica)
+{
+### Escenario 1: Obtención de servicio exitosa.
+Dado: Que fue realizado el pago del mes anterior al solicitado y que el afiliado con código “1234” tiene 1 solicitud de turno en el mes.
+Cuando: El afiliado ingrese el código “1234” y presione “Pedir consulta médica”.
+Entonces: El sistema redirige al afiliado a la verificación de su cuota, espera respuesta, registra el pedido e informar “Servicio otorgado exitosamente”. 
+
+### Escenario 2: Obtención de servicio fallida por cupos ya utilizados.
+Dado: Que fue realizado el pago del mes anterior al solicitado y que el afiliado con código “1234” tiene 2 solicitud de turno en el mes.
+Cuando: El afiliado ingrese el código “1234” y presione “Pedir consulta médica”.
+Entonces: El sistema informar “Fallo al otorgar el servicio, por cupos ya utilizados
+
+### Escenario 3: Obtención de servicio fallida por atraso de cuota.
+Dado: Que no fue realizado el pago del mes anterior al solicitado y que el afiliado con código “1234” tiene 1 solicitud de turno en el mes.
+Cuando: El afiliado ingrese el código “1234” y presione “Pedir consulta médica”.
+Entonces: El sistema redirige al afiliado a la verificación de su cuota, espera respuesta e informar “Fallo al otorgar el servicio, por atraso de cuota”.
+}
+

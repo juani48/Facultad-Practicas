@@ -12,39 +12,29 @@ function evaluar(){
 
 if test $# -eq 3
 then
-    count_exit=0
-    oper="N"
-    parm_array=($*)
-    num_array=()
-    for i in ${parm_array[*]}; do
-        case $i in
+    case $2 in
         "+")
-        count_exit=$(expr $count_exit + 1)
-        evaluar $count_exit
-        oper="+"
+        echo "Suma: $(expr $1 + $3)"
         ;;
         "-")
-        count_exit=$(expr $count_exit + 1)
-        evaluar $count_exit
-        oper="-"
+        echo "Resta: $(expr $1 - $3)"
         ;;
         "*")
-        count_exit=$(expr $count_exit + 1)
-        evaluar $count_exit
-        oper="*"
+        echo "Multiplicacion: $(expr $1 \* $3)"
         ;;
         "/")
-        count_exit=$(expr $count_exit + 1)
-        evaluar $count_exit
-         oper="/"
+        echo "Division: $(expr $1 / $3)"
         ;;
         *)
-        num_array=(${num_array[*]} $i)
-        esac
-    done
-    resul=$(expr ${num_arrray[0]} ${oper} ${num_arrray[1]})
-    echo "Resultado de ${num_arrray[0]} ${oper} ${num_arrray[1]} = ${resut}"
+        echo "No se ingresaron parametros validos."
+        echo "Respete el fomarto: (numero) (operador) (numero)."
+        echo "Para multiplicar ingrese: \*"
+        exit 1
+        ;;
+    esac
 else
-    echo "No se enviaron los parametros necesarios. Se enviarion ${$#}."
+    echo "No se enviaron los parametros necesarios."
+    echo "Respete el fomarto: (numero) (operador) (numero)."
+    echo "Para multiplicar ingrese: \*"
     exit 1
 fi
