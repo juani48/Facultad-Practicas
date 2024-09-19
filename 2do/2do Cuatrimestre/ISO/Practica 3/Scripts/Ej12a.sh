@@ -16,7 +16,7 @@ echo "La multiplicacion de los dos numeros es: $(expr $num1 \* $num2)"
 
 echo "La division de los dos numeros es: $(expr $num1 / $num2)"
 
-if test $num1 -gt $num2
+if [ $num1 -gt $num2 ]
 then
     echo "El primer numero ( ${num1} ) es el mas grande de los dos"
 else 

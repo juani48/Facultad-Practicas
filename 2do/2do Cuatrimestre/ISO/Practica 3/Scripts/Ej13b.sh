@@ -6,6 +6,8 @@
 # DondeEstoy: muestra el directorio donde me encuentro ubicado.
 # QuienEsta: muestra los usuarios conectados al sistema
 
+if test $# -eq 0 ; then
+
 opci="1"
 echo "Bienvenido al sistema."
 while test $opci -gt 0 && test $opci -lt 4; do
@@ -17,13 +19,13 @@ while test $opci -gt 0 && test $opci -lt 4; do
 
     case $opci in
     "1")
-    echo $(ls)
+    	echo $(ls)
     ;;
     "2")
-    echo $(pwd)
+    	echo $(pwd)
     ;;
     "3")
-    echo $(users)
+	echo $(users)
     ;;
     *)
     break
@@ -32,3 +34,6 @@ while test $opci -gt 0 && test $opci -lt 4; do
 done
 echo "Saliendo del sistema."
 exit 0
+else
+	exit 1
+if
