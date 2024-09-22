@@ -98,13 +98,17 @@ public class Mamifero {
         }	
     }
 
+    public boolean equals(Mamifero mamifero){
+        return this.getIdentificador() == mamifero.getIdentificador();
+    }
+
     public boolean tieneComoAncestroA(Mamifero ancestro){
         boolean ok = false;
         if(this.getMadre() != null && !ok){
-        	ok = this.getMadre() == ancestro || this.getMadre().tieneComoAncestroA(ancestro);
+        	ok = this.getMadre().equals(ancestro) || this.getMadre().tieneComoAncestroA(ancestro);
         }
         if(this.getPadre() != null && !ok){
-        	ok = this.getPadre() == ancestro || this.getPadre().tieneComoAncestroA(ancestro);	
+        	ok = this.getPadre().equals(ancestro) || this.getPadre().tieneComoAncestroA(ancestro);	
         }
         return ok;
     }
