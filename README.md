@@ -49,7 +49,7 @@ Practicas de la carrera de Lincenciatura en Sistemas, plan de estudio [2021](htt
       * [Técnicas de Elicitación de Requerimientos](https://github.com/juani48/Facultad-Practicas/tree/main/2do/2do%20Cuatrimestre/IS1/Practica-1).
       * [Historia de Usuario](https://github.com/juani48/Facultad-Practicas/tree/main/2do/2do%20Cuatrimestre/IS1/Practica-2).
       * [Casos de Uso](https://github.com/juani48/Facultad-Practicas/tree/main/2do/2do%20Cuatrimestre/IS1/Practica-3)
-        
+  
     * [Orientación a Objetos 1](https://github.com/juani48/Facultad-Practicas/tree/main/2do/2do%20Cuatrimestre/OO1).
       * [Practica 1](https://github.com/juani48/Facultad-Practicas/tree/main/2do/2do%20Cuatrimestre/OO1/Practica1).
 
