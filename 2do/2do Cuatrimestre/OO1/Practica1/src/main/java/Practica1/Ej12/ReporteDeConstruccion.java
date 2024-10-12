@@ -5,18 +5,22 @@ import java.util.List;
 
 public class ReporteDeConstruccion {
 
-    private List<IPieza> piezas;
+    private List<Pieza> piezas;
 
-    public ReporteDeConstruccion(){
-        this.piezas = new ArrayList<>();
+    public ReporteDeConstruccion(List<Pieza> list){
+        this.piezas = new ArrayList<>(list);
     }
 
-    private List<IPieza> getPeizas(){
+    private List<Pieza> getPeizas(){
         return this.piezas;
     }
 
-    public double getVolumenDeMaterial(String mateiral){
-        return this.getPeizas().stream().mapToDouble(x -> x.getVolumenDeMaterial(mateiral)).sum();
+    public double getVolumenDeMaterial(String material){
+        return this.getPeizas().stream().filter(x -> x.getMaterial() == material).mapToDouble(x -> x.getVolumenDeMaterial()).sum();
+    }
+
+    public double getSuperficieDeColor(String color){
+        return this.getPeizas().stream().filter(x -> x.getColor() == color).mapToDouble(x -> x.getSuperficieDeColor()).sum();
     }
 
 }

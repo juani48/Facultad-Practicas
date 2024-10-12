@@ -27,6 +27,10 @@ public class PlazoFijo implements Inversiones {
         return this.fechaDeConstitucion;
     }
 
+    public void setFechaDeConstitucion(LocalDate fechaDeConstitucion){
+        this.fechaDeConstitucion = fechaDeConstitucion;
+    }
+
     @Override
     public double valorActual() {
         return (DAYS.between(this.getFechaDeConstitucion(), LocalDate.now()))*this.getPorcentajeDeInteresDiario()*this.getMontoDepositado();

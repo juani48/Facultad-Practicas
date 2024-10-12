@@ -14,6 +14,10 @@ public class Inversor {
         this.inversiones = new ArrayList<>();
     }
 
+    public void agregarInversion(Inversiones inversion){
+        this.getInversiones().add(inversion);
+    }
+
     public List<Inversiones> getInversiones(){
         return this.inversiones;
     }

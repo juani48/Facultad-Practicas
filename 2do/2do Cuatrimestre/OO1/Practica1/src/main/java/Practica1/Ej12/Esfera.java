@@ -14,12 +14,12 @@ public class Esfera extends Pieza {
     }
 
     @Override
-    public double getVolumenDeMaterial(String mateiral) {
+    public double getVolumenDeMaterial() {
         return (4/3) * Math.PI * Math.pow(this.getRadio(), 3);
     }
 
     @Override
-    public double getSuperficieDeColor(String mateiral) {
+    public double getSuperficieDeColor() {
         return 4 * Math.PI * Math.pow(this.getRadio(), 2);     
     }
 

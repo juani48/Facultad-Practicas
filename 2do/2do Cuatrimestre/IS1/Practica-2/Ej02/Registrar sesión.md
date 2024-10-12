@@ -10,11 +10,11 @@ Reglas de negocios: El nombre de usuario es único. La contraseña debe poseer, 
 - Entonces: El sistema registra al usuario y lo redirige al listado de posgrados.
 
 ### Escenario 2: Registro fallido por nombre de usuario duplicado.
-- Dado: Que ya existe un registro del nombre de usuario ‘CBA’ pero no de la contraseña ‘D12345’.
+- Dado: Que ya existe un registro del nombre de usuario ‘CBA’.
 - Cuando: El usuario ingrese el nombre de usuario ‘CBA’  y la contraseña ‘D12345’ y presione “Registrar”.
 - Entonces: El sistema informara “Falla al registrar al usuario, el nombre de usuario ya existe”. 
 
 ### Escenario 3: Registro fallido por contraseña incorrecta.
-- Dado: Que no existe un registro del nombre del usuario ‘ABC’ y la contraseña ‘D12345’.
-- Cuando: El usuario ingrese el nombre de usuario ‘ABC  y la contraseña ‘1234’ y presione “Registrar”.
+- Dado: Que no existe un registro del nombre del usuario ‘ABC’ y la contraseña ‘D123’ posee menos de 6 caracteres.
+- Cuando: El usuario ingrese el nombre de usuario ‘ABC  y la contraseña ‘D123’ y presione “Registrar”.
 - Entonces: El sistema informara “Falla al registrar al usuario, la contraseña tiene menos de 6 caracteres”. 

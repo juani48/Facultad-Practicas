@@ -26,12 +26,12 @@ public class PrismaRectangular extends Pieza{
     }
 
     @Override
-    public double getVolumenDeMaterial(String mateiral) {
+    public double getVolumenDeMaterial() {
        return this.getAltura() * this.getLadoMayor() * this.getLadoMenor();
     }
 
     @Override
-    public double getSuperficieDeColor(String mateiral) {
+    public double getSuperficieDeColor() {
         return 2 * (this.getLadoMayor() * this.getLadoMenor() + this.getLadoMayor() * this.getAltura() + this.getLadoMenor());
     }
     
