@@ -1,4 +1,4 @@
-## ID: Cerrar sesión
+## ID: Cerrar sesión.
 ### TITULO: Como usuario, quiero cerrar sesión, para la seguridad de mi cuenta.
 Reglas de Negocios: ---
 

@@ -145,6 +145,7 @@ public class AdjListGraph<T> implements Graph<T> {
 
 
 	// Método para generar un grafo aleatorio con vértices y aristas aleatorios
+	@SuppressWarnings("unchecked")
 	public void generateRandomGraph(int numVertices, int numEdges, int maxWeight) {
         Random random = new Random();
 

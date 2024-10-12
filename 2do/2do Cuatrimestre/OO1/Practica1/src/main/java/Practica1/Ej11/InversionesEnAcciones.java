@@ -2,6 +2,7 @@ package Practica1.Ej11;
 
 public class InversionesEnAcciones implements Inversiones{
 
+    @SuppressWarnings("unused")
     private String nombre;
     private int cantidad;
     private double valorUnitario;

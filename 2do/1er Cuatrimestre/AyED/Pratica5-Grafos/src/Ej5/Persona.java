@@ -5,6 +5,7 @@ public class Persona {
     private String nombre = "";
     private boolean esJubilado = false;
     private boolean jubilacionRecivida = false;
+    @SuppressWarnings("unused")
     private String domicilio = "";
 
     public Persona(String nombreJubildao, boolean jubilacio){

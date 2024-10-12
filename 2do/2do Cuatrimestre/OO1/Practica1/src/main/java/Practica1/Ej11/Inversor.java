@@ -5,6 +5,7 @@ import java.util.List;
 
 public class Inversor {
 
+    @SuppressWarnings("unused")
     private String nombre;
     private List<Inversiones> inversiones;
 
