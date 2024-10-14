@@ -1,0 +1,3 @@
+* [Imperativo-Pascal](https://github.com/juani48/Facultad-Practicas/tree/main/1ro/2-Cutrimestre/TallerDeProgramacion/1-Imperativo%20(Pascal)).
+* [Objetos-Java](https://github.com/juani48/Facultad-Practicas/tree/main/1ro/2-Cutrimestre/TallerDeProgramacion/2-Objetos%20(Java)).
+* [Concurrente-R-Info](https://github.com/juani48/Facultad-Practicas/tree/main/1ro/2-Cutrimestre/TallerDeProgramacion/3-Concurrente%20(r-info)).

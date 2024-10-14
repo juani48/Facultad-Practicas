@@ -13,10 +13,6 @@ Practicas de la carrera de Lincenciatura en Sistemas, plan de estudio [2021](htt
  
     * [Taller de programacion](https://github.com/juani48/Facultad-Practicas/tree/main/1ro/2-Cutrimestre/TallerDeProgramacion).
 
-      * [Imperativo-Pascal](https://github.com/juani48/Facultad-Practicas/tree/main/1ro/2-Cutrimestre/TallerDeProgramacion/1-Imperativo%20(Pascal)).
-      * [Objetos-Java](https://github.com/juani48/Facultad-Practicas/tree/main/1ro/2-Cutrimestre/TallerDeProgramacion/2-Objetos%20(Java)).
-      * [Concurrente-R-Info](https://github.com/juani48/Facultad-Practicas/tree/main/1ro/2-Cutrimestre/TallerDeProgramacion/3-Concurrente%20(r-info)).
-
 * [Segundo año](https://github.com/juani48/Facultad-Practicas/tree/main/2do).
  
   * [Primer cuatrimestre](https://github.com/juani48/Facultad-Practicas/tree/main/2do/1er%20Cuatrimestre).
@@ -24,43 +20,19 @@ Practicas de la carrera de Lincenciatura en Sistemas, plan de estudio [2021](htt
     * [Seminario de lenguaje - .NET](https://github.com/juani48/Facultad-Practicas/tree/main/2do/1er%20Cuatrimestre).
       
     * [Algoritmos y Estructuras de Datos](https://github.com/juani48/Facultad-Practicas/tree/main/2do/1er%20Cuatrimestre/AyED).
-      * [Definicion de clases](https://github.com/juani48/Facultad-Practicas/tree/main/2do/1er%20Cuatrimestre/AyED/JavaClases).
-      * [Arboles Binarios](https://github.com/juani48/Facultad-Practicas/tree/main/2do/1er%20Cuatrimestre/AyED/Practica2-ArbolesBInarios).
-      * [Arboles Generales](https://github.com/juani48/Facultad-Practicas/tree/main/2do/1er%20Cuatrimestre/AyED/Practica3-ArbolesGenerales).
-      * [Grafos](https://github.com/juani48/Facultad-Practicas/tree/main/2do/1er%20Cuatrimestre/AyED/Pratica5-Grafos).
-      * [Ejercicios Teoricos](https://github.com/juani48/Facultad-Practicas/tree/main/2do/1er%20Cuatrimestre/AyED/EjercitacionTeorica).
-         - [Arboles](https://github.com/juani48/Facultad-Practicas/tree/main/2do/1er%20Cuatrimestre/AyED/EjercitacionTeorica/1-Arboles).
-         - [Heap](https://github.com/juani48/Facultad-Practicas/tree/main/2do/1er%20Cuatrimestre/AyED/EjercitacionTeorica/2-Heap).
-         - [Grafos](https://github.com/juani48/Facultad-Practicas/tree/main/2do/1er%20Cuatrimestre/AyED/EjercitacionTeorica/3-Grafos).
            
     * [Fundamentos de Organizacion de Datos](https://github.com/juani48/Facultad-Practicas/tree/main/2do/1er%20Cuatrimestre/FOD).
-      * [Archivos Secuenciales ordenados](https://github.com/juani48/Facultad-Practicas/tree/main/2do/1er%20Cuatrimestre/FOD/Practica2-Algor%C3%ADtmica%20Cl%C3%A1sica).
-      * [Bajas en archivos secuenciales](https://github.com/juani48/Facultad-Practicas/tree/main/2do/1er%20Cuatrimestre/FOD/Practica3-Bajas).
-      * [Arboles B](https://github.com/juani48/Facultad-Practicas/tree/main/2do/1er%20Cuatrimestre/FOD/Practica4-Arboles).
-      * [Hashing](https://github.com/juani48/Facultad-Practicas/tree/main/2do/1er%20Cuatrimestre/FOD/Practica5-Hashing).
 
   * [Segundo cuatrimestre](https://github.com/juani48/Facultad-Practicas/tree/main/2do/2do%20Cuatrimestre).
     
     * [Diseño de Bases de Datos](https://github.com/juani48/Facultad-Practicas/tree/main/2do/2do%20Cuatrimestre/DBD).
-      * [Modelado Conceptual](https://github.com/juani48/Facultad-Practicas/tree/main/2do/2do%20Cuatrimestre/DBD/Practica%201).
-      * [Modelado Conceptual, logico y físico](https://github.com/juani48/Facultad-Practicas/tree/main/2do/2do%20Cuatrimestre/DBD/Practica%202)
       
     * [Ingeniería de Software 1](https://github.com/juani48/Facultad-Practicas/tree/main/2do/2do%20Cuatrimestre/IS1).
-      * [Técnicas de Elicitación de Requerimientos](https://github.com/juani48/Facultad-Practicas/tree/main/2do/2do%20Cuatrimestre/IS1/Practica-1).
-      * [Historia de Usuario](https://github.com/juani48/Facultad-Practicas/tree/main/2do/2do%20Cuatrimestre/IS1/Practica-2).
-      * [Casos de Uso](https://github.com/juani48/Facultad-Practicas/tree/main/2do/2do%20Cuatrimestre/IS1/Practica-3)
   
     * [Orientación a Objetos 1](https://github.com/juani48/Facultad-Practicas/tree/main/2do/2do%20Cuatrimestre/OO1).
       * [Practica 1](https://github.com/juani48/Facultad-Practicas/tree/main/2do/2do%20Cuatrimestre/OO1/Practica1).
 
     * [Introducción a los Sistemas Operativos](https://github.com/juani48/Facultad-Practicas/tree/main/2do/2do%20Cuatrimestre/ISO).
-      * [Practica 1](https://github.com/juani48/Facultad-Practicas/tree/main/2do/2do%20Cuatrimestre/ISO/Practica%201).
-      * [Practica 2](https://github.com/juani48/Facultad-Practicas/tree/main/2do/2do%20Cuatrimestre/ISO/Practica%202).
-      * [Practica 3](https://github.com/juani48/Facultad-Practicas/tree/main/2do/2do%20Cuatrimestre/ISO/Practica%203).
-        * [Conceptos](https://github.com/juani48/Facultad-Practicas/tree/main/2do/2do%20Cuatrimestre/ISO/Practica%203/Conceptos).
-        * [Bash](https://github.com/juani48/Facultad-Practicas/tree/main/2do/2do%20Cuatrimestre/ISO/Practica%203/Scripts).
-      * [Autoevaluaciones](https://github.com/juani48/Facultad-Practicas/tree/main/2do/2do%20Cuatrimestre/ISO/Autoevaluaciones).
-        * [Practica 1 y 2](https://github.com/juani48/Facultad-Practicas/blob/main/2do/2do%20Cuatrimestre/ISO/Autoevaluaciones/Practica%201%20y%202.md).
 
 >Ejercicios sujetos a errores, pregunta al Ayudate/JTP la validez del codigo.
 
