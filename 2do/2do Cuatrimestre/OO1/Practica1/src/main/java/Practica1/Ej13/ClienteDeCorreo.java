@@ -21,8 +21,12 @@ public class ClienteDeCorreo {
         return this.carpetas;
     }
 
+    public void addCarpeta(Carpeta carpeta){
+        this.getCarpetas().add(carpeta);
+    }
+    
     public void recibir(Email email){
-        this.mover(this.getInbox(), this.getInbox(), email);
+        this.getInbox().addEmail(email);
     }
 
     public Email buscar(String texto){
@@ -30,11 +34,11 @@ public class ClienteDeCorreo {
         if(aux != null){
             return aux;
         }
-        return this.getCarpetas().stream().map(x -> x.buscar(texto)).findFirst().orElse(null);
+        return this.getCarpetas().stream().map(x -> x.buscar(texto)).findFirst().get();
     }
 
     public int espacioOcupado(){
-        return 0;
+        return this.getCarpetas().stream().mapToInt(x -> x.tamaño()).sum();
     }
 
     public void mover(Carpeta origen, Carpeta destino, Email email){

@@ -27,8 +27,16 @@ public class Email {
         return this.adjuntos;
     }
 
+    public void addAdjunto(Archivo archivo){
+        this.adjuntos.add(archivo);
+    }
+
+    public boolean equals(Email email){
+        return this.getTitulo().equals(email.getTitulo()) && this.getCuerpo().equals(email.getCuerpo());
+    }
+
     public Email buscar(String texto){
-        if (this.getCuerpo().contains(texto) && this.getTitulo().contains(texto)){
+        if (this.getCuerpo().contains(texto) || this.getTitulo().contains(texto)){
             return this;
         }
         return null;

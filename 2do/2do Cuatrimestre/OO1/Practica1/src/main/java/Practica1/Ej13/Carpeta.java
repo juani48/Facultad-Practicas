@@ -21,15 +21,23 @@ public class Carpeta {
         return this.emails;
     }
 
-    private void add (Email email){
+    public void addEmail (Email email){
         this.getEmails().add(email);
     }
 
     public void mover(Email email, Carpeta carpeta){
-        carpeta.add(this.getEmails().stream().filter(x -> x.equals(email)).findFirst().get());
+        Email aux = this.getEmails().stream().filter(x -> x.equals(email)).findFirst().orElse(null);
+        if (aux != null){
+            this.getEmails().remove(aux);
+            carpeta.addEmail(aux);
+        }
     }
 
     public Email buscar (String texto){
-        return this.getEmails().stream().filter(x -> x.buscar(texto) != null).findFirst().orElse(null);
+        return this.getEmails().stream().map(x -> x.buscar(texto)).findFirst().get();
+    }
+
+    public int tamaño(){
+        return this.getEmails().stream().mapToInt(x -> x.tamaño()).sum() + this.getNombre().length();
     }
 }

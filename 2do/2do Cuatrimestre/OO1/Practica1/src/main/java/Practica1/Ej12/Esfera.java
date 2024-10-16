@@ -15,7 +15,7 @@ public class Esfera extends Pieza {
 
     @Override
     public double getVolumenDeMaterial() {
-        return (4/3) * Math.PI * Math.pow(this.getRadio(), 3);
+        return (4.0/3.0) * Math.PI * Math.pow(this.getRadio(), 3);
     }
 
     @Override

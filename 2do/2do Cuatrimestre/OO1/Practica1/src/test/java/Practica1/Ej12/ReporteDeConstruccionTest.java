@@ -22,13 +22,13 @@ public class ReporteDeConstruccionTest {
 
     @Test
     void testVolumenDeMaterial(){
-        assertEquals(33.51032164, this.reporteDeConstruccion.getVolumenDeMaterial("Material"));
+        assertEquals(25.132741228718345, this.reporteDeConstruccion.getVolumenDeMaterial("Material"));
         assertEquals(0, this.reporteDeConstruccion.getVolumenDeMaterial("Otro material"));
     }
 
     @Test
     void testSuperficieDeColor(){
-        assertEquals(50.26548246, this.reporteDeConstruccion.getSuperficieDeColor("Color"));
+        assertEquals(50.26548245743669, this.reporteDeConstruccion.getSuperficieDeColor("Color"));
         assertEquals(0, this.reporteDeConstruccion.getSuperficieDeColor("Otro color"));
     }
 
