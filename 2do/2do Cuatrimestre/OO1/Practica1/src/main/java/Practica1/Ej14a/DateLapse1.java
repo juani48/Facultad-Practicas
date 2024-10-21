@@ -30,6 +30,6 @@ public class DateLapse1 implements IDateLapse {
 
     //“recibe un objeto LocalDate y retorna true si la fecha está entre el from y el to del receptor y false en caso contrario”
     public boolean includesDate(LocalDate other){
-        return other.isAfter(this.getFrom()) && other.isBefore(this.getTo());
+        return this.getFrom().isAfter(other) && this.getTo().isBefore(other) || this.getFrom().equals(other) || this.getTo().equals(other);
     }
 }
