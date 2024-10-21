@@ -31,8 +31,9 @@ public class DateLapse2Test {
 
     @Test
     void testIncludesDate2(){
-        assertTrue(this.dateLapse2.includesDate(LocalDate.of(1, 1, 1)));
-        assertTrue(this.dateLapse2.includesDate(LocalDate.of(1, 1, 10)));
-        assertFalse(this.dateLapse2.includesDate(LocalDate.of(1, 1, 11)));
+        IDateLapse periodo1 = new DateLapse1(LocalDate.of(1, 1, 1), LocalDate.of(1, 1, 9));
+        IDateLapse periodo2 = new DateLapse1(LocalDate.of(1, 1, 1), LocalDate.of(1, 1, 11));
+        assertTrue(this.dateLapse2.includesDate(periodo1));
+        assertFalse(this.dateLapse2.includesDate(periodo2));
     }
 }

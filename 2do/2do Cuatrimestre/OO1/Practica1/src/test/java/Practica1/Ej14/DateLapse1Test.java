@@ -21,22 +21,20 @@ public class DateLapse1Test {
     @BeforeEach
     void setUp(){
         this.dateLapse1 = new DateLapse1(LocalDate.of(1, 1, 1), LocalDate.of(1, 1, 10));
-        
-        
     }
 
     @Test
     void testSizeInDays1(){
-        
         assertEquals(9, this.dateLapse1.sizeInDays());
         assertNotEquals(10, this.dateLapse1.sizeInDays());
     }
 
     @Test
     void testIncludesDate1(){
-        assertTrue(this.dateLapse1.includesDate(LocalDate.of(1, 1, 1)));
-        assertTrue(this.dateLapse1.includesDate(LocalDate.of(1, 1, 10)));
-        assertFalse(this.dateLapse1.includesDate(LocalDate.of(1, 1, 11)));
+        IDateLapse periodo1 = new DateLapse1(LocalDate.of(1, 1, 1), LocalDate.of(1, 1, 9));
+        IDateLapse periodo2 = new DateLapse1(LocalDate.of(1, 1, 1), LocalDate.of(1, 1, 11));
+        assertTrue(this.dateLapse1.includesDate(periodo1));
+        assertFalse(this.dateLapse1.includesDate(periodo2));
     }
 
     
