@@ -3,6 +3,8 @@ package Practica1.Ej17;
 import java.util.ArrayList;
 import java.util.List;
 
+import Practica1.Ej14a.IDateLapse;
+
 public class Usuario extends Persona {
 
     private String direccion;
@@ -23,7 +25,8 @@ public class Usuario extends Persona {
     }
 
     public boolean cancelarReserva(Reserva reserva){
-        Reserva aux = this.getReservas().stream().filter(x -> x.equals(reserva) && x.isActivo() == false).findFirst().orElse(null);
+        IDateLapse periodo = reserva.getPeriodo();
+        Reserva aux = this.getReservas().stream().filter(x -> x.equals(reserva) && x.isActivo(periodo) == false).findFirst().orElse(null);
         if(aux != null){
             aux.cancelar();
             this.getReservas().remove(aux);

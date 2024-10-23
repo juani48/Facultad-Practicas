@@ -3,6 +3,8 @@ package Practica1.Ej17;
 import java.util.ArrayList;
 import java.util.List;
 
+import Practica1.Ej14a.IDateLapse;
+
 public class Propietario extends Persona {
 
     private List<Propiedad> propiedades;
@@ -20,8 +22,8 @@ public class Propietario extends Persona {
         this.getPropiedades().add(propiedad);
     }
 
-    public double calcularRetribucion(){
-        return this.getPropiedades().stream().mapToDouble(x -> x.getMontoTotal() * 0.75).sum();
+    public double calcularRetribucion(IDateLapse perido){
+        return this.getPropiedades().stream().filter(x -> x.diponibilidad(perido) != false).mapToDouble(x -> x.getMontoTotal(perido) * 0.75).sum();
     }
 
 

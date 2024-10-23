@@ -34,8 +34,8 @@ public class Propiedad {
         return this.precio;
     }
 
-    public double getMontoTotal(){
-        return this.getReservas().stream().mapToDouble(x -> x.getPrecioNoche()).sum();
+    public double getMontoTotal(IDateLapse periodo){
+        return this.getReservas().stream().mapToDouble(x -> x.getPrecioNoche(periodo)).sum();
     }
 
     public List<Reserva> getReservas(){

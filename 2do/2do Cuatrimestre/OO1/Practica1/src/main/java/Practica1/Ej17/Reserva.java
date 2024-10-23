@@ -1,8 +1,5 @@
 package Practica1.Ej17;
 
-import java.time.LocalDate;
-
-import Practica1.Ej14a.DateLapse1;
 import Practica1.Ej14a.IDateLapse;
 
 public class Reserva {
@@ -29,16 +26,19 @@ public class Reserva {
         return this.periodo;
     }
 
-    public boolean isActivo(){
-        return this.getPeriodo().includesDate(new DateLapse1(LocalDate.now(),LocalDate.now()));
+    public boolean isActivo(IDateLapse periodo){
+        return this.getPeriodo().includesDate(periodo);
     }
 
     public Usuario usuario(){
         return this.usuario;
     }
 
-    public double getPrecioNoche(){
-        return this.getPropiedad().getPrecio() * this.getPeriodo().sizeInDays();
+    public double getPrecioNoche(IDateLapse perido){
+        if(this.isActivo(perido)){
+            return this.getPropiedad().getPrecio() * this.getPeriodo().sizeInDays();
+        }
+        return 0;
     }
 
     public void cancelar(){
