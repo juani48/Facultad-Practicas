@@ -1,0 +1,43 @@
+@startuml
+
+interface IEnvio{
+montoPagar(): double
+}
+
+class EnvioLocal{
+-fechaDespacho: LocalDate
+-origen: string
+-destino: string
+-gramos: double
+}
+
+class EnvioInterUrbano{
+-distancia: double
+}
+
+class EnvioInternacional{}
+
+abstract class Cliente{
+-direccion: string
+agregraEnvio(envio: IEnvio)
+}
+
+class PersonaFisica{
+-nombre: string
+-dni: integer
+}
+
+class ClienteCorporativo{
+-nombre_empresa: string
+-cuit: integer
+}
+
+EnvioLocal <|-- EnvioInterUrbano : <<Extends>>
+EnvioLocal<|-- EnvioInternacional: <<Extends>>
+IEnvio <|.. EnvioLocal : <<Implements>>
+
+Cliente --> IEnvio : -envios 0..n
+
+Cliente <|-- PersonaFisica: <<Extends>>
+Cliente <|-- ClienteCorporativo: <<Extends>>
+@enduml
