@@ -5,7 +5,9 @@ import java.util.List;
 
 public class Usuario {
 
+    @SuppressWarnings("unused")
     private String nombre;
+    @SuppressWarnings("unused")
     private String domicilio;
     private List<Consumo> consumos;
 

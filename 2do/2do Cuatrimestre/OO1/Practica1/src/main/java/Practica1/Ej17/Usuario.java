@@ -7,6 +7,7 @@ import Practica1.Ej14a.IDateLapse;
 
 public class Usuario extends Persona {
 
+    @SuppressWarnings("unused")
     private String direccion;
     private List<Reserva> reservas;
 
