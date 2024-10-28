@@ -7,6 +7,7 @@ import Practica1.Ej14a.IDateLapse;
 
 public abstract class Cliente {
 
+	@SuppressWarnings("unused")
 	private String direccion;
 	private List<IEnvio> envios;
 	

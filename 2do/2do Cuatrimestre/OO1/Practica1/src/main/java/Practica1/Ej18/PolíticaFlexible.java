@@ -1,10 +1,5 @@
 package Practica1.Ej18;
 
-import Practica1.Ej14a.IDateLapse;
-
-import java.time.LocalDate;
-
-import Practica1.Ej14a.DateLapse1;
 import Practica1.Ej17.Reserva;
 
 public class PolíticaFlexible implements IPolitica {

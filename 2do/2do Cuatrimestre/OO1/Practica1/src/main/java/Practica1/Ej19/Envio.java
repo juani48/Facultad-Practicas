@@ -4,7 +4,9 @@ import java.time.LocalDate;
 public abstract class Envio  implements IEnvio {
 
 	private LocalDate fechaDespacho;
+	@SuppressWarnings("unused")
 	private String origen;
+	@SuppressWarnings("unused")
 	private String destino;
 	private double gramos;
 	

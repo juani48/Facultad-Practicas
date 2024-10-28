@@ -4,7 +4,9 @@ import Practica1.Ej14a.IDateLapse;
 
 public class PersonaFisica extends Cliente{
 
+	@SuppressWarnings("unused")
 	private String nombre;
+	@SuppressWarnings("unused")
 	private int dni;
 	
 	public PersonaFisica(String direccion, String nombre, int dni) {

@@ -10,7 +10,6 @@ import org.junit.jupiter.api.Test;
 
 import Practica1.Ej14a.DateLapse1;
 import Practica1.Ej14a.IDateLapse;
-import Practica1.Ej19.PersonaFisica;
 
 public class PersonaFisicaTest {
 
