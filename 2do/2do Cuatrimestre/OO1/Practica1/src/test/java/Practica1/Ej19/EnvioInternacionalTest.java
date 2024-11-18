@@ -1,6 +1,7 @@
 package Practica1.Ej19;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 import java.time.LocalDate;
 
@@ -30,13 +31,13 @@ public class EnvioInternacionalTest {
 	}
 	
 	@Test
-	void testMontoPagar() {
+	void testMontoPagarLiviano() {
 		this.envioInternacional = new EnvioInternacional(this.fecha, "origen", "destino", 999);
 		assertEquals(5000, this.envioInternacional.montoPagar(periodo));
 	}
 	
 	@Test
-	void testMontoPagarLiviano() {
+	void testMontoPagarMedio() {
 		this.envioInternacional = new EnvioInternacional(this.fecha, "origen", "destino", 1000);
 		assertEquals(15000, this.envioInternacional.montoPagar(periodo));
 	}

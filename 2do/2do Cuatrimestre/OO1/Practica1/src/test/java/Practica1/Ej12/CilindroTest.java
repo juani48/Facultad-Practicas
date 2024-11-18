@@ -18,7 +18,7 @@ public class CilindroTest {
     @Test
     void testVolumentMaterial(){
         assertEquals(12.566370614359172, this.cilindro.getVolumenDeMaterial());
-        assertNotEquals(12, this.cilindro.getVolumenDeMaterial());
+        assertNotEquals(12.566370614359171, this.cilindro.getVolumenDeMaterial());
     }
 
     @Test

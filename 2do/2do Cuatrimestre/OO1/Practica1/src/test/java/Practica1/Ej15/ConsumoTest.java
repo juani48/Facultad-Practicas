@@ -1,6 +1,7 @@
 package Practica1.Ej15;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -17,8 +18,8 @@ public class ConsumoTest {
     @Test // minimo activa = 1.334 reactiva = 1 => 0.8001439309
     void testGetMontoFinal(){
         assertEquals(4.4, this.consumo.getMontoFinal());
-        this.consumo = new Consumo(1,1, new CuadroTarifario(2));
-        assertEquals(2, this.consumo.getMontoFinal());
+       this.consumo = new Consumo(1,1, new CuadroTarifario(2));
+        assertEquals(5, this.consumo.getMontoFinal());
     }
 
 }
