@@ -60,3 +60,6 @@
 - [Diagramas de Transición y Estados](https://github.com/juani48/Facultad-Practicas/blob/main/2do/2do%20Cuatrimestre/IS1/Autoevaluaciones/4%20-%20DTE%20(Diagramas%20de%20Transici%C3%B3n%20y%20Estados).md).
 - [Redes de Petri](https://github.com/juani48/Facultad-Practicas/blob/main/2do/2do%20Cuatrimestre/IS1/Autoevaluaciones/5%20-%20Redes%20de%20Petri.md).
 - [Tablas de decisión](https://github.com/juani48/Facultad-Practicas/blob/main/2do/2do%20Cuatrimestre/IS1/Autoevaluaciones/6%20-%20Tablas%20de%20decisi%C3%B3n.md).
+- [Análisis estructurado moderno y modelos de procesos](https://github.com/juani48/Facultad-Practicas/blob/main/2do/2do%20Cuatrimestre/IS1/Autoevaluaciones/7%20-%20An%C3%A1lisis%20estructurado%20moderno%20y%20modelos%20de%20procesos.md).
+- [Metodologías Ágiles](https://github.com/juani48/Facultad-Practicas/blob/main/2do/2do%20Cuatrimestre/IS1/Autoevaluaciones/8%20-%20Metodolog%C3%ADas%20%C3%81giles.md).
+- [MDD y Calidad](https://github.com/juani48/Facultad-Practicas/blob/main/2do/2do%20Cuatrimestre/IS1/Autoevaluaciones/9%20-%20MDD%20y%20Calidad.md).
