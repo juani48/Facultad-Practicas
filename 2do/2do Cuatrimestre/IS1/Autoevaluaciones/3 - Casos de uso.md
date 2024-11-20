@@ -53,7 +53,7 @@
 ## 7 - Coloque la palabra que define adecuadamente a cada descripción presentada de los componentes de los escenarios de los CU:
 
 - Es la descripción del comportamiento si ocurre una excepción o variación del curso típico. → [*Curso alterno*]
--Es una restricción del estado del sistema antes de la ejecución del caso de uso. En general, esto se refiere a otro caso de uso que debe ejecutarse previamente. → [*Precondición*]
+- Es una restricción del estado del sistema antes de la ejecución del caso de uso. En general, esto se refiere a otro caso de uso que debe ejecutarse previamente. → [*Precondición*]
 - Es una restricción del estado del sistema después que el caso de uso ha sido ejecutado con éxito. Esto podría ser datos registrados en una base de datos o un recibo entregado a un cliente. → [*Postcondición*]
 - Son los involucrados que se benefician del caso de uso al recibir algo de valor medible u observable. → [*Actores*]
 - Representa la interacción entre el actor y el sistema sin errores ni condiciones → [*Curso normal*]

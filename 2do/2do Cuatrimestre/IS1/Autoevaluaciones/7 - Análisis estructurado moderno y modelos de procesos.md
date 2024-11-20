@@ -1,4 +1,5 @@
-## 1 - El análisis estructurado es una actividad de construcción de \___ . Mediante una notación creamos modelos que representan los datos y \___ . Se realizan tres tipos de modelados: de \___ (por ejemplo usando DER), de \___ del sistema (por ejemplo usando DFD) y del \___ del sistema (por ejemplo usando DTE).
+## 1 - Complete el texto con las palabras correctas:
+### El análisis estructurado es una actividad de construcción de \___ . Mediante una notación creamos modelos que representan los datos y \___ . Se realizan tres tipos de modelados: de \___ (por ejemplo usando DER), de \___ del sistema (por ejemplo usando DFD) y del \___ del sistema (por ejemplo usando DTE).
 
 **La respuesta correcta es:** El análisis estructurado es una actividad de construcción de [*modelos*]. Mediante una notación creamos modelos que representan los datos y [*flujo de información*]. Se realizan tres tipos de modelados: de [*datos*] (por ejemplo usando DER), de [*funciones*] del sistema (por ejemplo usando DFD) y del [*comportamiento*] del sistema (por ejemplo usando DTE)
 
