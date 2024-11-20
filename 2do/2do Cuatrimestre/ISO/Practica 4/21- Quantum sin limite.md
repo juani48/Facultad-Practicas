@@ -1,0 +1,3 @@
+## A - Explicar porqué si el quantum "q.en Round-Robin se incrementa sin límite, el método se aproxima a FIFO.
+
+RR internamente organiza los procesos mediante un cola FIFO, por lo que, si el quantum aumenta mucho, simularía directamente un algoritmo FCFS, debido a que un proceso podría llegar a durar en CPU la misma cantidad de ciclos que necesita para finalizar, enlenteciendo la cola y el algoritmo RR terminaría sin otorgar de forma constante y homotermia la CPU todos los procesos.

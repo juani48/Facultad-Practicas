@@ -15,7 +15,6 @@ public class PedidoTest {
     private Pedido pedido;
     private Cliente cliente;
     private Producto producto1;
-    private Producto producto2;
 
     @BeforeEach
     void setUp(){

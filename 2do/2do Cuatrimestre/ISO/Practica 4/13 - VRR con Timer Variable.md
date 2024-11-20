@@ -1,0 +1,3 @@
+## Suponga que un SO utiliza un algoritmo de VRR con Timer Variable para el planificar sus procesos. Para ello, el quantum es representado por un contador, que es decrementado en 1 unidad cada vez que ocurre una interrupción de reloj. ¿Bajo este esquema, puede suceder que el quantum de un proceso nunca llegue a 0 (cero)? Justifique su respuesta.
+
+Bajo este esquema es muy probable que algún proceso nunca llegue a cero, si un proceso se cuenta realizando muchas llamadas al sistema, con lo que constantemente hace operaciones I/O, es muy probablemente que su qunatum nunca llegue a termine.
