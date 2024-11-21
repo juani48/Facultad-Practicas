@@ -1,14 +1,17 @@
 @startuml
-
 interface IEnvio{
 montoPagar(): double
 }
 
-class EnvioLocal{
+abstract class Envio{
 -fechaDespacho: LocalDate
 -origen: string
 -destino: string
 -gramos: double
+}
+
+class EnvioLocal{
+
 }
 
 class EnvioInterUrbano{
@@ -32,9 +35,11 @@ class ClienteCorporativo{
 -cuit: integer
 }
 
-EnvioLocal <|-- EnvioInterUrbano : <<Extends>>
-EnvioLocal<|-- EnvioInternacional: <<Extends>>
-IEnvio <|.. EnvioLocal : <<Implements>>
+Envio <|-- EnvioLocal : <<Extends>>
+Envio <|-- EnvioInterUrbano : <<Extends>>
+Envio <|-- EnvioInternacional: <<Extends>>
+
+IEnvio <|.. Envio : <<Implements>>
 
 Cliente --> IEnvio : -envios 0..n
 

@@ -8,12 +8,7 @@ public class EnvioLocal extends Envio{
 
 	private boolean rapida;
 	
-	public EnvioLocal(
-			LocalDate fecha, 
-			String origen, 
-			String destino, 
-			double gramos, 
-			boolean rapido) 
+	public EnvioLocal(LocalDate fecha, String origen, String destino, double gramos, boolean rapido) 
 	{
 		super(fecha,origen, destino, gramos);
 		this.rapida = rapido;
