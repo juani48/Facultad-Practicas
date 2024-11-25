@@ -1,0 +1,4 @@
+## A - Describa como trabajan las siguientes técnicas de E/S
+- **E/S programada:** La CPU controla directamente el intercambio de datos con el dispositivo periférico mediante instrucciones específicas. La CPU consulta constantemente al dispositivo para determinar si está listo para recibir o enviar datos.
+- **E/S dirigida por interrupciones:** El periférico envía una señal de interrupción cuando está listo para transferir datos. Al recibir esta señal, la CPU interrumpe su ejecución actual, maneja la transferencia de datos y luego reanuda su tarea original.
+- **DMA (Acceso Directo a Memoria):** Un controlador de DMA (hardware especializado) se encarga de transferir datos directamente entre el dispositivo periférico y la memoria principal, sin intervención de la CPU. La CPU configura la transferencia y el controlador DMA realiza la operación de manera autónoma.

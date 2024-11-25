@@ -1,0 +1,4 @@
+## A - La tecnica de E/S programa puede trabajar de dos formas: E/S mapeada, E/S aislada. Indique como trabajan estas 2 técnicas.
+
+- *E/S mapeada:* Las direcciones de los periféricos se incluyen en el mismo espacio de direcciones que la memoria principal. Los dispositivos se tratan como si fueran ubicaciones de memoria, permitiendo que la CPU acceda a ellos usando las mismas instrucciones de lectura y escritura que utiliza para la memoria.
+- *E/S aislada:* Los periféricos tienen un espacio de direcciones separado e independiente del espacio de direcciones de la memoria principal. La CPU utiliza instrucciones específicas para acceder a los dispositivos.
