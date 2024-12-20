@@ -109,6 +109,6 @@
 3. [ ] Pueden ir en el HAVING.
 4. [ ] Pueden aparecer sin otros atributos en el SELECT.
 5. [ ] Todas son correctas.
-6. [x] 1, 2 y 4 son correctas.
+6. [ ] 1, 2 y 4 son correctas.
 7. [ ] 1, 2 y 3 son correctas.
-8. [ ] 1 y 3 son correctas.
+8. [x] 1 y 3 son correctas.
