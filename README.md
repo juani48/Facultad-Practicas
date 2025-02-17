@@ -7,6 +7,7 @@ Practicas de la carrera de Lincenciatura en Sistemas, plan de estudio [2021](htt
 * [Primer año](https://github.com/juani48/Facultad-Practicas/tree/main/1ro).
 
   * [Primer cuatrimestre](https://github.com/juani48/Facultad-Practicas/tree/main/1ro/1-Cutrimestre).
+    
     * [Conceptos de Algoritmos, Datos y Programas](https://github.com/juani48/Facultad-Practicas/tree/main/1ro/1-Cutrimestre/CADP).
 
   * [Segundo cuatrimestre](https://github.com/juani48/Facultad-Practicas/tree/main/1ro/2-Cutrimestre).
@@ -32,6 +33,26 @@ Practicas de la carrera de Lincenciatura en Sistemas, plan de estudio [2021](htt
     * [Orientación a Objetos 1](https://github.com/juani48/Facultad-Practicas/tree/main/2do/2do%20Cuatrimestre/OO1/Practica1).
 
     * [Introducción a los Sistemas Operativos](https://github.com/juani48/Facultad-Practicas/tree/main/2do/2do%20Cuatrimestre/ISO).
+
+* [Tercer año]()
+
+  * [Primer cuatrimestre]()
+
+    * [Ingeniería de Software 2 ]()
+
+    * [Conceptos y Paradigmas de Lenguajes de Programación]()
+
+    * [Orientación a Objetos 2]()
+
+  * [Segundo cuatrimestre]()
+
+    * [Redes y Comunicaciones]()
+
+    * [Programación Concurrente]()
+
+    * [Proyecto de Software]()
+
+    * [Bases de Datos 1]()
 
 >Ejercicios sujetos a errores, pregunta al Ayudate/JTP la validez del codigo.
 
