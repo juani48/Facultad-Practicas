@@ -1,4 +1,4 @@
-## 1 -En la técnica de administración de memoria principal por Segmentación Paginada la unidad de trabajo para subir o bajar de la RAM es ______
+## 1 - En la técnica de administración de memoria principal por Segmentación Paginada la unidad de trabajo para subir o bajar de la RAM es ______
 
 La respuesta correcta es: **En la técnica de administración de memoria principal por Segmentación Paginada la unidad de trabajo para subir o bajar de la RAM es [La pagina]**.
 ## 2 - El registro del estado (libre o ocupado) de los marcos de la memoria (frames) es administrado por:
