@@ -108,8 +108,8 @@ La respuesta correcta es: **Falso**.
 - [ ] 3.
 - [ ] Ninguna.
 - [ ] 1.
-- [ ] 2 y 3.
-- [x] 1 y 3.
+- [x] 2 y 3.
+- [ ] 1 y 3.
 
 ## 19 - En la técnica de Buffer Cache vista, todos los buffers que se encuentran en la free list están vacíos (sin bloques de disco).
 
