@@ -1,0 +1,26 @@
+@startuml
+
+class Usuario{
+-screenName : string
++eliminarTweets()
+}
+
+class Tweet{
+-texto: string
++Tweet(texto: string)
++Tweet(origen: Tweet)
+}
+
+class Twitter {
++registrarUsuario(screenName : string)
++eliminarUsuario(screenName : string)
+}
+
+
+Twitter -> Usuario : usuarios 0..n
+
+Usuario -> Tweet : tweets 0..n
+
+Tweet -> Tweet : origen 0..1
+
+@enduml
