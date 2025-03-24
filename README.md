@@ -34,15 +34,15 @@ Practicas de la carrera de Lincenciatura en Sistemas, plan de estudio [2021](htt
 
     * [Introducción a los Sistemas Operativos](https://github.com/juani48/Facultad-Practicas/tree/main/2do/2do%20Cuatrimestre/ISO).
 
-* [Tercer año]()
+* [Tercer año](https://github.com/juani48/Facultad-Practicas/tree/main/3ro)
 
-  * [Primer cuatrimestre]()
+  * [Primer cuatrimestre](https://github.com/juani48/Facultad-Practicas/tree/main/3ro/1er%20Cutrimestre)
 
     * [Ingeniería de Software 2 ]()
 
-    * [Conceptos y Paradigmas de Lenguajes de Programación]()
+    * [Conceptos y Paradigmas de Lenguajes de Programación](https://github.com/juani48/Facultad-Practicas/tree/main/3ro/1er%20Cutrimestre/CPLP)
 
-    * [Orientación a Objetos 2]()
+    * [Orientación a Objetos 2](https://github.com/juani48/Facultad-Practicas/tree/main/3ro/1er%20Cutrimestre/OO2/Practica/practica)
 
   * [Segundo cuatrimestre]()
 
