@@ -19,6 +19,8 @@ G es la gramatica, el conjunto N es de los elementos no terminales, T es el conj
 Es ambigua al queres definir el elemento <numero_entero> ya que presenta recursividad por izquierda y por derecha, lo que genera un arbol sintactico ambiguo por tener varais posibles definiciones.
 
 Para que sea correcto:
+```
 P = {
 	<numero_entero> ::= <digito> | <digito><numero_entero>
 }
+```
