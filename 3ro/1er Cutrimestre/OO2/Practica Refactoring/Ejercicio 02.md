@@ -1,8 +1,8 @@
-# Para cada una de las siguientes situaciones, realice en forma iterativa los siguientes pasos:
-# 1. Indique el mal olor,
-# 2. Indique el refactoring que lo corrige, 
-# 3. Aplique el refactoring, mostrando el resultado final (código y/o diseño según corresponda). 
-# Si vuelve a encontrar un mal olor, retorne al paso 1. 
+## Para cada una de las siguientes situaciones, realice en forma iterativa los siguientes pasos:
+### 1. Indique el mal olor,
+### 2. Indique el refactoring que lo corrige, 
+### 3. Aplique el refactoring, mostrando el resultado final (código y/o diseño según corresponda). 
+### Si vuelve a encontrar un mal olor, retorne al paso 1. 
 
 
 ## A - Empleados
@@ -44,7 +44,7 @@ public class EmpleadoPasante {
 }
 ```
 1. Code smell: Codigo duplicado.
-2. Crear una generalizacion y aplicar: Pull Up Method, Push Up Field y Hide Field to Encapsulate Field.
+2. Crear una generalizacion y aplicar: Pull Up Method, Push Up Field y Hide Field o Encapsulate Field.
 3. El resultado es:
 
 ```java
