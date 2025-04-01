@@ -1,0 +1,4 @@
+## Explique cuál es la semántica para las variables predefinidas en lenguaje Ruby self y nil. ¿Qué valor toman, cómo son usadas por el lenguaje?
+
+- **self:** Es una pseudovariable que se refiere al objeto actual en el contexto en el que se encuentra. self es muy útil en métodos de instancia y de clase para referirse al objeto que está siendo manipulado en ese momento. Por ejemplo, en una clase, self dentro de un método de instancia se refiere a la instancia de la clase en la que se está ejecutando el método.
+- **nil:** Es un objeto que representa la ausencia de valor. En Ruby, nil es una instancia de la clase NilClass. nil se utiliza comúnmente para indicar que una variable no tiene un valor asignado o que una operación no ha producido un resultado válido. En términos de evaluación booleana, nil se considera false.
