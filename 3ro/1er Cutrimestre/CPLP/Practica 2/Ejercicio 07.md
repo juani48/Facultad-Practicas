@@ -1,6 +1,6 @@
 ## Defina en EBNF la gramática para la definición de números reales. Inténtelo desarrollar para BNF y explique las diferencias con la utilización de la gramática EBNF.
 
-# EBNF
+### EBNF
 ```
 G = {
 	N, T, S, P
@@ -25,7 +25,7 @@ P = {
 }
 ```
 
-# BNF
+### BNF
 ```
 G = {
 	N, T, S, P

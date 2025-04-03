@@ -1,6 +1,6 @@
 ## Describa las características más relevantes de Ada, referida a:
 
-# Tipos de datos
+### Tipos de datos
 
 - Escalar:
   - Discreto:
@@ -20,7 +20,7 @@
 
 Definicion de variables ::= type < var > is < type > ;
 
-# Tipos abstractos de datos – paquetes
+### Tipos abstractos de datos – paquetes
 
 Un TAD es una colección de valores y de operaciones definidos mediante una espeficación independiente de cualquier representación. La programación con TADs requiere dos pasos:
 1. **Definición del tipo:** Establecer los valores que puede tomar el tipo y las operaciones necesarias para manipular los valores y especificar su interfaz.
@@ -28,7 +28,7 @@ Un TAD es una colección de valores y de operaciones definidos mediante una espe
 
 En Ada, los TADs se pueden definir utilizando paquetes, que permiten separar la especificación (lo que hace la función o procedimiento) de la implementación (las instrucciones concretas que lo hacen). Esto facilita la reutilización de algoritmos y permite cambiar la implementación en el futuro sin afectar a los programas que utilizan el TAD, siempre y cuando se mantenga la interfaz.
 
-# Estructuras de datos
+### Estructuras de datos
 
 En Ada, los punteros se denominan "accesos" y se utilizan para crear estructuras de datos dinámicas.
 ```ada
@@ -42,7 +42,7 @@ type TP_Persona is access TPersona; -- Tipo de los punteros a TPersona dinámico
 ```
 Además, se puede imponer una restricción de lectura a un puntero para que no se pueda modificar el objeto al que apunta. Esto permite referenciar una constante o una variable de forma segura, garantizando que no podrá modificarse a través del puntero.
 
-# Manejo de excepciones
+### Manejo de excepciones
 
 Los manejadores de excepciones en Ada comienzan con la cláusula when seguida de la lista de excepciones a las que responde y las instrucciones a ejecutar.
 ```ada
@@ -62,7 +62,7 @@ En Ada también se pueden declarar nuevas excepciones para indicar distintos tip
 ```ada
 Error: exception;
 ```
-# Manejo de concurrencia
+### Manejo de concurrencia
 
 En Ada se emplea una programación concurrente distribuida (transferencia de mensajes entre los procesos o threads) y la principal forma de sincronizar las unidades de ejecución, conocidas como tareas, son los puntos de entrada a la tarea o citas.
 

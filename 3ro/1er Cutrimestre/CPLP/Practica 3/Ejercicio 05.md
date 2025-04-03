@@ -1,6 +1,6 @@
 ## Sean los siguientes ejemplos de programas. Analice y diga qué tipo de error se produce (Semántico o Sintáctico) y en qué momento se detectan dichos errores (Compilación o Ejecución).
 
-# Pascal
+### Pascal
 ```pascal
 Program P
     var 5: integer;
@@ -19,7 +19,7 @@ End.
   - El nombre de una variable no puede empezar con numero (5).
   - Simbolo incorrecto  de asignacion (a = a + 1).
 
-# Java
+### Java
 ```java
 public String tabla(int numero, arrayList<Boolean> listado) {
     String result = null;
@@ -42,7 +42,7 @@ public String tabla(int numero, arrayList<Boolean> listado) {
 - Errores logicos:
   - El "for" sera un bucle infinito.
 
-# C
+### C
 ```c
 # include <stdio.h>
     int suma; /* Esta es una variable global */
@@ -74,5 +74,10 @@ public String tabla(int numero, arrayList<Boolean> listado) {
   - "Llama a la funcion final */" no es un comentario correcto.
   - El tipo de parametro de la funcion cuadrado no esta definido.
   - La sentencia "numero, numero_cuadrado);" debe estar en la misma linea del printf.
+
+### Python
+```
+
+```
 
 
