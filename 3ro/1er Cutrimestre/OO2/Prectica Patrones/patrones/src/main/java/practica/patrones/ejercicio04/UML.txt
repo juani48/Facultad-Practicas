@@ -1,0 +1,52 @@
+@startuml
+skinparam classAttributeIconSize 0
+
+class ToDoItem <<context>> {
+- nombre: string
++ <create> ToDoItem(nombre: string)
++ start()
++ togglePause()
++ finish()
++ finish(): Duration
++ addComment(comment: string)
++ setStage(stage: Stage)
+}
+
+abstract class Stage <<state>> {
++ start(item: ToDoItem)
++ <abstract> togglePause(item: ToDoItem)
++ finish(item: ToDoItem)
++ <abstract> workedTime(item: ToDoItem): Duration
++ addComment(item: ToDoItem, comment: string)
+}
+
+class Pending <<concretState>> {
++ togglePause(item: ToDoItem)
++ finish(item: ToDoItem)
++ workedTime(item: ToDoItem)
+}
+class InProgres <<concretState>> {
++ start(item: ToDoItem)
++ togglePause(item: ToDoItem)
++ workedTime(item: ToDoItem)
+}
+
+class Paused <<concretState>> {
++ togglePause()
++ finish()
++ workedTime()
+}
+class Finished <<concretState>> {
+- finishedTime: Time
++ togglePause(item: ToDoItem)
++ workedTime(item: ToDoItem)
++ addComment(item: ToDoItem, comment: string)
+}
+
+ToDoItem --> Stage : - stage
+Stage <|-- Pending
+Stage <|-- InProgres
+Stage <|-- Paused
+Stage <|-- Finished
+
+@enduml
