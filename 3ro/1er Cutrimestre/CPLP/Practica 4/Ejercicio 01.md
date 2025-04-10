@@ -20,10 +20,10 @@
 
 Variable 'a' (los atributos de una variable son un 5-tupla = {nombre, alcance, tipo, l-value, r-value}) :
 - **Nombre:** 'a'
-- **Alcance:** Local
-- **Tipo:** Tipo predefinido, integer. Ligadura estatica y explicita.
-- **L-value:** Locacion de memoria estatica.
-- **R-value:** Valor numerico.
+- **Alcance:** 2-16
+- **Tipo:** Dinamica
+- **L-value:** 
+- **R-value:** 0
 
 ## B - Compare los atributos de la variable del punto A con los atributos de la variable de la línea 4. Que dato contiene esta variable?
 
