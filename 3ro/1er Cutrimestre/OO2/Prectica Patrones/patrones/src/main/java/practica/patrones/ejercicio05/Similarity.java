@@ -1,13 +1,15 @@
 package practica.patrones.ejercicio05;
 
 import java.util.List;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
-public abstract class Similarity extends Criterion {
-	
+public class Similarity extends Criterion {
+
 	@Override
-	public List<Movie> recommend(List<Movie> reproduced, List<Movie> movies){
-		return reproduced.stream()
-				.map(x -> x.getSimilar().g);
+	protected Stream<Movie> sorted(Stream<Movie> list) {
+		return list.map(x -> x.getSimilar())
+				.flatMap(List::stream)
+				.distinct();
 	}
-
 }

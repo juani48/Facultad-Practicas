@@ -11,8 +11,8 @@ public class Decoder {
 	
 	public Decoder(Criterion criterion) {
 		this.criterion = criterion;
-		this.reproduced = new ArrayList();
-		this.movies = new ArrayList();
+		this.reproduced = new ArrayList<Movie>();
+		this.movies = new ArrayList<Movie>();
 	}
 	
 	public void setCriterion(Criterion criterion) {
@@ -20,7 +20,7 @@ public class Decoder {
 	}
 	
 	public List<Movie> recommend(Movie movie){
-		return this.criterion.recommend(movie, this.reproduced, this.movies);
+		return this.criterion.recommend(this.reproduced, this.movies);
 	}
 	
 }

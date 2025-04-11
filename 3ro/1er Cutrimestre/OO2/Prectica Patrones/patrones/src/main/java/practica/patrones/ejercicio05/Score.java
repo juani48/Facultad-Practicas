@@ -1,5 +1,13 @@
 package practica.patrones.ejercicio05;
 
-public abstract class Score extends Criterion {
+import java.util.List;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
+public class Score extends Criterion {
+
+	@Override
+	protected Stream<Movie> sorted(Stream<Movie> list) {
+		return list.sorted((x, y) -> Double.compare(x.getScore(), y.getScore()));
+	}
 }
