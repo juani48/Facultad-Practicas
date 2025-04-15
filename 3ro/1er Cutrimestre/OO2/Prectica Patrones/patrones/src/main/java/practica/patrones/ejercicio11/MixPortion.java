@@ -7,13 +7,9 @@ public class MixPortion extends Portion{
 
     public MixPortion(List<Portion> portions){
         super(1.1);
-        if(portions.size() <= 4){
-            this.portions = portions;
-        }
-        throw new Exception("Numero maximo de porciones superado.");
+        this.portions = portions; //asumo que la comprobacion se realiza antes :)
     }
 
-    @Override
     public List<Portion> getPortions(){ return this.portions; }
 
     @Override
@@ -22,7 +18,13 @@ public class MixPortion extends Portion{
     }
 
     @Override
-    public boolean equals(Portion portion){
-        return this.getPortions().equals(portion.getPortions());
+    public boolean equals(Water water){ return false; }
+
+    @Override
+    public boolean equals(Dirth dirth){ return false; }
+
+    @Override
+    public boolean equals(MixPortion mixPortion){
+        return this.getPortions().equals(portion.getPortions()); 
     }
 }
