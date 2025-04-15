@@ -18,7 +18,7 @@ public class MixPortion extends Portion{
 
     @Override
     public double calculatePortion(){
-        return this.getPortions().stream().mapToDouble(x -> x.getWaterPortion()).average();
+        return this.getPortions().stream().mapToDouble(x -> x.calculatePortion()).average();
     }
 
     @Override
