@@ -18,5 +18,14 @@ public class Definitive extends State{
 		}
 
 	}
+
+	@Override
+	public String getInformation(Excursion excursion) {
+		return super.getInformation(excursion) + this.getEmails() + (excursion.getMaxQuota() - this.registeredSize());
+	}
+	
+	private String getEmails() {
+		return this.getRegistered().stream().map(x -> x.getEmail()).toString();
+	} 
 	
 }

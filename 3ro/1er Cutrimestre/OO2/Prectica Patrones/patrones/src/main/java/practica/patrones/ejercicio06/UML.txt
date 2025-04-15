@@ -1,0 +1,57 @@
+class User {
+- name; string
+- lastName: string
+- email: string
++<<create>>User(name: string, lastName: string, email: string)
++register(excursion: Excursion)
++getInformation(): string
+}
+
+class Excursion <<context>> {
+- name: string
+- start: date
+- end: date
+- meetingPoint: string
+- cost: double
+- minQuota: integer
+- maxQuota: integer
++<<create>>Excursion(name: string, start: date, end: date, meetingPoint: string, cost: double, minQuota: integer, maxQuota: integer, state: State)
++ getState(): state
++ setState(state: State)
++ singOn(user: User)
++ getInformation(): string
+}
+
+abstract class State <<state>> {
+- registered: User[*]
++<<create>>State()
++<<create>>State(registered: User[*])
++ getRegistered(): User[*]
++ registeredSize(): integer
++ <<abstract>>singOn(excursion: Excursion, user: User)
++ getInformation(excursion: Excursion): string
+}
+
+class Provisional <<concretState>> {
++ singOn(excursion: Excursion, user: User)
++ getInformation(excursion: Excursion): string
+}
+class Definitve <<concretState>> {
++ <<create>>Definitive(registered: User[*])
++ singOn(excursion: Excursion, user: User)
++ getInformation(excursion: Excursion): string
+- getEmails(): string
+}
+class Full <<concretState>> {
+- onHold: User[*]
++ <<create>>Full(registered: User[*])
++ getOnHold(): User[*]
++ singOn(excursion: Excursion, user: User)
+}
+
+User --> Excursion: - excursion
+Excursion --> State: - state
+
+State <|-- Provisional
+State <|-- Definitve
+State <|-- Full

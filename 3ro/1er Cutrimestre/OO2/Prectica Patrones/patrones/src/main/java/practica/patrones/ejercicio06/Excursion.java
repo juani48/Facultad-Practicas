@@ -26,11 +26,20 @@ public class Excursion {
 	public State getState() { return this.state; }
 	public void setState(State state) { this.state = state; }
 	
+	public String getName() {return this.name; }
+	public LocalDate getStart() { return start; }
+	public LocalDate getEnd() { return end; }
+	public String getMeetingPoint() { return meetingPoint; }
+	public double getCost() { return cost; }
 	public int getMinQuota() { return this.minQuota; }
 	public int getMaxQuota() { return this.maxQuota; } 
 	
 	public void signOn(User user) {
 		this.getState().signOn(this, user);
+	}
+	
+	public String getInformation() {
+		return this.getState().getInformation(this);
 	}
 	
 }

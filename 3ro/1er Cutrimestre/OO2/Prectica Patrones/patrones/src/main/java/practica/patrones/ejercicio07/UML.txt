@@ -1,0 +1,64 @@
+
+class Calculator{
++<<create>>Calculator(state: State)
++ setState(state: State)
++ getState(): state
++ getResult(): string
++ delete()
++ setValue(value: double)
++ plus()
++ subtraction()
++ multiplication()
++ division()
+}
+
+abstract class State{
+- value: double
++ getValue(): double
+# setValue(value: double)
++ plus(calculator: Calculator)
++ subtraction(calculator: Calculator)
++ multiplication(calculator: Calculator)
++ division(calculator: Calculator)
++ delete(calculator: Calculator)
++ setValue(calculator: Calculator, value: double)
++ getResult(calculator: Calculator): string
+}
+
+class Error{
++ deletecalculator: Calculator)
++ getResult(calculator: Calculator): string
+}
+class Initial{
++ plus(calculator: Calculator)
++ subtraction(calculator: Calculator)
++ multiplication(calculator: Calculator)
++ division(calculator: Calculator)
++ delete(calculator: Calculator)
++ setValue(calculator: Calculator, value: double)
+}
+class Plus{
++ setValue(calculator: Calculator, value: double)
++ delete(calculator: Calculator)
+}
+class Subtraction{
++ setValue(calculator: Calculator, value: double)
++ delete(calculator: Calculator)
+}
+class Multiplication{
++ setValue(calculator: Calculator, value: double)
++ delete(calculator: Calculator)
+}
+class Division{
++ setValue(calculator: Calculator, value: double)
++ delet(calculator: Calculator)
+}
+
+Calculator --> State: -state
+
+State <|-- Error
+State <|-- Initial
+State <|-- Plus
+State <|-- Subtraction
+State <|-- Multiplication
+State <|-- Division

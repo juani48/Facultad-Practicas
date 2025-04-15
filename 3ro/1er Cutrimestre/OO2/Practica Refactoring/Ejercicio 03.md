@@ -17,7 +17,7 @@ public class Document {
 
 ## A - Enumere los code smell y que refactorings utilizará para solucionarlos.
 
-1. Organizacion de datos (variables public que deberian ser privadas): Ocultar y encapsular campo.
+1. Variables que rompen el encapsulamiento: Ocultar y encapsular campo.
 2. Inicializacion de varaibles ineccesarias: Replace temp whit query.
 3. Codigo reptido: Replace temp whit query.
 

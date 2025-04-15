@@ -1,0 +1,62 @@
+
+class Device <<contex>> {
++ <<create>>Device(crcCalculator: ICrcCalculator, connection: IConnection, ringer: Ringer, display: Display)
++ configureCRC(crcCalculator: ICrcCalculator)
++ getCrcCalculator(): ICrcCalculator
+- setConnection(connection: IConnection)
++ getConnection(): IConnection
++ getRinger(): Ringer
++ getDisplay(): Display
++ send(data: string): string
++ connectWith(connection: IConnection): string
+}
+
+class Display {
++ showBanner(): string
+}
+class Ringer {
++ ring()
+}
+
+interface IConnection <<strategy>> {
++ sendData(data: string, crc: long): string
++ pict(): string
+}
+
+interface ICrcCalculator <<strategy>> {
++ crcFor(data: string): long
+}
+
+class CRC16_Calculator <<concretStrategy>> {
++ crcFor(data: string): long
+}
+class CRC32_Calculator <<concretStrategy>> {
++ crcFor(data: string): long
+}
+
+class WifiConnection <<concretStrategy>> {
++ sendData(data: string, crc: long): string
++ pict(): string
+}
+class _4GConnection <<adaptee>> <<concretStrategy>> {
+- symb: string
++ getSymb(): string
++ transmit(data: string, crc: long): string
+}
+
+class _4GConnectionAdapter <<adapter>> {
++ sendData(data: string, crc: long): string
++ pict(): string
+}
+
+Device --> IConnection : -connection
+Device --> ICrcCalculator : -crcCalculator
+Device --> Display : -display
+Device --> Ringer : -ringer
+
+IConnection <|.. WifiConnection
+IConnection <|.. _4GConnectionAdapter
+_4GConnectionAdapter --> _4GConnection : -_4gConnection
+
+ICrcCalculator <|.. CRC16_Calculator
+ICrcCalculator <|.. CRC32_Calculator

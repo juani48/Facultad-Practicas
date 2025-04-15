@@ -76,7 +76,7 @@ public class EmpleadoTemporario extends EmpleadoPlanta{
     }
 }
 ```
-1. Organizacion de datos
+1. Variables que rompen el encapsulamiento
 2. Aplicar Hide Field o Encapsulate Field.
 3. 
 ```java
@@ -156,7 +156,7 @@ public class Jugador {
     public void modificar(int puntaje){ this.puntuacion += puntaje; }
 }
 ```
-1. Organizacion de datos.
+1. Variables que rompen el encapsulamiento
 2. Aplicar: Hide Field o Encapsulate Field.
 3. 
 ```java
@@ -300,7 +300,7 @@ public class Post{
     
 }
 ```
-1. Organizacion de datos.
+1. Variables que rompen el encapsulamiento
 2. Encapsulate Field.
 3. 
 ```java
@@ -432,7 +432,7 @@ public class Carrito {
     }
 }
 ```
-1. Organizacion de datos.
+1. Variables que rompen el encapsulamiento
 2. Encapsular campo.
 3. 
 ```java
@@ -556,7 +556,7 @@ public class Direccion{
     }
 }
 ```
-1. Organizacion de datos.
+1. Variables que rompen el encapsulamiento
 2. Encapsular campo.
 3. 
 ```java
@@ -806,7 +806,7 @@ public class Pelicula {
     }
 }
 ```
-1. Organizacion de datos.
+1. Variables que rompen el encapsulamiento
 2. Ocultar y encapsular el campo.
 3. 
 ```java

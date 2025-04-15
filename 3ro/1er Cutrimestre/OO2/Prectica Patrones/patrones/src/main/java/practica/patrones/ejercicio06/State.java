@@ -20,4 +20,9 @@ public abstract class State {
 	
 	public abstract void signOn(Excursion excursion, User user);
 	
+	public String getInformation(Excursion excursion) {
+		return excursion.getName() + excursion.getCost() + excursion.getStart().toString() + 
+				excursion.getEnd().toString() + excursion.getMeetingPoint();
+	}
+	
 }

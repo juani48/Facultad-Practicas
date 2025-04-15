@@ -13,5 +13,9 @@ public class Provisional extends State{
 			excursion.setState(new Definitive(this.getRegistered()));
 		}
 	}
-	
+
+	@Override
+	public String getInformation(Excursion excursion) {
+		 return super.getInformation(excursion) + (excursion.getMinQuota() - this.registeredSize());
+	}
 }

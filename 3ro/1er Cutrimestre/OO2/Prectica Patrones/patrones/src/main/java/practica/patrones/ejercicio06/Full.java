@@ -18,5 +18,4 @@ public class Full extends State{
 	public void signOn(Excursion excursion, User user) {
 		this.getOnHold().add(user);
 	}
-
 }

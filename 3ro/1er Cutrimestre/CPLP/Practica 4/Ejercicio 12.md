@@ -29,16 +29,18 @@
 
 | ID | Tipo | R-Valor | Alcance | T.V. |
 |----|------|---------|---------|------|
-| a | Automatica | Basura | 4...24 | 1...24 |
-| n | Automatica | Basura | 4...24 | 1...24 |
-| p | Automatica | Basura | 4...10 - 19...24 | 1...24 |
-| v1 | Automatica | Basura | 5...24 | 1...24 |
-| c1 | Automatica | 10 | 6...10 - 19...24 | 1...24 |
-| v2 | Semidinamica | Basura | 9...19 | 7...19 |
-| c1 | Automatica | Basura | 10...19 | 7...19 |
-| c2 | Automatica | Basura | 10...19 | 7...19 |
-| p | Automatica | Basura | 11...19 | 7...19 |
-| q | Automatica | Basura | 11...19 | 7...19 |
-| p^ | Dinamica | Basura | 15...17 | 15...17 |
-| q^ | Dinamica | Basura | 15...17 | 15...17 |
+|Main| | | 2...24 | 2...24 |
+| a | Automatica | Basura | 5...24 | 1...24 |
+| n | Automatica | Basura | 5...24 | 1...24 |
+| p | Automatica | Basura | 5...10 - 19...24 | 1...24 |
+| v1 | Automatica | Basura | 6...24 | 1...24 |
+| c1 | Automatica | 10 | 7...10 - 19...24 | 1...24 |
+| Uno | | | 7...24 | 7...19 |
+| v2 | Semidinamica | Basura | 10...19 | 7...19 |
+| c1 | Automatica | Basura | 11...19 | 7...19 |
+| c2 | Automatica | Basura | 11...19 | 7...19 |
+| p | Automatica | Basura | 12...19 | 7...19 |
+| q | Automatica | Basura | 12...19 | 7...19 |
+| p^ | Dinamica | Basura | 16...17 | 15...17 |
+| q^ | Dinamica | Basura | 16...17 | 15...17 |
 
