@@ -1,4 +1,4 @@
-package ar.info.juego.Encriptador;
+package practica.patrones.ejercicio10;
 
 import java.nio.charset.StandardCharsets;
 import java.util.Arrays;
