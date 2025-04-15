@@ -27,5 +27,5 @@ public abstract class Empleado {
 		return adicional;
 	}
 
-	//clase intermedia con las variables de temporario y planta
+	//clase intermedia con las variables de temporario y planta (EmpleadoFijo)
 }
