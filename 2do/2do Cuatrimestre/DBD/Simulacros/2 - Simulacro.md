@@ -4,7 +4,7 @@
 3. [ ] Debe estar definido en una entidad del modelo conceptual.
 4. [ ] Ningun de las anteriores es correcto.
 
-## Una realcion ternaria sobre el modelo logico
+## Una relacion ternaria sobre el modelo logico
 1. [ ] Puede ser muchos a muchos, optativa y obligatoria segun el caso.
 2. [ ] Debe ser una relacion muchos a muchos.
 3. [ ] Puede contener atributos polivalentes.
@@ -49,7 +49,7 @@
 5. [ ] Ninguna de las anteriores es correcta
 > El DMS puede generar indices temporales.
 
-## Sea un ciclo entre tres entidades A, B y C, que a partir de $\ R_{1} $, $\ R_{2} y $\ R_{3}. En los tres casos $\ R_{i} es una relación muchos a muchos
+## Sea un ciclo entre tres entidades A, B y C, que a partir de $R_{1}$, $R_{2}$ y $R_{3}$. En los tres casos $R_{i}$ es una relación muchos a muchos
 1. [ ] El ciclo puede atentar contra la minimalidad.
 2. [ ] El ciclo atenta contra la minimalidad.
 3. [x] El ciclo no representa problema alguno respet de la minimalidad.
@@ -85,10 +85,10 @@
 
 > Si se trata de un cobertura *parcial* es la 5.
 
-## En algebra relacional la expresión $\ A\ x\ B $ da el mismo resultado que:
-1. [ ] $\ A\ x\ B $
-2. [ ] $\ A\ x\ B $ Si entre las tablas A y B no hay atributo común.
-3. [x] $\ B\ |x|\ A $
+## En algebra relacional la expresión $A\ x\ B$ da el mismo resultado que:
+1. [ ] $A\ x\ B$
+2. [ ] $A\ x\ B$ Si entre las tablas A y B no hay atributo común.
+3. [x] $B\ |x|\ A$
 4. [ ] Todas las anteriores.
 5. [ ] Algunas de las Anteriores
 6. [ ] Ninguna de las anteriores.
