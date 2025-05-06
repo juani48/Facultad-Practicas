@@ -1,4 +1,4 @@
-package main.java.practica.patrones.ejercicio11;
+package practica.patrones.ejercicio11;
 
 import java.util.List;
 
@@ -14,7 +14,7 @@ public class MixPortion extends Portion{
 
     @Override
     public double calculatePortion(){
-        return this.getPortions().stream().mapToDouble(x -> x.calculatePortion()).average();
+        return this.getPortions().stream().mapToDouble(x -> x.calculatePortion()).average().getAsDouble();
     }
 
     @Override
@@ -25,6 +25,6 @@ public class MixPortion extends Portion{
 
     @Override
     public boolean equals(MixPortion mixPortion){
-        return this.getPortions().equals(portion.getPortions()); 
+        return this.getPortions().equals(mixPortion.getPortions()); 
     }
 }

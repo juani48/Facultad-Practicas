@@ -1,0 +1,79 @@
+@startuml
+
+  
+
+class FileSystem <<client>>{
+
++ size(): integer
+
++ largestFile(): File
+
++ newestFile(): File
+
++ search(name: string): File
+
++ searchAll(name: string): File[*]
+
++ tableOfContents(): string
+
+}
+
+  
+
+abstract class FileSystemComponent {
+
+- name: string
+
+- creation: date
+
+- size: integer
+
++ <<create>>File(name: string, creation: date, size: integer)
+
++ <<abstract>>size(): integer
+
++ <<abstract>>largestFile(): FileSystemComponent
+
+# largestFile(File: FileSystemComponent): integer
+
++ <<abstract>>newestFile(): FileSystemComponent
+
+# newestFile(File: FileSystemComponent): integer
+
++ <<abstract>>search(name: string): FileSystemComponent
+
++ <<abstract>>searchAll(name: string): FileSystemComponent[*]
+
++ <<abstract>>tableOfContents(): string
+
+}
+
+  
+
+class File <<Component>>{
+
++ <<create>>File(name: string, creation: date, size: int)
+
+}
+
+  
+
+class FileFolder <<Composite>> {
+
++ <<create>>File(name: string, creation: date)
+
+}
+
+  
+
+FileSystem --> FileSystemComponent: file
+
+FileSystemComponent <|-- FileFolder
+
+FileSystemComponent <|-- File
+
+FileFolder --> FileSystemComponent : - files
+
+  
+
+@enduml

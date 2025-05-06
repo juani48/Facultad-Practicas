@@ -1,7 +1,4 @@
-
-//package practica.patrones.ejercicio11;
-
-import main.java.practica.patrones.ejercicio11.Portion;
+package practica.patrones.ejercicio11;
 
 public class Topography {
     private Portion portion;
