@@ -1,44 +1,54 @@
 @startuml
-abstract class SandwichComponent <<Component>>{
+
+class Client <<client>>{
++ buildClasico(): Sandwiche
++ buildVegetariano(): Sandwiche
++ buildVegano(): Sandwiche
++ buildSinTACC(): Sandwiche
+}
+
+class Director <<director>>{
++ <<create>> Director(builder: Builder): Sandwiche
++ build(): Sandwiche
+}
+
+abstract class Builder{
++ build(): Sandwiche
+# <<abstract>> buildPincipal()
+# <<abstract>> buildBread()
+# <<abstract>> buildSeasoning()
+# <<abstract>> buildAdditional()
+}
+
+class BuilderClasico <<concretBuilder>>{
+}
+class BuilderVegetariano <<concretBuilder>>{
+}
+class BuilderVegano <<concretBuilder>>{
+}
+class BuilderSinTACC <<concretBuilder>>{
+}
+
+class Sandwiche <<product>>{
++ addComponent(component: Component)
++ cost(): double
+}
+
+class Component {
 - name: string
 - cost: double
-<<create>>SandwichComponent(name: string, cost: double)
-+ <<abstract>>cost(): double
-}
-
-class Principal <<ConcretComponent>> {
-<<create>>Principal(name: string, cost: double)
++ <<create>> Component(name: string, cost: double)
 + cost(): double
 }
 
-abstract class Decorator <<Decorator>> {
-+ <<create>>Decorator(name: string, cost: double, SandwichComponent component)
-+ cost(): double
-# <<abstract>>decoratorCost(): double
-}
+Client --> Director: - director
+Director --> Builder: - builder
 
-class Bread <<ConcretDecorator>>{ 
-<<create>>Bread(name: string, cost: double)
-# decoratorCost(): double
-}
+Builder <|-- BuilderClasico
+Builder <|-- BuilderVegetariano
+Builder <|-- BuilderVegano
+Builder <|-- BuilderSinTACC
 
-class Seasoning <<ConcretDecorator>> {
-<<create>>Seasoning(name: string, cost: double)
-# decoratorCost(): double
-}
-
-class Additional <<ConcretDecorator>>{
-<<create>>Additional(name: string, cost: double)
-# decoratorCost(): double
-}
-
-SandwichComponent <|-- Principal
-SandwichComponent <|-- Decorator
-
-Decorator --> SandwichComponent: - component
-
-Decorator <|-- Bread
-Decorator <|-- Seasoning
-Decorator <|-- Additional
+Sandwiche --> Component: - components*
 
 @enduml
