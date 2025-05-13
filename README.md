@@ -42,7 +42,7 @@ Practicas de la carrera de Lincenciatura en Sistemas, plan de estudio [2021](htt
 
     * [Conceptos y Paradigmas de Lenguajes de Programación](https://github.com/juani48/Facultad-Practicas/tree/main/3ro/1er%20Cutrimestre/CPLP)
 
-    * [Orientación a Objetos 2](https://github.com/juani48/Facultad-Practicas/tree/main/3ro/1er%20Cutrimestre/OO2/Practica/practica)
+    * [Orientación a Objetos 2](https://github.com/juani48/Facultad-Practicas/tree/main/3ro/1er%20Cutrimestre/OO2)
 
   * [Segundo cuatrimestre]()
 
