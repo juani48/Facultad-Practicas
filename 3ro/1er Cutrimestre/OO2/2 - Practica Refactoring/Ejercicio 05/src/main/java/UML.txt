@@ -1,0 +1,86 @@
+@startuml
+
+class GestorNumerosDisponibles{
+- lineas: Set[string]
++ obtenerNumeroLibre(): string
++ cambiarTipoGenerador(generador: GeneradorNumero)
++ agregarNumeroTelefono(numero: string): boolean
+}
+
+interface GeneradorNumero {
++ obtenerNumeroLibre(lineas: Set[string]): string
+}
+
+class Ultimo{
++ obtenerNumeroLibre(lineas: Set[string]): string
+}
+class Primero{
++ obtenerNumeroLibre(lineas: Set[string]): string
+}
+class Random{
++ obtenerNumeroLibre(lineas: Set[string]): string
+}
+
+GestorNumerosDisponibles --> GeneradorNumero: - generador
+GeneradorNumero <.. Ultimo
+GeneradorNumero <.. Primero
+GeneradorNumero <.. Random
+
+class Empresa{
++ agregarNumeroTelefono(numero: string): boolean 
++ obtenerNumeroLibre(): string
++ calcularMontoTotalLlamadas(cliente :Cliente): double
+}
+
+Empresa --> GestorNumerosDisponibles: - gestor
+Empresa --> Cliete: -clientes
+
+class Cliente {
+- nombre: string
+- telefono: string
+- cuit: string
+- dni: string
++ calcularMonto(): double
+}
+
+Cliente --> Llamada: - llamadas [*]
+Cliente --> TipoCliente: - tipo
+
+class Llamada {
+- origen: string
+- destino: string
+- duracion: integer
++ calcularMonto(): double
+}
+
+interface TipoCliente{
++ descuento(): double
+}
+
+class Fisica{
++ descuento(): double
+}
+class Juridica{
++ descuento(): double
+}
+
+TipoCliente <.. Fisica
+TipoCliente <.. Juridica
+
+Llamada --> TipoLlamada: - tipo
+
+interface TipoLlamada {
++ calcularMonto(duracion: integer): double
+}
+
+class Nacional{
++ calcularMonto(duracion: integer): double
+}
+class Internacional{
++ calcularMonto(duracion: integer): double
+}
+
+TipoLlamada <.. Nacional
+TipoLlamada <.. Internacional
+
+@enduml
