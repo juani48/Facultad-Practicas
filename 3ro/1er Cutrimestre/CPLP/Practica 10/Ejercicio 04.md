@@ -1,0 +1,3 @@
+## ¿Qué es una expresión en un lenguaje funcional? ¿Su valor de qué depende?
+
+Una expresion es un conjunto de definiciones o funciones que dan como resultado un valor, por lo que se las considera un valor y dicho valor esta dado por las sub expresiones que lo componen. Las expresiones cumplen con la propiedad de transparencia referencial, donde dos expresiones sintácticamente iguales darán el mismo valor.

@@ -1,0 +1,3 @@
+## La posibilidad de ocultamiento y encapsulamiento para los objetos es el primer nivel de abstracción de la POO, ¿cuál es el segundo?
+
+EL segundo nivel de abstraccion es la herencia y el polimorfismo, la herencia permite que una sub clase herede comportamiento o atributos de su super clase y el polimorfismo se basa en el concepto de herencia, donde varias sub clases pueden responder a un mismo mensaje, pero tener un comportamiento diferente.

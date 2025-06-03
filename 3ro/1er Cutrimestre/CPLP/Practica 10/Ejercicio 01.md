@@ -1,0 +1,3 @@
+## Un programa en un lenguaje procedural es una secuencia de instrucciones o comandos que se van ejecutando y producen cambios en las celdas de memoria, a través de las sentencias de asignación. ¿Qué es un programa escrito en un lenguaje funcional? y ¿Qué rol cumple la computadora?
+
+Un programa escrito en un leguaje funcional es un conjunto de definiciones de funciones matematicas y un conjunto evaluaciones de esas funciones, teniendo como resultado variables matematicas, las cuales mantienen un valor constante durante la ejecucion del programa. Siendo la computadora una calculadora avazada, donde calcula conjuntos de expresiones complejas y redefinibles.

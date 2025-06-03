@@ -1,0 +1,3 @@
+## ¿Cómo definiría un programa escrito en POO?
+
+Un programa orientado a objetos consta de moldes o clases, en las que se definen variables de instancia y metodos. La definicion de clases permite instancia objetos que reflejan el comportamiento y la informacion definida en las clases, estos objetos son los que se encargan del procesamiento de la informaicon mediante el envio de mensajes entre diferentes instancias. 

@@ -1,0 +1,7 @@
+## Diga cuáles son los elementos más importantes y hable sobre ellos en la programación orientada a objetos.
+
+- Objetos: Son entidades que poseen estado interno y comportamiento. Es el equivalente a un dato abstracto.
+- Mensajes: Es una petición de un objeto a otro para que este se comporte de una determinada manera, ejecutando uno de sus métodos. Todo el procesamiento en este modelo es activado por mensajes entre objetos.
+- Métodos: Es un programa que está asociado a un objetos determinado y cuya ejecución solo puede desencadenarse a través de un mensaje recibido por éste o por sus descendientes.
+- Clases: Es un tipo definido por el usuario que determina las estructuras de datos y las operaciones asociadas con ese tipo. Cada objeto pertenece a una clase y recibe de ella su funcionalidad. Es el primer nivel de abstracción de datos, que no permite definir la estructura, y comportamiento, manteniendo ocultamiento de informacio. La información contenida en el objeto solo puede ser accedida por la ejecución de los métodos correspondientes.
+- Instancia de clase: Cada vez que se construye un objeto se está creando una instancia de esa clase. Una instancia es un objeto individualizado por los valores que tomen sus atributos.

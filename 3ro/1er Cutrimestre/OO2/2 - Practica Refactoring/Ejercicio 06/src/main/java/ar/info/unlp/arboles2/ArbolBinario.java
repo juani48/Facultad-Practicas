@@ -1,7 +1,7 @@
 package ar.info.unlp.arboles2;
 
 public class ArbolBinario implements Nodo {
-    private int valor;
+	private int valor;
     private Nodo hijoIzquierdo;
     private Nodo hijoDerecho;
 

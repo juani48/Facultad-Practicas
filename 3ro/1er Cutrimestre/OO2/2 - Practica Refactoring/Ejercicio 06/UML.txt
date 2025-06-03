@@ -1,0 +1,22 @@
+@startuml
+class ArbolBinario {
+- valor: integer
++ <<create>>ArbolBinario(valor: integer)
+}
+
+interface Nodo {
++ recorrerPreorden(): string
++ recorrerInorden(): string
++ recorrerPostorden(): string
+}
+
+class NodoVacio{
++ <<create>>NodoVacio()
+}
+
+Nodo <|.. NodoVacio
+Nodo <|.. ArbolBinario
+
+ArbolBinario --> Nodo: - hijoIzquierdo
+ArbolBinario --> Nodo: - hijoDerecho
+@enduml

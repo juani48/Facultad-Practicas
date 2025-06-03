@@ -23,6 +23,7 @@ public class Recorridos {
     } 
 
     public static void DFS(Graph<String> graph, boolean[] visitado, Vertex<String> vertex, List<String> list){
+        
         visitado[vertex.getPosition()] = true;
         list.add(vertex.getData());
         
@@ -46,18 +47,26 @@ public class Recorridos {
                 if(!visitado[i]){
 
                     queue.enqueue(graph.getVertex(i));
+                    queue.enqueue(null);
                     while(!queue.isEmpty()){
                         
                         Vertex<String> vertex = queue.dequeue();
-
-                        if(!visitado[vertex.getPosition()]){
+                        if(vertex != null){
                             visitado[vertex.getPosition()] = true;
-                            list.add(vertex.getData());
+                            list.add(vertex.getData()); 
 
                             for(var edge : graph.getEdges(vertex)){
-                                queue.enqueue(edge.getTarget());
+                                if(!visitado[edge.getTarget().getPosition()]){
+                                    queue.enqueue(edge.getTarget());
+                                }  
                             }
                         }
+                        else{
+                            if(!queue.isEmpty()){
+                                queue.enqueue(null);
+                            }
+                        }
+                                
                     }
                 }                
             }
