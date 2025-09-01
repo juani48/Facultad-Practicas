@@ -1,0 +1,2 @@
+## Describa la funcionalidad de la entidad genérica “Agente de usuario” o “User agent”.
+La línea de encabezado `User-agent:` especifica el agente de usuario, es decir, el tipo de navegador que está realizando la solicitud al servidor. Esta línea de encabezado es útil porque el servidor puede enviar diferentes versiones del mismo objeto a diferentes tipos de agentes de usuario. (Cada una de las versiones se direcciona mediante la misma URL).

@@ -1,0 +1,4 @@
+## Explique brevemente cómo es el modelo Cliente/Servidor
+En una arquitectura cliente-servidor, hay un end system siempre activo, llamado servidor, que atiende las solicitudes de muchos otros end systems, llamados clientes.
+## ¿Conoce algún otro modelo de comunicación?
+En una arquitectura P2P, existe una mínima (o nula) dependencia de servidores dedicados en centros de datos. En su lugar, la aplicación aprovecha la comunicación directa entre pares de end systems conectados de manera intermitente, llamados peers. Debido a que los peers se comunican sin pasar por un servidor dedicado, la arquitectura se denomina peer-to-peer. 

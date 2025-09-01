@@ -1,0 +1,2 @@
+## ¿Cuál es la función de la capa de aplicación?
+Provee servicios de comunicación a los usuarios y a las aplicaciones. Mostrando una interfaz visual para el usuario (UI) y presenta un modelo de comunicacion Machine-Toa-Machine (M2M) para procesos de diferentes maquinas.
