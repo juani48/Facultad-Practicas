@@ -1,0 +1,1 @@
+## Introduccion - [Practica 1](https://github.com/juani48/Facultad-Practicas/blob/main/3ro/2do%20Cuatrimestre/RyC/Practica%201/Practica%201.md)

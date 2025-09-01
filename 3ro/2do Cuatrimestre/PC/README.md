@@ -1,0 +1,1 @@
+## Variables compartidas - [Practica 1](https://github.com/juani48/Facultad-Practicas/tree/main/3ro/2do%20Cuatrimestre/PC/Practica%201)
