@@ -2,7 +2,7 @@
 
 ### A - ¿Cuántos requerimientos realizó y qué recibió? Pruebe redirigiendo la salida (>) del comando curl a un archivo con extensión html y abrirlo con un navegador.
 
-Se realizo el envio de un unico requerimiento `GET` a la url `www.redes.unlp.edu.ar` y recibi el contenido HTML del documento index.html
+Se realizo el envio de un unico requerimiento `GET` a la url `www.redes.unlp.edu.ar` y recibi el contenido HTML del documento raiz (`/`)
 
 ### B - ¿Cómo funcionan los atributos href de los tags link e img en html?
 
