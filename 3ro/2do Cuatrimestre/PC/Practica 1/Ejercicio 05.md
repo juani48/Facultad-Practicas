@@ -25,7 +25,7 @@ process Persona[i=1 to N]{
 ```
 
 ### C - Modifique la solución de (a) para el caso en que se deba respetar el orden dado por el identificador del proceso (cuando está libre la impresora, de los procesos que han solicitado su uso la debe usar el que tenga menor identificador).
-```
+```c
 int turno := 1
 process Persona[i=1 to N]{
     string documento;
@@ -36,7 +36,7 @@ process Persona[i=1 to N]{
 ```
 
 ### D - Modifique la solución de (b) para el caso en que además hay un proceso Coordinador que le indica a cada persona que es su turno de usar la impresora.
-```
+```c
 bool personas[N];
 process Persona[i=0 to N-1]{
     string documento; int mi_turno;

@@ -6,7 +6,7 @@ Pre-condicones:
 - El valor `N` debe ser valido (un numero entero)
 - El arreglo debe estar definido o no ser nulo
 - El valor `M` debe ser mayot a `0`
-```
+```c
 int total := 0; 
 int array[M];
 int value := N

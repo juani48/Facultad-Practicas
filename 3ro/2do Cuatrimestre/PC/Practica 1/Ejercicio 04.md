@@ -1,6 +1,6 @@
 ## Resolver con SENTENCIAS AWAIT (<> y <await B; S>). Un sistema operativo mantiene 5 instancias de un recurso almacenadas en una cola, cuando un proceso necesita usar una instancia del recurso la saca de la cola, la usa y cuando termina de usarla la vuelve a depositar.
 
-```
+```c
 int push := 0; int pop := 0; int size := 5;
 int array[5] := ([N] 1);
 process Consumirdor[i=1 to 5]{

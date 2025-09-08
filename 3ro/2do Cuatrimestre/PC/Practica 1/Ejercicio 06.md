@@ -1,20 +1,20 @@
 ## Dada la siguiente solución para el Problema de la Sección Crítica entre dos procesos (suponiendo que tanto SC como SNC son segmentos de código finitos, es decir que terminan en algún momento), indicar si cumple con las 4 condiciones requeridas:
-```
+```c
 int turno = 1;
 Process SC1::{
     while (true){ 
         while (turno == 2) skip;
-        SC;
+        //SC;
         turno = 2;
-        SNC;
+        //SNC;
     }
 }
 Process SC2::{ 
     while (true){ 
         while (turno == 1) skip;
-        SC;
+        //SC;
         turno = 1;
-        SNC;
+        //SNC;
     }
 }
 ```

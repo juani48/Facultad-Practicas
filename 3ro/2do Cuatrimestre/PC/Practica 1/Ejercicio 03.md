@@ -28,7 +28,7 @@ El codigo funciona correctamente miestras se quiera implementar un buffer circul
 - Si `cant == 0`, significa buffer vacío → aunque `pri_vacia = pri_ocupada`, el consumidor no puede leer porque `await (cant > 0)` bloquea.
 
 ### B - Modificar el código para que funcione para C consumidores y P productores.
-```
+```c
 int cant = 0;
 int pri_ocupada = 0;
 int pri_vacia = 0;
