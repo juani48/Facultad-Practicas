@@ -59,6 +59,7 @@ process Pasajero[i = 0 to P-1]{
     P(mutex);
     if (calculando){
         P(c_mutex); push(C, i); V(c_mutex);
+        V(mutex);
         P(priv[i]);
     }
     calculando := true;
@@ -79,7 +80,7 @@ process Pasajero[i = 0 to P-1]{
     }
     else{
         calculando := false;
-        V(mutex);
+        V(mutex); V(c_mutex);
     }
 
     P(priv[i]); // Espera a ser atendido    

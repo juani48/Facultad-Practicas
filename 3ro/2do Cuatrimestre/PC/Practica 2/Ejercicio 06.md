@@ -14,25 +14,29 @@ process Persona[i := 1 to N]{
 ### B - Modifique la solución de (A) para el caso en que se deba respetar el orden de llegada.
 ```c
 sem mutex := 1;
-cola C;
+cola C; sem c_mutex := 1;
 sem privados[N] := (N 0);
 bool libre := true
 
 process Persona[i := 0 to N-1]{
     P(mutex);
     if (not libre){
-        push(C, i);
+        P(c_mutex) push(C, i); V(c_mutex);
         V(mutex);
         P(privados[i]);
     }
     libre := false;
+    V(mutex);
     Imprimir(documento);
+    P(mutex); P(c_mutex);
     if (not empty(cola)){
         int id := pop(C);
+        V(c_mutex);
         V(privados[id]);
     }
     else {
-        V(mutex);
+        libre:= true;
+        V(mutex); V(c_mutex);
     }
 }
 ```
