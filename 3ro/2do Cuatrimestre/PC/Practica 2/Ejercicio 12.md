@@ -28,6 +28,9 @@ process Enfermera[i = 0 to E-1]{
             Hisopar();
             V(priv[id]);
         }
+        else {
+            V(f_mutex[i])
+        }
     }
 }
 process Recepcionista{
@@ -93,6 +96,9 @@ process Enfermera[i = 0 to E-1]{
             V(f_mutex[i]);
             Hisopar();
             V(priv[id]);
+        }
+        else{
+            V(f_mutex[i]);
         }
     }
 }

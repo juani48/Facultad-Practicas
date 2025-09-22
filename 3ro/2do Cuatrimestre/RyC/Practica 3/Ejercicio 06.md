@@ -1,0 +1,15 @@
+### Describa para qué se utilizan los siguientes tipos de registros de DNS
+- A: Son registros que mapean de un nombre de domino a una dirección IP. Sirve para IPv4
+- MX: Son registros que indican, para un nombre de domino, cuáles son los servidores de mail SMTP encargados de recibir los mensajes para ese dominio.
+- PTR: Estos son registros que mapean direcciones IP a nombres de dominio.
+- AAAA: Igual que el registro A pero para IPv6
+- SRV: Los registros (SOA) se crean por cada zona o sub-zona que brinda el servicio de DNS. En este registro se especifican los parámetros globales para todos los registros del dominio o zona. Los parámetros que comprende son los siguientes:
+  - Nombre del servidor: nombre del servidor de nombres. 
+  - Número de Serie: número de serie de la DB.
+  - Refresh Time: cada cuánto tiempo los servidores secundarios deben refrescar desde el maestro/primario
+  - Expiry Time: el tiempo que deja de ser autoritativa una zona. Luego de este tiempo, el servidor secundario debe chequear el Serial de la SOA del maestro y, si cambio, realizar una Transferencia de Zona.
+  - TTL: se utilizan para elCacheo Negativo: si se pregunta por un valor y el servidor autoritativo respondió que no lo tiene, no se volverá a preguntar por el tiempo de este valor.
+- NS: Los registros (NS) indican los servidores de nombre autoritativos para una zona o sub-dominio. A partir de esto, se puede lograr una delegación de sub-dominios.
+- CNAME: Son registros que mapean de un nombre de domino a otros nombres. Se los conoce como aliases, debido a que dado un nombre indican el nombre original.
+- SOA
+- TXT: Son registros que mapean de un nombre de domino a información extra asociada con el equipo que tiene dicho nombre, por ejemplo pueden indicar finalidad, usuarios, etc.
