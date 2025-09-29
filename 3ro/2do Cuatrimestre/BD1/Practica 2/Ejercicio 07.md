@@ -105,7 +105,7 @@ S13 se encuentra en 4FN porque dada dm1 se cumple que {#suscripcion} multideterm
 S13 se encuentra en 4FN porque dada dm2 se cumple que {#suscripcion} multidetermina {#contenido} y es trivual
  
 ### Esquema final
-S1(email, nombre_usuario)
+- S1(email, nombre_usuario)
 - S3(email_adicional, nombre_adicional)
 - S5(#plan, nombre_plan, texto_condiciones, precio)
 - S7(#contenido, titulo, sinopsis, duracion)
