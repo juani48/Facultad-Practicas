@@ -33,7 +33,7 @@ process Buffer{
     do
     [] Examinador?(sitio) ->
         cola.push(sitio);
-    [] (Analizador?ready()) and (!cola.empty()) ->
+    [] !cola.empty(); Analizador?ready()  ->
         Analizador!send(cola.pop());
     od
 }
