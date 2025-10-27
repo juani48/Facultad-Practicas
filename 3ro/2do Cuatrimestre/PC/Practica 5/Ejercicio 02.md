@@ -2,7 +2,7 @@
 
 ### A - Implemente una solución donde los clientes llegan y se retiran sólo después de haber sido atendidos.
 ```ada
-PROCEDURE Program;
+PROCEDURE Program IS
     TASK Empleado IS
         ENTRY Atender(comprobante: OUT text);
     END Empleado;
@@ -31,7 +31,7 @@ END Program;
 ```
 ### B - Implemente una solución donde los clientes se retiran si esperan más de 10 minutos para realizar el pago.
 ```ada
-PROCEDURE Program;
+PROCEDURE Program IS
     TASK Empleado IS
         ENTRY Atender(comprobante: OUT text);
     END Empleado;
@@ -65,7 +65,7 @@ END Program;
 
 ### C - Implemente una solución donde los clientes se retiran si no son atendidos inmediatamente.
 ```ada
-PROCEDURE Program;
+PROCEDURE Program IS
     TASK Empleado IS
         ENTRY Atender(comprobante: OUT text);
     END Empleado;

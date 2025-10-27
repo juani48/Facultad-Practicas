@@ -18,6 +18,9 @@ BEGIN
     DECLARE fin INT DEFAULT 0;
     DECLARE aux_id INT(11);
     DECLARE aux_count INT(11);
+
+    START TRANSACTION; 
+
     DECLARE app_per_user CURSOR FOR 
         SELECT P.patient_id, count(*) AS appointment_count  
         FROM patient AS P INNER JOIN appointment AS A ON (P.patient_id = A.patient_id)
@@ -33,6 +36,8 @@ BEGIN
         VALUES (aux_id, aux_count, NOW(), SUBSTRING_INDEX(USER(), '@', 1));
     END LOOP;
     CLOSE app_per_user;
+
+    COMMIT;
 
 END//
 

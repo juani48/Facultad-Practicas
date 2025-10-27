@@ -2,7 +2,7 @@
 
 ### A - Realice la solución suponiendo que todos los vehículos tienen la misma prioridad.
 ```ada
-PROCEDURE Porgram is
+PROCEDURE Porgram IS
     
     TASK Puente IS
         ENTRY EntrarAuto

@@ -4,10 +4,11 @@
 ```c
 chan cajero[3](int id);
 chan privado[P](int pos);
-chan add_fila(int: id), delete_fila(int: pos);
+chan add_fila(int: id), delete_fila(int: pos), message();
 
 process Cliente[i := 0 to P-1]{
     int pos;
+    send message();
     send add_fila(i);
     recive privado[i](pos);
     
@@ -20,29 +21,31 @@ process Cajero[i := 0 to 2]{
         recive cajero[i](id);
         // atiende al cliente
         send privado[id](i);
+        send message();
         send delete_fila(i);
     }
 }
 process Fila{
     int id, pos;
     int cant[3] := (3 0);
-    do 
-    [] (not empty(add_fila)) ->
-        recive add_fila(id);
-        int min := 999, pos := 0;
-        for(j := 0 to 3){
-            if (cant[j] < min){
-                pos := j;
-                min := cant[j];
+    while(true){
+        recive massage();
+        if
+        [] (not empty(add_fila)) ->
+            recive add_fila(id);
+            int min := 999, pos := 0;
+            for(j := 0 to 3){
+                if (cant[j] < min){
+                    pos := j;
+                    min := cant[j];
+                }
             }
-        }
-        cant[pos]++;
-        privado[id](pos);
-    [] (not empty(delete_fila)) ->
-        recive delete_fila(pos);
-        cant[pos]--;
-    [] (empty(delete_fila)) and (empty(add_fila)) ->
-        delay(1);
-    od
+            cant[pos]++;
+            privado[id](pos);
+        [] (not empty(delete_fila)) ->
+            recive delete_fila(pos);
+            cant[pos]--;
+        fi
+    }
 }
 ```

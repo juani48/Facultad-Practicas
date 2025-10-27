@@ -49,31 +49,25 @@ process Buffer{
     cola cola;
     int cant := 0;
     do
-    [] cant < P; Alumno[*](id, e)? ->
+    [] cant < N; Alumno[*](id, e)? ->
         cola.push(id, e); // Guarda en la cola el id y el examen en la misma posicion
-    [] (cant < P) and (!cola.empty()); Profesor[*]?ready(id) ->
+    [] (cant < N) and (!cola.empty()); Profesor[*]?ready(id) ->
         Profesor[id]!send(cola.pop()); // Desencola el id y el examen
-    [] cant < P; Profesor[*]?finalizar() ->
+    [] catn < N;Profesor[*]?finalizar(id) ->
         cant++;
+        Profesor[id]!finalizar(cant);
     od
 }
 process Profesor[i := 0 to P-1]{
     int id; examen e; int cant:= 0;
     while(cant < N){
         Buffer!ready()
-        if
-        [] Buffer?send(id, e) ->
-            // Corrige el examen y obtiene la nota
-            Alumno[id]!(nota);
-            for(j := 0 to P){
-                if (j == P){ continue; }
-                else { Profesor[j]!corregi(); }
-            }
-        [] Profesor[*]?corregi() ->
-            cant++;
-        fi  
+        Buffer?send(id, e)
+        // Corrige el examen y obtiene la nota
+        Alumno[id]!(nota);
+        Buffer!fianlizar(i);
+        Buffer?finalizar(cant);
     }
-    Buffer!fianlizar();
 }
 ```
 
@@ -101,30 +95,24 @@ process Buffer{
     cola cola;
     int cant := 0;
     do
-    [] cant < P; Alumno[*](id, e)? ->
+    [] cant < N; Alumno[*](id, e)? ->
         cola.push(id, e); // Guarda en la cola el id y el examen en la misma posicion
-    [] (cant < P) and (!cola.empty()); Profesor[*]?ready(id) ->
+    [] (cant < N) and (!cola.empty()); Profesor[*]?ready(id) ->
         Profesor[id]!send(cola.pop()); // Desencola el id y el examen
-    [] cant < P; Profesor[*]?finalizar() ->
+    [] cant < N; Profesor[*]?finalizar() ->
         cant++;
+        Profesor[id]!finalizar(cant);
     od
 }
 process Profesor[i := 0 to P-1]{
     int id; examen e; int cant:= 0;
     while(cant < N){
         Buffer!ready()
-        if
-        [] Buffer?send(id, e) ->
-            // Corrige el examen y obtiene la nota
-            Alumno[id]!(nota);
-            for(j := 0 to P){
-                if (j == P){ continue; }
-                else { Profesor[j]!corregi(); }
-            }
-        [] Profesor[*]?corregi() ->
-            cant++;
-        fi  
+        Buffer?send(id, e)
+        // Corrige el examen y obtiene la nota
+        Alumno[id]!(nota);
+        Buffer!fianlizar(i);
+        Buffer?finalizar(cant);
     }
-    Buffer!fianlizar();
 }
 ```
