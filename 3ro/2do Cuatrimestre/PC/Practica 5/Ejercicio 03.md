@@ -43,7 +43,7 @@ PROCEDURE Program IS
     BEGIN
         LOOP
             ACCEPT Start;
-            DELAY 3; 
+            DELAY 3; -- 3 minutos
             Central.StopTimer;
         END LOOP;
     END;
@@ -53,7 +53,7 @@ PROCEDURE Program IS
         LOOP
             SELECT 
                 Central.Proceso1;
-            OR DELAY 2;
+            OR DELAY 2; -- 2 minutos
                 null;
             END SELECT
         END LOOP;
@@ -65,7 +65,7 @@ PROCEDURE Program IS
             SELECT 
                 Central.Proceso2;
             ELSE
-                DELAY 1;
+                DELAY 1; -- 1 minutos
                 Central.Proceso2;
             END SELECT
         END LOOP;

@@ -54,7 +54,7 @@ PROCEDURE Program IS
     BEGIN
         SELECT 
             Empleado.Atender(comprobante)
-        OR DELAY 600.0; 
+        OR DELAY 10; -- 10 minutos 
             null;
         END SELECT
     END;
@@ -122,7 +122,7 @@ PROCEDURE Program;
     BEGIN
         SELECT 
             Empleado.Atender(comprobante)
-        OR DELAY 600.0;
+        OR DELAY 10; -- 10 minutos
             null;
         END SELECT
 

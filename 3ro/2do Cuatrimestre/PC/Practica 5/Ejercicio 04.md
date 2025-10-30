@@ -27,13 +27,13 @@ PROCEDURE Program IS
     BEGIN
         SELECT
             Medico.AtenderPersona();
-        OR DELAY 300.0;
+        OR DELAY 5; -- 5 minutos
             SELECT
                 Medico.AtenderPersona();
-            OR DELAY 600.0;
+            OR DELAY 10; -- 10 minutos
                 SELECT
                     Medico.AtenderPersona();
-                OR DELAY 900.0;
+                OR DELAY 15; -- 15 minutos
                     null;
                 END SELECT;
             END SELECT;

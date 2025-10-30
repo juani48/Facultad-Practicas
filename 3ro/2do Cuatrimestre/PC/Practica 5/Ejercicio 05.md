@@ -16,11 +16,11 @@ PROCEDURE Program IS
         doc: text = "doc";
     BEGIN
         WHILE err LOOP
-            // Tabaja en el doc
+            --Tabaja en el doc
             SELECT
                 Servidor.RecibirDoc(doc, err);
-            OR DELAY 2; // 2 minutos
-                DELAY 1; // 1 minuto
+            OR DELAY 2; -- 2 minutos
+                DELAY 1; -- 1 minuto
                 Servidor.RecibirDoc(doc, err);
             END SELECT;
         END LOOP;
@@ -30,7 +30,7 @@ PROCEDURE Program IS
     BEGIN
         LOOP
             ACCEPT RecibirDoc(doc: IN text; err: OUT bool) DO
-                // valido el doc y guarda el res si esta bien o no
+                --valido el doc y guarda el res si esta bien o no
                 err = res;
             END ACCEPT
         END LOOP
