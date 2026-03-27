@@ -1,0 +1,5 @@
+## Indique por qué puede considerarse que existe una dualidad entre los mecanismos de monitores y pasaje de mensajes. Ejemplifique.
+
+Porque el monitor suele representar el recursor compartida o la seccion critica en si mismo, y podee mecanismos para que se ejecute con exclusion mutua. En cambio en pasaje de mensajes, no existen recursos compartidos que deban administrarse, en el mismo espacio de direcciones de todos los procesos, sino que cada proceso posee los datos suficientes para realizar sus calculos y si fuese necesario se comunicara con otros para compartir datos o sincronizarse.
+
+Por ejemplo, dado el paradigma de C/S, el monitor podria representar los recursos a acceder por varios clientes, asegurando la exclusion mutua y el orden de atencion mediante las variables condicion. Por otro lado, en pasaje de mensajes, un proceso representaria a un servidor, teniendo localmente las variables con los recursos a acceder por procesos clientes; en este caso y utilizando PMA, el canal tendria una cola con el orden de envio de los mensajes, por lo que no seria necesaria la delcaracion de una varible condicion.

@@ -1,0 +1,3 @@
+## Defina y diferencie programa concurrente, programa distribuido y programa paralelo.
+
+Un programa Concurrente es aquel en el que se posee una o mas unidade de porcesamiento y multiples procesos que se ejecutar "simultaneamente". Un programa Paralelo es un programa Concurrente que posee mas de una unidad de procesamiento para ejecutar los procesos. Un programa Distribuido es aque en el que multiples unidades de procesamiento ejecutan multiples procesos, pero el espacio de direcciones de cada unidad de procesamiento se eucntra aislada del resto, ya sea porque se encuentran fisicamente separadas o porque el SO restringe el acceso a los diferentes espacios de direcciones.

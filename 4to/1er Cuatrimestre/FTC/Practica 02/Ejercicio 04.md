@@ -1,0 +1,7 @@
+## Sean $L_1$ y $L_2$ dos lenguajes recursivamente enumerables de números naturales codificados en unario (por ejemplo, el número 5 se representa con 11111). Probar que también es recursivamente enumerable el lenguaje $L = \{x | x$ es un número natural codificado en unario, y existen $y$, $z$, tales que $y + z = x$, con y $∈ L1, z ∈ L2\}$. 
+
+Si $L_1 \in RE$ y $L_2 \in RE$ entonces $L_1 . L_2 \in RE$ 
+
+Es decir: Si existe una MT $M_1$ que acepta $L_1$ y existe una MT $M_2$ que acepta $L_2$, tambien existe una MT $M$ que acepta $L_1 . L_2$
+
+Idea general: Construir una MT $M$ que ejecute paralelamente las MT $M_1$ y $M_2$ de forma tal que si la entrada $w$ posee $n$ caracteres, $M$ itere de la siguiente forma: $M$ ejecuta $M_1$ a partir de los primeros $n - n$ caracteres de $w$ y $M_2$ a partir de los últimos $n$ caracteres de $w$, si en ambos casos se acepta, entonces $M$ acepta. Si no se acepta, $M$ repite la iteracion anterior pero ejecutando $M_1$ a partir de los primeros $n - (n - 1)$ caracteres de $w$ y $M_2$ a partir de los últimos $(n - 1)$ caracteres de $w$, si en ambos casos se acepta, entonces $M$ acepta. Esto se repetirá hasta que $M$ acepte la palabra o hasta llegar al paso de ejecutar $M_1$ a partir de los primeros $n$ caracteres de $w$ y $M_2$ a partir de los últimos $0$ caracteres de $w$. Es aceptable que si $M_1$ o $M_2$ loopean, $M$ loopee porque $M$ acepta $L_1 . L_2 \in RE$.

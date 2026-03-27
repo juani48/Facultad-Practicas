@@ -1,0 +1,3 @@
+## Explicar cómo una MT sin el movimiento S (el no movimiento) puede simular(ejecutar) otra que sí lo tiene. 
+
+Realizando movimientos de izquierda a derecha, simulando mantenerse en una posición. Si la MT debe simular mantenerse apuntado al carácter $X_n$ de la cinta, deberá realizar $2^K$ movimientos como $K$ pasos deba mantenerse en no movimiento (S). Esto se consigue por realizar movimientos de derecha (R) y luego a izquierda (L) (o viceversa) de a pares repetidamente de modo tal que en el primer paso la MT apuntara a $X_{n+1}$ (en caso de realizar el primer movimiento a la izquierda, se apuntara a $X_{n-1}$), para luego retroceder (o avanzar) y volver a apuntar a $X_n$. Con lo que simularía en dos pasos, el no movimiento de un paso.

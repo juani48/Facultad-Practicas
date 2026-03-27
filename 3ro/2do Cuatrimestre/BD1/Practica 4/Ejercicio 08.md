@@ -12,8 +12,6 @@ CREATE TRIGGER update_appointments_per_user
 AFTER INSERT
 ON appointment FOR EACH ROW
 BEGIN
-    
-END //
     DECLARE patient_count INT;
     DECLARE current_user VARCHAR(50);
     
@@ -33,5 +31,7 @@ END //
         INSERT INTO appointments_per_patient (id_patient, count_appointments, last_update, `user`)
         VALUES (NEW.patient_id, patient_count, NOW(), current_user);
     END IF;
+END ;
+    
 DELIMITER ;
 ```
