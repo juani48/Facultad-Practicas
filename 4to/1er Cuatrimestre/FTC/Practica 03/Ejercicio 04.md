@@ -1,0 +1,3 @@
+## Sea $M_1$ una MT que genera en su cinta de salida todas las cadenas de un lenguaje $L$. Dar la idea general de cómo sería una MT $M_2$ que, usando $M_1$, acepte una cadena $w$ si $w \in L$.
+
+$M_1$ simula $M_2$ hasta que $M_2$ imprima una cadena igual a la entrada $w$. Si $M_2$ genera una cadena idéntica a $w$, $M_1$ acepta $w$, si $M_2$ genera una cadena que es mayor en el orden canónico que $w$ $M_1$ rechaza $w$.

@@ -1,0 +1,4 @@
+## Explicar cómo enumeraría los números naturales pares, los números enteros, los números racionales (o fraccionarios), y las cadenas de $\Sigma^*$ siendo $\Sigma = \{0, 1\}$.
+- Naturales Pares: Crear una MT $P$ que ejecute $n$ pasos, siendo $n := 0$ y que por cada paso imprima el valor $n*2$ e incremente $n$ en uno.
+- Naturales enteros: Crea una MT $N$ que ejecute $n$ pasos, siendo $n := 0$ y que por cada paso imprima el valor $n$ e incremente $n$ en uno.
+- Cadenas de $\Sigma^*$: Crea una MT $S$ que ejecute $n$ pasos, siendo $n := 0$ y representando la cantidad de caracteres por palabra. En cada paso de $n$, $S$ imprime palabras de menor a mayor que contengan 0 y 1, respetando al cantidad máxima definida por $n$ e imprimiendo todas las combinaciones posibles de caracteres 0 y 1 para ese limite definido.
