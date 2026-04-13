@@ -78,39 +78,28 @@ Desventajas:
 ## 36 - ​Realice el mismo proceso ahora con la estrategia `TABLE_PER_CLASS`. Indique cuál le parece la mejor estrategia para este modelo concreto y justifique su elección.
 
 Ventajas:
-- Es la alternativa mas oreintada a objetos pisble. Se tiene una tabla que representa la clase abstracta,
-en la que se definen los atributos comunes a todas las subclases; y luego
-tablas para las clases concretas que “apuntan” a la tabla de la clase
+- Es la alternativa mas oreintada a objetos pisble. Se tiene una tabla que representa la clase abstracta, en la que se definen los atributos comunes a todas las subclases; y luego tablas para las clases concretas que “apuntan” a la tabla de la clase
 abstracta.
-2. Cuando se realiza un cambio que debe propagarse a cada clase concreta
-es necesario alterar solamente la clase abstracta. El resto de las tablas no
-debe ser modificado. En este sentido es similar a la alternativa anterior.
-3. Cuando se requiere consultar el conjunto de instancias de una clase en
-particular, simplemente basta con apuntar la consulta a la tabla asociada
-sin tener que recorrer inútilmente el resto de las instancias (siempre y
-cuando no se requieran datos que están en la tabla Person).
-4. Si hay un atributo con el mismo nombre en dos o más clases, cada una lo
-puede mapear como más le convenga.
-5. Para aquellas consultas que deban apuntar a todas las instancias de la
-clase Person (recordar que todas las instancias de las clases Employee y
-Customer son en definitiva también instancias de la clase Person) basta
-con dirigir la consulta a una sola tabla (Person). Esto suponiendo que
-dicha tabla contiene toda la información requerida.
-B. Desventajas de esta solución
-1. Quizás la mayor desventaja de esta solución de mapeo resida en la
-necesidad de realizar siempre joins para poder recuperar toda la
-información que compone a una instancia. Esto se debe a que la parte
-común a todas las instancias se encuentra en la tabla Person y la parte
-correspondiente a la Clase Customer está en la tabla Customer.
+- Cuando se realiza un cambio que debe propagarse a cada clase concreta es necesario alterar solamente la clase abstracta.
+- Cuando se requiere consultar el conjunto de instancias de una clase en particular, simplemente basta con apuntar la consulta a la tabla asociada sin tener que recorrer inútilmente el resto de las instancias (siempre y cuando no se requieran datos que están en la tabla que representa la clase abstracta).
+- Si hay un atributo con el mismo nombre en dos o más clases, cada una lo puede mapear como más le convenga.
+- Para aquellas consultas que deban apuntar a todas las instancias de la clase abstracta basta con dirigir la consulta a una sola tabla que representa la clase abstracta. Esto suponiendo que dicha tabla contiene toda la información requerida.
 
-## 37 - ​Route tiene relaciones muchos-a-muchos con `DriverUser` y `TourGuideUser` (subclases de `User`). Analizar el impacto de la estrategia de herencia sobre la tabla join:
+Desventajas de esta solución
+- La necesidad de realizar siempre joins para poder recuperar toda la información que compone a una instancia. 
+
+La mejor estrategia para esta solución en aplicar `TABLE_PER_CLASS`, dado que por mas que se pierda performance realizando joins en las consultas para obtener todos los datos de una instancia, permite no poseer anomalías de repetición de datos (como en el caso de la estrategia `JOINED`) o tener tuplas con datos nulos (en caso de `SINGLE_TABLE`). Ademas `TABLE_PER_CLASS` es una estrategia que respeta el paradigma de orientación  objetos, permitiendo mappear cada una de las clases en tablas individuales, permitiendo que las consultas respeten el esquema uml de objetos.
+
+## 37 - `​Route` tiene relaciones muchos-a-muchos con `DriverUser` y `TourGuideUser` (subclases de `User`). Analizar el impacto de la estrategia de herencia sobre la tabla join:
 
 ### BB - ​Si la jerarquía es `SINGLE_TABLE`, ¿a que tabla apunta la `FK` en la tabla join?
 
+Apuntara a `User`.
 
 ### CC - ​Si la jerarquía es `JOINED`, ¿cambia la tabla destino de esa `FK`?
 
+Si, apunara a `DriverUser` o `TourGuideUser` dependiendo la relacion.
 
 ## 38 - ​¿Qué estrategia resulta más robusta ante cambios futuros como agregar una nueva subclase de `User`? Justificar con al menos dos argumentos.
 
-
+La estrategia mas robusta ante cambios, es `TABLE_PER_CLASS`, debido a que no es necesario modificar las tablas existentes, ya sea la clase abstracta ni las instancias, solo agregando una tabla nueva y referenciando a a su super clase, ya se poseen todos los datos de `User` y de la nueva clase concreta, ademas ayudaría a reducir las  posibles anomalías al solo agregare una tabla nueva y no realizar modificaciones en tablas anteriores.
